@@ -375,4 +375,33 @@ export const languageResourcesKm = {
     description:
       'មគ្គុទ្ទេសក៍ផ្លូវការសម្រាប់ C# និង .NET គ្របដណ្ដប់លើ LINQ, async/await, pattern matching និង ASP.NET Core។',
   },
+  'w3schools-python': {
+    title: 'មេរៀន Python របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description:
+      'ឯកសារយោង Python ងាយយល់សម្រាប់អ្នកចាប់ផ្ដើម គ្របដណ្ដប់លើវាក្យសម្ព័ន្ធ បញ្ជី អនុគមន៍ និង classes។',
+  },
+  'w3schools-c': {
+    title: 'មេរៀន C របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description: 'ឯកសារយោងភាសា C ជាជំហានៗ គ្របដណ្ដប់លើអថេរ រង្វិលជុំ arrays, pointers និង structs។',
+  },
+  'w3schools-cpp': {
+    title: 'មេរៀន C++ របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description:
+      'ឯកសារយោង C++ មានរចនាសម្ព័ន្ធ គ្របដណ្ដប់លើ OOP, classes, references និង STL containers។',
+  },
+  'w3schools-java': {
+    title: 'មេរៀន Java របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description:
+      'មគ្គុទ្ទេសក៍ Java អនុវត្តផ្ទាល់ គ្របដណ្ដប់លើ methods, OOP, ArrayList, HashMap និង exceptions។',
+  },
+  'w3schools-csharp': {
+    title: 'មេរៀន C# របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description:
+      'មេរៀន C# ច្បាស់លាស់ គ្របដណ្ដប់លើប្រភេទទិន្នន័យ methods, OOP, properties និង interfaces។',
+  },
 }

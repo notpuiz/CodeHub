@@ -9,6 +9,14 @@ import { zeroToProLessonsKm } from '@/data/zeroToProLessonsKm'
 import { webDeep } from '@/data/lessons/webDeep'
 import { languagesDeep } from '@/data/lessons/languagesDeep'
 import { enterpriseDeep } from '@/data/lessons/enterpriseDeep'
+import { htmlExpanded } from '@/data/lessons/htmlExpanded'
+import { cssExpanded } from '@/data/lessons/cssExpanded'
+import { jsExpanded } from '@/data/lessons/jsExpanded'
+import { pythonExpanded } from '@/data/lessons/pythonExpanded'
+import { cExpanded } from '@/data/lessons/cExpanded'
+import { cppExpanded } from '@/data/lessons/cppExpanded'
+import { javaExpanded } from '@/data/lessons/javaExpanded'
+import { csharpExpanded } from '@/data/lessons/csharpExpanded'
 import { useLocaleStore } from '@/stores/locale'
 
 const STORAGE_KEY = 'codehub-completed-lessons'
@@ -21,6 +29,24 @@ const allDeep = {
   ...webDeep,
   ...languagesDeep,
   ...enterpriseDeep,
+}
+
+const expandedByTrack = {
+  html: htmlExpanded,
+  css: cssExpanded,
+  javascript: jsExpanded,
+  python: pythonExpanded,
+  c: cExpanded,
+  cpp: cppExpanded,
+  java: javaExpanded,
+  csharp: csharpExpanded,
+}
+
+const expandedKmByKey = {}
+for (const [trackId, list] of Object.entries(expandedByTrack)) {
+  for (const item of list) {
+    expandedKmByKey[`${trackId}/${item.slug}`] = item.km
+  }
 }
 
 const baseTracks = rawTracks.map((track) => {
@@ -42,11 +68,44 @@ const baseTracks = rawTracks.map((track) => {
     combinedLessons = [...prepended, ...track.lessons, ...appended]
   }
 
+  // Insert expanded W3Schools-style chapters at their designated syllabus positions
+  const expanded = expandedByTrack[track.id] || []
+  if (expanded.length) {
+    combinedLessons = [...combinedLessons]
+    for (const item of expanded) {
+      const lessonObj = {
+        slug: item.slug,
+        level: item.level,
+        title: item.en.title,
+        duration: item.en.duration,
+        summary: item.en.summary,
+        objectives: item.en.objectives,
+        sections: item.en.sections,
+        challenge: item.en.challenge,
+        quiz: item.en.quiz,
+        _isExpanded: true,
+      }
+      const afterIdx = combinedLessons.findIndex((l) => l.slug === item.insertAfter)
+      if (afterIdx !== -1) {
+        combinedLessons.splice(afterIdx + 1, 0, lessonObj)
+      } else {
+        combinedLessons.push(lessonObj)
+      }
+    }
+  }
+
   const totalSteps = combinedLessons.length
   return {
     ...track,
     lessons: combinedLessons.map((lesson, idx) => {
       const key = `${track.id}/${lesson.slug}`
+      if (lesson._isExpanded) {
+        return {
+          ...lesson,
+          step: idx + 1,
+          totalSteps,
+        }
+      }
       const deepEn = allDeep[key]?.en
       return {
         ...lesson,
@@ -96,6 +155,44 @@ function localizeTracks(locale) {
       badge: tKm.badge ?? track.badge,
       lessons: track.lessons.map((lesson) => {
         const key = `${track.id}/${lesson.slug}`
+
+        if (lesson._isExpanded) {
+          const expKm = expandedKmByKey[key] || {}
+          const kmSecById = new Map((expKm.sections || []).map((sec) => [sec.id, sec]))
+          return {
+            ...lesson,
+            title: expKm.title ?? lesson.title,
+            duration: expKm.duration ?? lesson.duration,
+            summary: expKm.summary ?? lesson.summary,
+            objectives: expKm.objectives ?? lesson.objectives,
+            sections: lesson.sections.map((section) => {
+              const sKm = kmSecById.get(section.id) || {}
+              return {
+                ...section,
+                heading: sKm.heading ?? section.heading,
+                body: sKm.body ?? section.body,
+                points: sKm.points ?? section.points,
+                table: sKm.table ?? section.table,
+                warning: sKm.warning ?? section.warning,
+                tip: sKm.tip ?? section.tip,
+                example: section.example
+                  ? {
+                      ...section.example,
+                      title: sKm.exampleTitle ?? section.example.title,
+                    }
+                  : undefined,
+              }
+            }),
+            challenge: lesson.challenge
+              ? {
+                  ...lesson.challenge,
+                  ...expKm.challenge,
+                }
+              : null,
+            quiz: expKm.quiz ?? lesson.quiz,
+          }
+        }
+
         const lKm = tKm.lessons?.[lesson.slug] || {}
         const deepKm = allDeep[key]?.km || {}
         const deepSectionsById = new Map((deepKm.extraSections || []).map((sec) => [sec.id, sec]))
@@ -236,13 +333,15 @@ export const useCurriculumStore = defineStore('curriculum', () => {
       for (let lIdx = 0; lIdx < track.lessons.length; lIdx += 1) {
         const lesson = track.lessons[lIdx]
         const enLesson = enTrack.lessons[lIdx]
+        const key = `${track.id}/${lesson.slug}`
         const kmLesson = kmTrack.lessons?.[lesson.slug] || {}
-        const deepKm = allDeep[`${track.id}/${lesson.slug}`]?.km || {}
+        const deepKm = allDeep[key]?.km || {}
+        const expKm = expandedKmByKey[key] || {}
         const levelLabel = getLevelLabel(lesson.level)
 
         items.push({
           type: 'lesson',
-          id: `${track.id}/${lesson.slug}`,
+          id: key,
           title: lesson.title,
           subtitle: `${track.name} · ${levelLabel}`,
           description: lesson.summary,
@@ -263,6 +362,9 @@ export const useCurriculumStore = defineStore('curriculum', () => {
             kmLesson.summary || '',
             ...Object.values(kmLesson.sections || {}).map((s) => s.heading || ''),
             ...(deepKm.extraSections || []).map((s) => s.heading || ''),
+            expKm.title || '',
+            expKm.summary || '',
+            ...(expKm.sections || []).map((s) => s.heading || ''),
           ]
             .join(' ')
             .toLowerCase(),

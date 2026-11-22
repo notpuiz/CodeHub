@@ -352,6 +352,12 @@ export const resourcesKm = {
     description:
       'បញ្ជីពេញលេញនៃធាតុ HTML ស្តង់ដារទាំងអស់ គុណលក្ខណៈ និងកំណត់ចំណាំភាពងាយស្រួលប្រើប្រាស់។',
   },
+  'w3schools-html': {
+    title: 'មេរៀន HTML របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description:
+      'ឯកសារយោង HTML ជាជំហានៗសម្រាប់អ្នកចាប់ផ្ដើម ជាមួយបញ្ជីស្លាក គុណលក្ខណៈ និងឧទាហរណ៍អន្តរកម្ម។',
+  },
   'html-semantics': {
     title: 'រៀន HTML នៅលើ Web.dev',
     type: 'មគ្គុទ្ទេសក៍',
@@ -374,6 +380,11 @@ export const resourcesKm = {
     type: 'ឧបករណ៍',
     description: 'ពិនិត្យតារាងគាំទ្រកម្មវិធីរុករកថ្មីៗបំផុតសម្រាប់មុខងារ HTML, CSS និង JavaScript។',
   },
+  'w3schools-css': {
+    title: 'មេរៀន CSS របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description: 'ឯកសាររហ័សសម្រាប់លក្ខណៈសម្បត្តិ CSS ឧទាហរណ៍ប្លង់ selectors និងការសាកល្បងផ្ទាល់។',
+  },
   'javascript-info': {
     title: 'មេរៀន JavaScript ទំនើប (JavaScript.info)',
     type: 'មគ្គុទ្ទេសក៍',
@@ -384,6 +395,11 @@ export const resourcesKm = {
     title: 'ឯកសារយោង JavaScript របស់ MDN',
     type: 'ឯកសារយោង',
     description: 'ឯកសារផ្លូវការសម្រាប់ built-in objects, Array methods, Promises និង Web APIs។',
+  },
+  'w3schools-js': {
+    title: 'មេរៀន JavaScript របស់ W3Schools',
+    type: 'មគ្គុទ្ទេសក៍',
+    description: 'ឯកសារយោង JavaScript ងាយយល់ គ្របដណ្ដប់លើប្រមាណវិធី រង្វិលជុំ DOM, JSON និង ES6។',
   },
   'pro-git': {
     title: 'សៀវភៅ Pro Git',

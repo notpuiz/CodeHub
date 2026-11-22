@@ -789,4 +789,49 @@ export const languageResources = [
       'Official C# and .NET guides covering LINQ, async/await, pattern matching, and ASP.NET Core.',
     url: 'https://learn.microsoft.com/en-us/dotnet/csharp/',
   },
+  {
+    id: 'w3schools-python',
+    title: 'W3Schools Python Tutorial',
+    category: 'python',
+    type: 'Guide',
+    description:
+      'Beginner-friendly Python reference covering syntax, lists, dictionaries, functions, classes, and file handling.',
+    url: 'https://www.w3schools.com/python/',
+  },
+  {
+    id: 'w3schools-c',
+    title: 'W3Schools C Tutorial',
+    category: 'c',
+    type: 'Guide',
+    description:
+      'Step-by-step C reference covering variables, loops, arrays, pointers, structs, and memory.',
+    url: 'https://www.w3schools.com/c/',
+  },
+  {
+    id: 'w3schools-cpp',
+    title: 'W3Schools C++ Tutorial',
+    category: 'cpp',
+    type: 'Guide',
+    description:
+      'Structured C++ reference covering OOP, classes, references, STL containers, and files.',
+    url: 'https://www.w3schools.com/cpp/',
+  },
+  {
+    id: 'w3schools-java',
+    title: 'W3Schools Java Tutorial',
+    category: 'java',
+    type: 'Guide',
+    description:
+      'Practical Java guide covering methods, OOP, ArrayList, HashMap, exceptions, and file I/O.',
+    url: 'https://www.w3schools.com/java/',
+  },
+  {
+    id: 'w3schools-csharp',
+    title: 'W3Schools C# Tutorial',
+    category: 'csharp',
+    type: 'Guide',
+    description:
+      'Clear C# tutorial covering types, methods, OOP, properties, interfaces, and exception handling.',
+    url: 'https://www.w3schools.com/cs/',
+  },
 ]

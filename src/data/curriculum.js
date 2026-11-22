@@ -1063,6 +1063,15 @@ export const resources = [
     url: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element',
   },
   {
+    id: 'w3schools-html',
+    title: 'W3Schools HTML Tutorial',
+    category: 'html',
+    type: 'Guide',
+    description:
+      'Step-by-step beginner HTML reference with tag catalogs, attribute examples, and interactive sandboxes.',
+    url: 'https://www.w3schools.com/html/',
+  },
+  {
     id: 'html-semantics',
     title: 'Web.dev Learn HTML',
     category: 'html',
@@ -1097,6 +1106,15 @@ export const resources = [
     url: 'https://caniuse.com/',
   },
   {
+    id: 'w3schools-css',
+    title: 'W3Schools CSS Tutorial',
+    category: 'css',
+    type: 'Guide',
+    description:
+      'Quick CSS property lookup, layout examples, selectors reference, and interactive try-it demos.',
+    url: 'https://www.w3schools.com/css/',
+  },
+  {
     id: 'javascript-info',
     title: 'The Modern JavaScript Tutorial',
     category: 'javascript',
@@ -1111,6 +1129,15 @@ export const resources = [
     type: 'Reference',
     description: 'Authoritative docs for built-in objects, Array methods, Promises, and Web APIs.',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
+  },
+  {
+    id: 'w3schools-js',
+    title: 'W3Schools JavaScript Tutorial',
+    category: 'javascript',
+    type: 'Guide',
+    description:
+      'Accessible JavaScript syntax reference covering operators, loops, DOM APIs, JSON, and ES6 features.',
+    url: 'https://www.w3schools.com/js/',
   },
   {
     id: 'pro-git',
