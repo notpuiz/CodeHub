@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import { Code2, Menu, Moon, PanelLeft, Search, Sun } from 'lucide-vue-next'
+import { Menu, Moon, PanelLeft, Search, Sun } from 'lucide-vue-next'
+import BrandLogo from '@/components/BrandLogo.vue'
 import { useThemeStore } from '@/stores/theme'
 import { useSearchStore } from '@/stores/search'
 import { useLocaleStore } from '@/stores/locale'
@@ -64,16 +65,8 @@ onUnmounted(() => {
           <PanelLeft class="h-4 w-4 shrink-0" />
         </button>
 
-        <router-link
-          to="/"
-          class="brand-link btn-press flex items-center gap-2 text-base font-semibold tracking-tight text-zinc-900 dark:text-zinc-50"
-        >
-          <span
-            class="brand-mark flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950"
-          >
-            <Code2 class="h-4 w-4 shrink-0" />
-          </span>
-          <span>CodeHub</span>
+        <router-link to="/" class="btn-press flex items-center">
+          <BrandLogo />
         </router-link>
       </div>
 

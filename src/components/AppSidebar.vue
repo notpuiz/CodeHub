@@ -1,16 +1,8 @@
 <script setup>
 import { computed, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import {
-  BookOpen,
-  CheckCircle2,
-  ChevronRight,
-  Circle,
-  Code2,
-  Home,
-  Terminal,
-  X,
-} from 'lucide-vue-next'
+import { BookOpen, CheckCircle2, ChevronRight, Circle, Home, Terminal, X } from 'lucide-vue-next'
+import BrandLogo from '@/components/BrandLogo.vue'
 import { useCurriculumStore } from '@/stores/curriculum'
 import { useLocaleStore } from '@/stores/locale'
 
@@ -309,17 +301,8 @@ function closeMobile() {
         <div
           class="flex h-14 shrink-0 items-center justify-between border-b border-zinc-200/80 px-4 dark:border-zinc-800/80"
         >
-          <router-link
-            to="/"
-            class="brand-link btn-press flex items-center gap-2 text-base font-semibold tracking-tight text-zinc-900 dark:text-zinc-50"
-            @click="closeMobile"
-          >
-            <span
-              class="brand-mark flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950"
-            >
-              <Code2 class="h-4 w-4 shrink-0" />
-            </span>
-            <span>CodeHub</span>
+          <router-link to="/" class="btn-press flex items-center" @click="closeMobile">
+            <BrandLogo />
           </router-link>
           <button
             type="button"
