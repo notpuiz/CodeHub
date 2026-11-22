@@ -122,6 +122,124 @@ html[lang='km'] {
   .sidebar-item-nudge:hover:not(:active) {
     transform: translateX(2px);
   }
+
+  .arrow-nudge-right {
+    transition:
+      transform 180ms var(--ease-out),
+      color 150ms ease;
+  }
+
+  .group:hover .arrow-nudge-right {
+    transform: translateX(3px);
+  }
+
+  .arrow-nudge-left {
+    transition:
+      transform 180ms var(--ease-out),
+      color 150ms ease;
+  }
+
+  .group:hover .arrow-nudge-left {
+    transform: translateX(-3px);
+  }
+
+  .arrow-nudge-ne {
+    transition:
+      transform 180ms var(--ease-out),
+      color 150ms ease;
+  }
+
+  .group:hover .arrow-nudge-ne {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* Pointer-origin click ring (GPU-composited via WAAPI) */
+.click-pulse-ring {
+  position: fixed;
+  z-index: 9998;
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 2px solid rgba(24, 24, 27, 0.24);
+  background: rgba(24, 24, 27, 0.06);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.dark .click-pulse-ring {
+  border-color: rgba(250, 250, 250, 0.28);
+  background: rgba(250, 250, 250, 0.08);
+}
+
+/* Toast notifications (Sonner-style 400ms ease, symmetric bottom exit) */
+.toast-enter-active,
+.toast-leave-active {
+  transition:
+    opacity 320ms ease,
+    transform 320ms var(--ease-out);
+}
+
+.toast-enter-from,
+.toast-leave-to {
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+}
+
+.toast-move {
+  transition: transform 240ms var(--ease-out);
+}
+
+/* Reading progress bar (GPU scaleX only) */
+.reading-progress-bar {
+  transform-origin: left center;
+  transition: transform 100ms linear;
+}
+
+/* Route / page switch transition (faster exit than enter, composite-only) */
+.page-switch-enter-active {
+  transition:
+    opacity 220ms var(--ease-out),
+    transform 220ms var(--ease-out);
+}
+
+.page-switch-leave-active {
+  transition:
+    opacity 140ms var(--ease-out),
+    transform 140ms var(--ease-out);
+}
+
+.page-switch-enter-from {
+  opacity: 0;
+  transform: translateY(8px) scale(0.99);
+}
+
+.page-switch-leave-to {
+  opacity: 0;
+  transform: translateY(-6px) scale(0.99);
+}
+
+/* Filter grid / tab pane swap transition */
+.tab-switch-enter-active {
+  transition:
+    opacity 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
+}
+
+.tab-switch-leave-active {
+  transition:
+    opacity 110ms var(--ease-out),
+    transform 110ms var(--ease-out);
+}
+
+.tab-switch-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.tab-switch-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
 }
 
 /* Navbar scroll elevation transition */
@@ -322,8 +440,28 @@ html[lang='km'] {
   .btn-press:active,
   .card-interactive:hover,
   .brand-link:hover .brand-mark,
-  .sidebar-item-nudge:hover {
+  .sidebar-item-nudge:hover,
+  .group:hover .arrow-nudge-right,
+  .group:hover .arrow-nudge-left,
+  .group:hover .arrow-nudge-ne {
     transform: none;
+  }
+
+  .toast-enter-from,
+  .toast-leave-to,
+  .page-switch-enter-from,
+  .page-switch-leave-to,
+  .tab-switch-enter-from,
+  .tab-switch-leave-to {
+    transform: none;
+    opacity: 0;
+  }
+
+  .page-switch-enter-active,
+  .page-switch-leave-active,
+  .tab-switch-enter-active,
+  .tab-switch-leave-active {
+    transition: opacity 140ms ease;
   }
 
   .lang-thumb,

@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import AppNavbar from '@/components/AppNavbar.vue'
 import AppSidebar from '@/components/AppSidebar.vue'
+import AppToast from '@/components/AppToast.vue'
 import SearchModal from '@/components/SearchModal.vue'
 import { useThemeStore } from '@/stores/theme'
 import { useSearchStore } from '@/stores/search'
@@ -13,6 +14,35 @@ const searchStore = useSearchStore()
 
 const mobileSidebarOpen = ref(false)
 const desktopSidebarOpen = ref(true)
+
+function spawnClickPulse(e) {
+  if (e.button !== 0 && e.pointerType === 'mouse') return
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+  const interactive = e.target?.closest?.('button, a, [role="button"]')
+  if (!interactive || interactive.disabled) return
+
+  const ring = document.createElement('span')
+  ring.className = 'click-pulse-ring'
+  ring.style.left = `${e.clientX}px`
+  ring.style.top = `${e.clientY}px`
+  document.body.appendChild(ring)
+
+  const anim = ring.animate(
+    [
+      { transform: 'translate(-50%, -50%) scale(0.5)', opacity: 0.75 },
+      { transform: 'translate(-50%, -50%) scale(1.65)', opacity: 0 },
+    ],
+    {
+      duration: 260,
+      easing: 'cubic-bezier(0.23, 1, 0.32, 1)',
+      fill: 'forwards',
+    },
+  )
+
+  anim.onfinish = () => ring.remove()
+  anim.oncancel = () => ring.remove()
+}
 
 function handleGlobalKeydown(e) {
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
@@ -32,10 +62,12 @@ function handleGlobalKeydown(e) {
 
 onMounted(() => {
   window.addEventListener('keydown', handleGlobalKeydown)
+  window.addEventListener('pointerdown', spawnClickPulse, { passive: true })
 })
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleGlobalKeydown)
+  window.removeEventListener('pointerdown', spawnClickPulse)
 })
 </script>
 
@@ -52,9 +84,14 @@ onUnmounted(() => {
         @close-mobile="mobileSidebarOpen = false"
       />
       <div class="min-w-0 flex-1">
-        <router-view />
+        <router-view v-slot="{ Component, route }">
+          <Transition name="page-switch" mode="out-in">
+            <component :is="Component" :key="route.path" />
+          </Transition>
+        </router-view>
       </div>
     </div>
     <SearchModal />
+    <AppToast />
   </div>
 </template>

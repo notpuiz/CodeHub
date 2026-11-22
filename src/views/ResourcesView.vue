@@ -61,35 +61,37 @@ const filteredResources = computed(() => {
       </button>
     </div>
 
-    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <a
-        v-for="item in filteredResources"
-        :key="item.id"
-        :href="item.url"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-5 hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700"
-      >
-        <div>
-          <div class="flex items-center justify-between gap-2">
-            <span
-              class="rounded bg-zinc-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
-            >
-              {{ curriculumStore.getCategoryLabel(item.category) }} · {{ item.type }}
-            </span>
-            <ArrowUpRight
-              class="h-4 w-4 shrink-0 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
-            />
-          </div>
+    <Transition name="tab-switch" mode="out-in">
+      <div :key="selectedCategory" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <a
+          v-for="item in filteredResources"
+          :key="item.id"
+          :href="item.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-5 hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2">
+              <span
+                class="rounded bg-zinc-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
+              >
+                {{ curriculumStore.getCategoryLabel(item.category) }} · {{ item.type }}
+              </span>
+              <ArrowUpRight
+                class="arrow-nudge-ne h-4 w-4 shrink-0 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
+              />
+            </div>
 
-          <h2 class="mt-3 text-base font-semibold text-zinc-950 dark:text-white">
-            {{ item.title }}
-          </h2>
-          <p class="mt-1.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            {{ item.description }}
-          </p>
-        </div>
-      </a>
-    </div>
+            <h2 class="mt-3 text-base font-semibold text-zinc-950 dark:text-white">
+              {{ item.title }}
+            </h2>
+            <p class="mt-1.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              {{ item.description }}
+            </p>
+          </div>
+        </a>
+      </div>
+    </Transition>
   </main>
 </template>

@@ -114,7 +114,7 @@ function handleKeydown(e) {
           <li v-for="(item, index) in results" :key="item.id">
             <button
               type="button"
-              class="flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left"
+              class="btn-press flex w-full items-start gap-3 rounded-lg px-3 py-2.5 text-left"
               :class="
                 index === activeIndex
                   ? 'bg-zinc-100 text-zinc-950 dark:bg-zinc-800 dark:text-white'

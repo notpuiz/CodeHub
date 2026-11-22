@@ -4,12 +4,20 @@ import { Code2, Menu, Moon, PanelLeft, Search, Sun } from 'lucide-vue-next'
 import { useThemeStore } from '@/stores/theme'
 import { useSearchStore } from '@/stores/search'
 import { useLocaleStore } from '@/stores/locale'
+import { useToastStore } from '@/stores/toast'
 
 const emit = defineEmits(['toggle-mobile-sidebar', 'toggle-desktop-sidebar'])
 
 const themeStore = useThemeStore()
 const searchStore = useSearchStore()
 const localeStore = useLocaleStore()
+const toastStore = useToastStore()
+
+function selectLocale(lang) {
+  if (localeStore.locale === lang) return
+  localeStore.setLocale(lang)
+  toastStore.show(localeStore.t('toasts.switchedLang'), 'accent')
+}
 
 const isScrolled = ref(false)
 
@@ -107,7 +115,7 @@ onUnmounted(() => {
                 : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200'
             "
             :aria-pressed="localeStore.locale === 'en'"
-            @click="localeStore.setLocale('en')"
+            @click="selectLocale('en')"
           >
             EN
           </button>
@@ -120,7 +128,7 @@ onUnmounted(() => {
                 : 'text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200'
             "
             :aria-pressed="localeStore.locale === 'km'"
-            @click="localeStore.setLocale('km')"
+            @click="selectLocale('km')"
           >
             ខ្មែរ
           </button>

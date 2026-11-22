@@ -3,9 +3,11 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { Play, RotateCcw, Terminal, Trash2 } from 'lucide-vue-next'
 import { usePlaygroundStore } from '@/stores/playground'
 import { useLocaleStore } from '@/stores/locale'
+import { useToastStore } from '@/stores/toast'
 
 const playgroundStore = usePlaygroundStore()
 const localeStore = useLocaleStore()
+const toastStore = useToastStore()
 
 const activeTab = ref('html')
 const consoleLogs = ref([])
@@ -64,14 +66,30 @@ function handleMessage(event) {
   })
 }
 
-function rerun() {
+function rerun(notify = false) {
   consoleLogs.value = []
   runKey.value += 1
+  if (notify) {
+    toastStore.show(localeStore.t('toasts.playgroundRan'), 'accent')
+  }
 }
 
 function resetCode() {
   playgroundStore.reset()
-  rerun()
+  rerun(false)
+  toastStore.show(localeStore.t('toasts.playgroundReset'), 'default')
+}
+
+function clearConsole() {
+  consoleLogs.value = []
+  toastStore.show(localeStore.t('toasts.consoleCleared'), 'default')
+}
+
+function handleEditorKeydown(e) {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+    e.preventDefault()
+    rerun(true)
+  }
 }
 
 onMounted(() => {
@@ -111,7 +129,7 @@ onUnmounted(() => {
         <button
           type="button"
           class="btn-press inline-flex h-9 items-center gap-1.5 rounded-lg bg-zinc-900 px-3 text-xs font-medium text-white hover:bg-zinc-800 sm:h-8 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200"
-          @click="rerun"
+          @click="rerun(true)"
         >
           <Play class="h-3 w-3 shrink-0 fill-current" />
           <span>{{ localeStore.t('playground.run') }}</span>
@@ -140,33 +158,41 @@ onUnmounted(() => {
           </button>
         </div>
 
-        <textarea
-          v-if="activeTab === 'html'"
-          v-model="playgroundStore.html"
-          spellcheck="false"
-          autocapitalize="none"
-          autocorrect="off"
-          :aria-label="localeStore.t('playground.htmlEditorAria')"
-          class="h-full w-full flex-1 resize-none bg-zinc-950 p-3.5 font-mono text-[13px] leading-relaxed text-zinc-100 outline-none sm:p-4"
-        />
-        <textarea
-          v-else-if="activeTab === 'css'"
-          v-model="playgroundStore.css"
-          spellcheck="false"
-          autocapitalize="none"
-          autocorrect="off"
-          :aria-label="localeStore.t('playground.cssEditorAria')"
-          class="h-full w-full flex-1 resize-none bg-zinc-950 p-3.5 font-mono text-[13px] leading-relaxed text-zinc-100 outline-none sm:p-4"
-        />
-        <textarea
-          v-else
-          v-model="playgroundStore.js"
-          spellcheck="false"
-          autocapitalize="none"
-          autocorrect="off"
-          :aria-label="localeStore.t('playground.jsEditorAria')"
-          class="h-full w-full flex-1 resize-none bg-zinc-950 p-3.5 font-mono text-[13px] leading-relaxed text-zinc-100 outline-none sm:p-4"
-        />
+        <Transition name="tab-switch" mode="out-in">
+          <textarea
+            v-if="activeTab === 'html'"
+            key="html"
+            v-model="playgroundStore.html"
+            spellcheck="false"
+            autocapitalize="none"
+            autocorrect="off"
+            :aria-label="localeStore.t('playground.htmlEditorAria')"
+            class="h-full w-full flex-1 resize-none bg-zinc-950 p-3.5 font-mono text-[13px] leading-relaxed text-zinc-100 outline-none sm:p-4"
+            @keydown="handleEditorKeydown"
+          />
+          <textarea
+            v-else-if="activeTab === 'css'"
+            key="css"
+            v-model="playgroundStore.css"
+            spellcheck="false"
+            autocapitalize="none"
+            autocorrect="off"
+            :aria-label="localeStore.t('playground.cssEditorAria')"
+            class="h-full w-full flex-1 resize-none bg-zinc-950 p-3.5 font-mono text-[13px] leading-relaxed text-zinc-100 outline-none sm:p-4"
+            @keydown="handleEditorKeydown"
+          />
+          <textarea
+            v-else
+            key="js"
+            v-model="playgroundStore.js"
+            spellcheck="false"
+            autocapitalize="none"
+            autocorrect="off"
+            :aria-label="localeStore.t('playground.jsEditorAria')"
+            class="h-full w-full flex-1 resize-none bg-zinc-950 p-3.5 font-mono text-[13px] leading-relaxed text-zinc-100 outline-none sm:p-4"
+            @keydown="handleEditorKeydown"
+          />
+        </Transition>
       </section>
 
       <!-- Preview + Console Pane -->
@@ -204,7 +230,7 @@ onUnmounted(() => {
             <button
               type="button"
               class="btn-press inline-flex items-center gap-1 rounded px-1.5 py-0.5 text-[11px] hover:bg-zinc-800 hover:text-zinc-200"
-              @click="consoleLogs = []"
+              @click="clearConsole"
             >
               <Trash2 class="h-3 w-3 shrink-0" />
               {{ localeStore.t('playground.clear') }}

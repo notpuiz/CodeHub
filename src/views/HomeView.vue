@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { ArrowRight, BookOpen, Code2, Play, Search, Sparkles } from 'lucide-vue-next'
+import { ArrowRight, BookOpen, Code2, Play, Search } from 'lucide-vue-next'
 import { useCurriculumStore } from '@/stores/curriculum'
 import { useSearchStore } from '@/stores/search'
 import { useLocaleStore } from '@/stores/locale'
@@ -64,7 +64,7 @@ function getPreviewLessons(track) {
       <div
         class="mb-5 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300"
       >
-        <Sparkles class="h-3.5 w-3.5 shrink-0 text-blue-600 dark:text-blue-400" />
+        <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
         <span class="tabular-nums">
           {{ localeStore.t('home.heroBadge', { count: curriculumStore.totalLessons }) }}
         </span>
@@ -87,10 +87,10 @@ function getPreviewLessons(track) {
       >
         <router-link
           to="/learn/html/introduction"
-          class="btn-press inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-zinc-900 px-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200"
+          class="btn-press group inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-zinc-900 px-5 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200"
         >
           <span>{{ localeStore.t('home.startHtml') }}</span>
-          <ArrowRight class="h-4 w-4 shrink-0" />
+          <ArrowRight class="arrow-nudge-right h-4 w-4 shrink-0" />
         </router-link>
 
         <router-link
@@ -156,60 +156,62 @@ function getPreviewLessons(track) {
         </div>
       </div>
 
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <router-link
-          v-for="track in visibleTracks"
-          :key="track.id"
-          :to="`/learn/${track.id}/${track.lessons[0].slug}`"
-          class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700"
-        >
-          <div>
-            <div class="flex items-center justify-between gap-3">
-              <span
-                class="inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold"
-                :class="accentClasses[track.accent]"
-              >
-                {{ track.badge }}
-              </span>
-              <span class="tabular-nums text-xs text-zinc-500 dark:text-zinc-400">
-                {{ localeStore.t('home.lessonsCount', { count: track.lessons.length }) }}
-              </span>
+      <Transition name="tab-switch" mode="out-in">
+        <div :key="selectedGroup" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <router-link
+            v-for="track in visibleTracks"
+            :key="track.id"
+            :to="`/learn/${track.id}/${track.lessons[0].slug}`"
+            class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700"
+          >
+            <div>
+              <div class="flex items-center justify-between gap-3">
+                <span
+                  class="inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold"
+                  :class="accentClasses[track.accent]"
+                >
+                  {{ track.badge }}
+                </span>
+                <span class="tabular-nums text-xs text-zinc-500 dark:text-zinc-400">
+                  {{ localeStore.t('home.lessonsCount', { count: track.lessons.length }) }}
+                </span>
+              </div>
+
+              <h3 class="mt-4 text-lg font-semibold text-zinc-950 dark:text-white">
+                {{ track.fullName }}
+              </h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                {{ track.tagline }}
+              </p>
+
+              <ul class="mt-4 space-y-2 border-t border-zinc-100 pt-4 dark:border-zinc-800/80">
+                <li
+                  v-for="lesson in getPreviewLessons(track)"
+                  :key="lesson.slug"
+                  class="flex items-center justify-between gap-2 text-xs text-zinc-600 dark:text-zinc-400"
+                >
+                  <span class="truncate">{{ lesson.title }}</span>
+                  <span
+                    class="shrink-0 rounded px-1.5 py-0.5 text-[10px] font-medium"
+                    :class="levelPillClasses[lesson.level] || levelPillClasses.beginner"
+                  >
+                    {{ localeStore.t(`levels.${lesson.level || 'beginner'}`) }}
+                  </span>
+                </li>
+              </ul>
             </div>
 
-            <h3 class="mt-4 text-lg font-semibold text-zinc-950 dark:text-white">
-              {{ track.fullName }}
-            </h3>
-            <p class="mt-1.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              {{ track.tagline }}
-            </p>
-
-            <ul class="mt-4 space-y-2 border-t border-zinc-100 pt-4 dark:border-zinc-800/80">
-              <li
-                v-for="lesson in getPreviewLessons(track)"
-                :key="lesson.slug"
-                class="flex items-center justify-between gap-2 text-xs text-zinc-600 dark:text-zinc-400"
-              >
-                <span class="truncate">{{ lesson.title }}</span>
-                <span
-                  class="shrink-0 rounded px-1.5 py-0.5 text-[10px] font-medium"
-                  :class="levelPillClasses[lesson.level] || levelPillClasses.beginner"
-                >
-                  {{ localeStore.t(`levels.${lesson.level || 'beginner'}`) }}
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="mt-6 flex items-center justify-between text-sm font-medium text-zinc-900 dark:text-zinc-100"
-          >
-            <span>{{ localeStore.t('home.exploreTrack', { name: track.name }) }}</span>
-            <ArrowRight
-              class="h-4 w-4 shrink-0 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
-            />
-          </div>
-        </router-link>
-      </div>
+            <div
+              class="mt-6 flex items-center justify-between text-sm font-medium text-zinc-900 dark:text-zinc-100"
+            >
+              <span>{{ localeStore.t('home.exploreTrack', { name: track.name }) }}</span>
+              <ArrowRight
+                class="arrow-nudge-right h-4 w-4 shrink-0 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
+              />
+            </div>
+          </router-link>
+        </div>
+      </Transition>
     </section>
 
     <!-- Quick Highlights -->

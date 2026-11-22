@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { Check, Copy, Play } from 'lucide-vue-next'
 import { usePlaygroundStore } from '@/stores/playground'
 import { useLocaleStore } from '@/stores/locale'
+import { useToastStore } from '@/stores/toast'
 
 const props = defineProps({
   example: {
@@ -15,6 +16,7 @@ const props = defineProps({
 const router = useRouter()
 const playgroundStore = usePlaygroundStore()
 const localeStore = useLocaleStore()
+const toastStore = useToastStore()
 const copied = ref(false)
 let copyTimer = null
 
@@ -22,6 +24,7 @@ async function copyCode() {
   try {
     await navigator.clipboard.writeText(props.example.code)
     copied.value = true
+    toastStore.show(localeStore.t('toasts.copiedCode'), 'success')
     clearTimeout(copyTimer)
     copyTimer = setTimeout(() => {
       copied.value = false
