@@ -3,6 +3,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import AppNavbar from '@/components/AppNavbar.vue'
 import AppSidebar from '@/components/AppSidebar.vue'
 import AppToast from '@/components/AppToast.vue'
+import LogoIntro from '@/components/LogoIntro.vue'
 import SearchModal from '@/components/SearchModal.vue'
 import { useThemeStore } from '@/stores/theme'
 import { useSearchStore } from '@/stores/search'
@@ -93,5 +94,6 @@ onUnmounted(() => {
     </div>
     <SearchModal />
     <AppToast />
+    <LogoIntro />
   </div>
 </template>

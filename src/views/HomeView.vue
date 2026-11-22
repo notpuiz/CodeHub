@@ -67,7 +67,7 @@ function getPreviewLessons(track) {
     <!-- Hero -->
     <section class="mx-auto max-w-4xl text-center">
       <div
-        class="mb-5 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300"
+        class="pop-in pop-in-1 mb-5 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300"
       >
         <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
         <span class="tabular-nums">
@@ -76,19 +76,19 @@ function getPreviewLessons(track) {
       </div>
 
       <h1
-        class="text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl lg:text-5xl dark:text-white"
+        class="pop-in pop-in-2 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl lg:text-5xl dark:text-white"
       >
         {{ localeStore.t('home.heroTitle') }}
       </h1>
 
       <p
-        class="mx-auto mt-4 max-w-[65ch] text-base leading-relaxed text-zinc-600 sm:mt-5 sm:text-lg dark:text-zinc-400"
+        class="pop-in pop-in-3 mx-auto mt-4 max-w-[65ch] text-base leading-relaxed text-zinc-600 sm:mt-5 sm:text-lg dark:text-zinc-400"
       >
         {{ localeStore.t('home.heroSubtitle') }}
       </p>
 
       <div
-        class="mt-7 flex flex-col items-stretch justify-center gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
+        class="pop-in pop-in-4 mt-7 flex flex-col items-stretch justify-center gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
       >
         <router-link
           to="/learn/html/introduction"
@@ -119,7 +119,7 @@ function getPreviewLessons(track) {
 
     <!-- Tracks -->
     <section class="mt-14 sm:mt-20">
-      <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+      <div class="pop-in pop-in-5 mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 class="text-xl font-semibold text-zinc-950 dark:text-white">
             {{ localeStore.t('home.tracksHeading') }}
@@ -164,10 +164,11 @@ function getPreviewLessons(track) {
       <Transition name="tab-switch" mode="out-in">
         <div :key="selectedGroup" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <router-link
-            v-for="track in visibleTracks"
+            v-for="(track, idx) in visibleTracks"
             :key="track.id"
             :to="`/learn/${track.id}/${track.lessons[0].slug}`"
-            class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200/90 bg-white/85 p-6 backdrop-blur-xs hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/65 dark:hover:border-zinc-700"
+            class="pop-in card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200/90 bg-white/85 p-6 backdrop-blur-xs hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/65 dark:hover:border-zinc-700"
+            :style="{ animationDelay: `${160 + Math.min(idx, 8) * 32}ms` }"
           >
             <div>
               <div class="flex items-center justify-between gap-3">
@@ -220,7 +221,7 @@ function getPreviewLessons(track) {
     </section>
 
     <!-- Quick Highlights -->
-    <section class="mt-16 grid gap-5 md:grid-cols-2">
+    <section class="pop-in pop-in-6 mt-16 grid gap-5 md:grid-cols-2">
       <router-link
         to="/playground"
         class="card-interactive btn-press flex items-start gap-4 rounded-xl border border-zinc-200 bg-zinc-50/70 p-6 hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900/40 dark:hover:border-zinc-700"

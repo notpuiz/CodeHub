@@ -242,6 +242,103 @@ html[lang='km'] {
   transform: translateY(-4px);
 }
 
+/* Quick content pop-in entrance on page open (scale(0.96) -> 1, releases transform after finish) */
+.pop-in {
+  animation: popIn 280ms var(--ease-out) backwards;
+}
+
+.pop-in-1 {
+  animation-delay: 0ms;
+}
+
+.pop-in-2 {
+  animation-delay: 45ms;
+}
+
+.pop-in-3 {
+  animation-delay: 85ms;
+}
+
+.pop-in-4 {
+  animation-delay: 120ms;
+}
+
+.pop-in-5 {
+  animation-delay: 155ms;
+}
+
+.pop-in-6 {
+  animation-delay: 240ms;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Quick monochrome logo intro pop-up on initial load */
+.logo-intro-leave-active {
+  pointer-events: none;
+  transition:
+    opacity 260ms var(--ease-out),
+    transform 260ms var(--ease-out);
+}
+
+.logo-intro-leave-to {
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+.logo-intro-mark {
+  animation: logoPopIn 300ms var(--ease-out) backwards;
+}
+
+.logo-intro-wordmark {
+  animation: logoWordmarkIn 260ms var(--ease-out) 80ms backwards;
+}
+
+.logo-intro-cursor {
+  animation: logoCursorBlink 520ms ease-in-out 180ms 1;
+}
+
+@keyframes logoPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes logoWordmarkIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoCursorBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
 /* HomeView layered visual background (eased multi-stop gradients + GPU-only drift) */
 .home-grid-bg {
   background-image:
@@ -593,6 +690,12 @@ html[lang='km'] {
   .tab-switch-enter-active,
   .tab-switch-leave-active {
     transition: opacity 140ms ease;
+  }
+
+  .pop-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   .home-orb-a,
