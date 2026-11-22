@@ -199,7 +199,9 @@ const levelBadgeClasses = {
           v-if="lesson.objectives?.length"
           class="mt-6 max-w-[65ch] rounded-xl border border-zinc-200/90 bg-zinc-50/70 p-4 sm:p-5 dark:border-zinc-800 dark:bg-zinc-900/50"
         >
-          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+          <p
+            class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400"
+          >
             {{ localeStore.t('learn.objectivesTitle') }}
           </p>
           <ul class="mt-3 space-y-2">
@@ -310,7 +312,9 @@ const levelBadgeClasses = {
             >
               <AlertTriangle class="mt-0.5 h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" />
               <div>
-                <p class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300">
+                <p
+                  class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300"
+                >
                   {{ localeStore.t('learn.commonMistake') }}
                 </p>
                 <p class="mt-1 leading-relaxed">{{ section.warning }}</p>
@@ -334,11 +338,7 @@ const levelBadgeClasses = {
           />
 
           <!-- Knowledge Check Quiz -->
-          <LessonQuiz
-            v-if="lesson.quiz?.length"
-            :questions="lesson.quiz"
-            :lesson-key="lessonKey"
-          />
+          <LessonQuiz v-if="lesson.quiz?.length" :questions="lesson.quiz" :lesson-key="lessonKey" />
         </div>
 
         <!-- Mark Complete Action -->
@@ -414,7 +414,9 @@ const levelBadgeClasses = {
       <!-- Right Table of Contents -->
       <aside v-if="lesson" class="hidden xl:block">
         <div class="sticky top-20">
-          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+          <p
+            class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400"
+          >
             {{ localeStore.t('learn.onThisPage') }}
           </p>
           <ul class="mt-3 space-y-2 border-l border-zinc-200 pl-3 dark:border-zinc-800">

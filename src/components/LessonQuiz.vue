@@ -29,10 +29,7 @@ watch(
 
 const answeredCount = computed(() => Object.keys(selected.value).length)
 const correctCount = computed(() =>
-  props.questions.reduce(
-    (sum, q, idx) => (selected.value[idx] === q.answer ? sum + 1 : sum),
-    0,
-  ),
+  props.questions.reduce((sum, q, idx) => (selected.value[idx] === q.answer ? sum + 1 : sum), 0),
 )
 
 function choose(qIdx, optIdx) {
@@ -40,7 +37,10 @@ function choose(qIdx, optIdx) {
   selected.value = { ...selected.value, [qIdx]: optIdx }
 
   const isCorrect = props.questions[qIdx].answer === optIdx
-  if (answeredCount.value === props.questions.length && correctCount.value === props.questions.length) {
+  if (
+    answeredCount.value === props.questions.length &&
+    correctCount.value === props.questions.length
+  ) {
     toastStore.show(localeStore.t('learn.quizPerfect'), 'success')
   } else if (isCorrect) {
     toastStore.show(localeStore.t('learn.quizCorrect'), 'success', 1500)

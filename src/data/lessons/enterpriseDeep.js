@@ -121,7 +121,8 @@ public class InvoiceFormatter {
             'The == operator checks reference identity on objects. Java caches Integer instances only for -128..127 by default, so two 200 wrappers are distinct heap objects; always use .equals() or Objects.equals().',
         },
         {
-          question: 'Which type should you use to store product prices and calculate invoice totals in Java?',
+          question:
+            'Which type should you use to store product prices and calculate invoice totals in Java?',
           options: [
             'float because it uses less memory',
             'double because it has 64-bit precision',
@@ -193,7 +194,8 @@ public class InvoiceFormatter {
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា Integer.valueOf(200) == Integer.valueOf(200) ត្រឡប់ false ក្នុង Java?',
+          question:
+            'ហេតុអ្វីបានជា Integer.valueOf(200) == Integer.valueOf(200) ត្រឡប់ false ក្នុង Java?',
           options: [
             'មិនអាចប្រៀបធៀប Integer objects ក្នុង Java បានទេ',
             '== ប្រៀបធៀបអាសយដ្ឋានអង្គចងចាំ ហើយ 200 ស្ថិតនៅក្រៅដែន cache -128..127 របស់ Integer',
@@ -246,10 +248,26 @@ public class InvoiceFormatter {
           table: {
             headers: ['Loop Construct', 'Best Used For', 'Common Pitfall'],
             rows: [
-              ['for (T item : list)', 'Reading every element in a collection/array', 'Mutating list structure throws ConcurrentModificationException'],
-              ['for (int i = 0; i < n; i++)', 'Index-sensitive logic or parallel arrays', 'Off-by-one errors (<= instead of <)'],
-              ['while (condition)', 'Reading streams/queues until a sentinel state', 'Forgetting to advance state causes infinite loop'],
-              ['do { ... } while (cond)', 'Prompting or retrying at least once', 'Runs once even if initial condition is false'],
+              [
+                'for (T item : list)',
+                'Reading every element in a collection/array',
+                'Mutating list structure throws ConcurrentModificationException',
+              ],
+              [
+                'for (int i = 0; i < n; i++)',
+                'Index-sensitive logic or parallel arrays',
+                'Off-by-one errors (<= instead of <)',
+              ],
+              [
+                'while (condition)',
+                'Reading streams/queues until a sentinel state',
+                'Forgetting to advance state causes infinite loop',
+              ],
+              [
+                'do { ... } while (cond)',
+                'Prompting or retrying at least once',
+                'Runs once even if initial condition is false',
+              ],
             ],
           },
           example: {
@@ -332,7 +350,8 @@ public class OrderCalculator {
       },
       quiz: [
         {
-          question: 'What happens if you call list.remove(item) directly inside an enhanced for (String item : list) loop?',
+          question:
+            'What happens if you call list.remove(item) directly inside an enhanced for (String item : list) loop?',
           options: [
             'The item is silently skipped without error',
             'The compiler refuses to compile the loop',
@@ -382,10 +401,26 @@ public class OrderCalculator {
           table: {
             headers: ['ប្រភេទរង្វិលជុំ', 'ស័ក្តិសមបំផុតសម្រាប់', 'កំហុសដែលកើតញឹកញាប់'],
             rows: [
-              ['for (T item : list)', 'អានធាតុទាំងអស់ក្នុង collection ឬ array', 'កែប្រែរចនាសម្ព័ន្ធ list បង្ក ConcurrentModificationException'],
-              ['for (int i = 0; i < n; i++)', 'តក្កវិជ្ជាដែលត្រូវការ index ឬ array ពីរស្របគ្នា', 'កំហុសលើសមួយជំហាន (<= ជំនួស <)'],
-              ['while (condition)', 'អាន stream ឬ queue រហូតដល់ស្ថានភាពបញ្ឈប់', 'ភ្លេចកែប្រែលក្ខខណ្ឌបង្ករង្វិលជុំគ្មានទីបញ្ចប់'],
-              ['do { ... } while (cond)', 'សួរអ្នកប្រើ ឬសាកល្បងឡើងវិញយ៉ាងតិចម្ដង', 'ដំណើរការម្ដងទោះលក្ខខណ្ឌដំបូងជា false'],
+              [
+                'for (T item : list)',
+                'អានធាតុទាំងអស់ក្នុង collection ឬ array',
+                'កែប្រែរចនាសម្ព័ន្ធ list បង្ក ConcurrentModificationException',
+              ],
+              [
+                'for (int i = 0; i < n; i++)',
+                'តក្កវិជ្ជាដែលត្រូវការ index ឬ array ពីរស្របគ្នា',
+                'កំហុសលើសមួយជំហាន (<= ជំនួស <)',
+              ],
+              [
+                'while (condition)',
+                'អាន stream ឬ queue រហូតដល់ស្ថានភាពបញ្ឈប់',
+                'ភ្លេចកែប្រែលក្ខខណ្ឌបង្ករង្វិលជុំគ្មានទីបញ្ចប់',
+              ],
+              [
+                'do { ... } while (cond)',
+                'សួរអ្នកប្រើ ឬសាកល្បងឡើងវិញយ៉ាងតិចម្ដង',
+                'ដំណើរការម្ដងទោះលក្ខខណ្ឌដំបូងជា false',
+              ],
             ],
           },
           exampleTitle: 'Guard Clauses និងការបូកសរុបទិន្នន័យដែលបានត្រង',
@@ -415,7 +450,8 @@ public class OrderCalculator {
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងប្រសិនបើអ្នកហៅ list.remove(item) ដោយផ្ទាល់នៅក្នុង for (String item : list)?',
+          question:
+            'តើមានអ្វីកើតឡើងប្រសិនបើអ្នកហៅ list.remove(item) ដោយផ្ទាល់នៅក្នុង for (String item : list)?',
           options: [
             'ធាតុនោះត្រូវបានរំលងដោយគ្មានកំហុស',
             'Compiler មិនអនុញ្ញាតឱ្យ compile កូដទេ',
@@ -468,11 +504,19 @@ public class OrderCalculator {
           table: {
             headers: ['Modifier / Keyword', 'Visibility / Role', 'Best Practice'],
             rows: [
-              ['private', 'Inside declaring class only', 'Default for all fields and internal helpers'],
+              [
+                'private',
+                'Inside declaring class only',
+                'Default for all fields and internal helpers',
+              ],
               ['(package-private)', 'Same package only', 'Great for module-internal collaborators'],
               ['protected', 'Same package + subclasses', 'Use sparingly; forms part of public API'],
               ['public', 'Accessible everywhere', 'Expose narrow, stable interfaces and records'],
-              ['sealed ... permits', 'Restricts allowed subtypes', 'Pair with records for exhaustive switch matching'],
+              [
+                'sealed ... permits',
+                'Restricts allowed subtypes',
+                'Pair with records for exhaustive switch matching',
+              ],
             ],
           },
           example: {
@@ -547,7 +591,8 @@ public record Money(BigDecimal amount, String currency) {
       },
       quiz: [
         {
-          question: 'What goes wrong if a regular class overrides equals() but forgets to override hashCode()?',
+          question:
+            'What goes wrong if a regular class overrides equals() but forgets to override hashCode()?',
           options: [
             'The Java compiler refuses to compile the class',
             'Two equal instances can produce different hash codes and fail lookups in HashMap/HashSet',
@@ -559,7 +604,8 @@ public record Money(BigDecimal amount, String currency) {
             'Hash-based collections check hashCode() first to pick a bucket. Without a matching hashCode() override, equal objects inherit Object.hashCode() (memory-based) and will not match inside HashMap or HashSet.',
         },
         {
-          question: 'Why are sealed interfaces especially effective when combined with Java 21 switch pattern matching?',
+          question:
+            'Why are sealed interfaces especially effective when combined with Java 21 switch pattern matching?',
           options: [
             'They make all fields public automatically',
             'They disable garbage collection for permitted subclasses',
@@ -597,11 +643,27 @@ public record Money(BigDecimal amount, String currency) {
           table: {
             headers: ['Modifier / ពាក្យគន្លឹះ', 'ដែនចូលប្រើ / តួនាទី', 'ការអនុវត្តល្អបំផុត'],
             rows: [
-              ['private', 'តែក្នុង class ផ្ទាល់ប៉ុណ្ណោះ', 'លំនាំដើមសម្រាប់ field និងអនុគមន៍ជំនួយខាងក្នុង'],
-              ['(package-private)', 'តែក្នុង package ដូចគ្នា', 'ល្អសម្រាប់ class សហការផ្ទៃក្នុង module'],
-              ['protected', 'package ដូចគ្នា + subclasses', 'ប្រើដោយប្រយ័ត្ន ព្រោះវាក្លាយជាផ្នែកនៃ API'],
+              [
+                'private',
+                'តែក្នុង class ផ្ទាល់ប៉ុណ្ណោះ',
+                'លំនាំដើមសម្រាប់ field និងអនុគមន៍ជំនួយខាងក្នុង',
+              ],
+              [
+                '(package-private)',
+                'តែក្នុង package ដូចគ្នា',
+                'ល្អសម្រាប់ class សហការផ្ទៃក្នុង module',
+              ],
+              [
+                'protected',
+                'package ដូចគ្នា + subclasses',
+                'ប្រើដោយប្រយ័ត្ន ព្រោះវាក្លាយជាផ្នែកនៃ API',
+              ],
               ['public', 'ចូលប្រើបានពីគ្រប់ទីកន្លែង', 'បើកតែ interface និង record ដែលមានស្ថិរភាព'],
-              ['sealed ... permits', 'កំណត់ប្រភេទកូនដែលអនុញ្ញាត', 'ផ្គូផ្គងជាមួយ record សម្រាប់ switch គ្រប់ជ្រុងជ្រោយ'],
+              [
+                'sealed ... permits',
+                'កំណត់ប្រភេទកូនដែលអនុញ្ញាត',
+                'ផ្គូផ្គងជាមួយ record សម្រាប់ switch គ្រប់ជ្រុងជ្រោយ',
+              ],
             ],
           },
           exampleTitle: 'Sealed Interface ជាមួយ Records និង Pattern Matching',
@@ -631,7 +693,8 @@ public record Money(BigDecimal amount, String currency) {
       },
       quiz: [
         {
-          question: 'តើមានបញ្ហាអ្វីកើតឡើងបើ class ធម្មតា override equals() ប៉ុន្តែភ្លេច override hashCode()?',
+          question:
+            'តើមានបញ្ហាអ្វីកើតឡើងបើ class ធម្មតា override equals() ប៉ុន្តែភ្លេច override hashCode()?',
           options: [
             'Java compiler បដិសេធមិន compile class នោះទេ',
             'Instance ពីរដែលមានតម្លៃស្មើគ្នាអាចមាន hashCode ខុសគ្នា ធ្វើឱ្យរកមិនឃើញក្នុង HashMap/HashSet',
@@ -643,7 +706,8 @@ public record Money(BigDecimal amount, String currency) {
             'HashMap និង HashSet ពិនិត្យ hashCode() ជាមុនដើម្បីរកទីតាំង bucket។ បើមិន override hashCode() ទេ object ស្មើគ្នានឹងមាន hash ផ្សេងគ្នា ហើយស្វែងរកមិនឃើញឡើយ។',
         },
         {
-          question: 'ហេតុអ្វី sealed interfaces មានប្រសិទ្ធភាពខ្លាំងពេលប្រើជាមួយ switch pattern matching ក្នុង Java 21?',
+          question:
+            'ហេតុអ្វី sealed interfaces មានប្រសិទ្ធភាពខ្លាំងពេលប្រើជាមួយ switch pattern matching ក្នុង Java 21?',
           options: [
             'វាធ្វើឱ្យ field ទាំងអស់ក្លាយជា public ដោយស្វ័យប្រវត្តិ',
             'វាបិទ garbage collection សម្រាប់ subclass',
@@ -684,11 +748,36 @@ public record Money(BigDecimal amount, String currency) {
           table: {
             headers: ['Collection', 'Ordering', 'Typical Lookup', 'Best Use Case'],
             rows: [
-              ['ArrayList', 'Insertion / Index', 'O(1) by index, O(n) search', 'General-purpose ordered lists'],
-              ['HashSet', 'Unordered', 'O(1) average contains()', 'Deduplication & fast membership checks'],
-              ['HashMap', 'Unordered', 'O(1) average get/put', 'Indexing entities by unique key/ID'],
-              ['LinkedHashMap', 'Insertion or Access', 'O(1) average get/put', 'Ordered maps & simple LRU caches'],
-              ['ArrayDeque', 'FIFO / LIFO', 'O(1) head/tail ops', 'Queues, BFS traversal, undo stacks'],
+              [
+                'ArrayList',
+                'Insertion / Index',
+                'O(1) by index, O(n) search',
+                'General-purpose ordered lists',
+              ],
+              [
+                'HashSet',
+                'Unordered',
+                'O(1) average contains()',
+                'Deduplication & fast membership checks',
+              ],
+              [
+                'HashMap',
+                'Unordered',
+                'O(1) average get/put',
+                'Indexing entities by unique key/ID',
+              ],
+              [
+                'LinkedHashMap',
+                'Insertion or Access',
+                'O(1) average get/put',
+                'Ordered maps & simple LRU caches',
+              ],
+              [
+                'ArrayDeque',
+                'FIFO / LIFO',
+                'O(1) head/tail ops',
+                'Queues, BFS traversal, undo stacks',
+              ],
             ],
           },
           warning:
@@ -780,7 +869,8 @@ public class RevenueReport {
       },
       quiz: [
         {
-          question: 'What happens if you call .add("X") on a list created by List.of("A", "B") or stream.toList()?',
+          question:
+            'What happens if you call .add("X") on a list created by List.of("A", "B") or stream.toList()?',
           options: [
             'The list automatically resizes and appends "X"',
             'Java throws UnsupportedOperationException at runtime',
@@ -830,10 +920,30 @@ public class RevenueReport {
           table: {
             headers: ['Collection', 'លំដាប់', 'ល្បឿនស្វែងរកទូទៅ', 'ការប្រើប្រាស់ស័ក្តិសមបំផុត'],
             rows: [
-              ['ArrayList', 'តាមលំដាប់បញ្ចូល / Index', 'O(1) តាម index, O(n) ស្វែងរក', 'បញ្ជីទិន្នន័យទូទៅមានលំដាប់'],
-              ['HashSet', 'គ្មានលំដាប់', 'O(1) ជាមធ្យម contains()', 'លុបទិន្នន័យស្ទួន និងពិនិត្យវត្តមានលឿន'],
-              ['HashMap', 'គ្មានលំដាប់', 'O(1) ជាមធ្យម get/put', 'ស្វែងរកទិន្នន័យតាម ID ឬ key តែមួយគត់'],
-              ['LinkedHashMap', 'តាមលំដាប់បញ្ចូល ឬប្រើ', 'O(1) ជាមធ្យម get/put', 'Map រក្សាលំដាប់ និង LRU cache សាមញ្ញ'],
+              [
+                'ArrayList',
+                'តាមលំដាប់បញ្ចូល / Index',
+                'O(1) តាម index, O(n) ស្វែងរក',
+                'បញ្ជីទិន្នន័យទូទៅមានលំដាប់',
+              ],
+              [
+                'HashSet',
+                'គ្មានលំដាប់',
+                'O(1) ជាមធ្យម contains()',
+                'លុបទិន្នន័យស្ទួន និងពិនិត្យវត្តមានលឿន',
+              ],
+              [
+                'HashMap',
+                'គ្មានលំដាប់',
+                'O(1) ជាមធ្យម get/put',
+                'ស្វែងរកទិន្នន័យតាម ID ឬ key តែមួយគត់',
+              ],
+              [
+                'LinkedHashMap',
+                'តាមលំដាប់បញ្ចូល ឬប្រើ',
+                'O(1) ជាមធ្យម get/put',
+                'Map រក្សាលំដាប់ និង LRU cache សាមញ្ញ',
+              ],
               ['ArrayDeque', 'FIFO / LIFO', 'O(1) ក្បាល/កន្ទុយ', 'Queues, BFS និង undo stacks'],
             ],
           },
@@ -864,7 +974,8 @@ public class RevenueReport {
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងប្រសិនបើអ្នកហៅ .add("X") លើ list ដែលបង្កើតដោយ List.of("A", "B") ឬ stream.toList()?',
+          question:
+            'តើមានអ្វីកើតឡើងប្រសិនបើអ្នកហៅ .add("X") លើ list ដែលបង្កើតដោយ List.of("A", "B") ឬ stream.toList()?',
           options: [
             'List ពង្រីកទំហំដោយស្វ័យប្រវត្តិហើយបន្ថែម "X"',
             'Java បោះកំហុស UnsupportedOperationException ពេលដំណើរការ',
@@ -917,8 +1028,18 @@ public class RevenueReport {
           table: {
             headers: ['Category', 'Base Class', 'Compiler Check', 'How to Handle'],
             rows: [
-              ['Checked Exception', 'Exception (non-Runtime)', 'Required (catch or throws)', 'Recoverable external failures (I/O, parsing)'],
-              ['Unchecked Exception', 'RuntimeException', 'Optional', 'Validation errors, domain rules, bugs'],
+              [
+                'Checked Exception',
+                'Exception (non-Runtime)',
+                'Required (catch or throws)',
+                'Recoverable external failures (I/O, parsing)',
+              ],
+              [
+                'Unchecked Exception',
+                'RuntimeException',
+                'Optional',
+                'Validation errors, domain rules, bugs',
+              ],
               ['Error', 'Error', 'Optional', 'JVM-level crashes (OOM)—do not catch'],
             ],
           },
@@ -1006,7 +1127,8 @@ public class GenericMax {
       },
       quiz: [
         {
-          question: 'According to the PECS rule, which parameter type should a method accept if it only READS Numbers from a List?',
+          question:
+            'According to the PECS rule, which parameter type should a method accept if it only READS Numbers from a List?',
           options: [
             'List<Number>',
             'List<? extends Number>',
@@ -1018,7 +1140,8 @@ public class GenericMax {
             'PECS stands for Producer Extends, Consumer Super. A list you read Numbers from is a producer, so List<? extends Number> safely accepts List<Integer>, List<Double>, or List<Number>.',
         },
         {
-          question: 'What is the key performance difference between optional.orElse(fetch()) and optional.orElseGet(() -> fetch())?',
+          question:
+            'What is the key performance difference between optional.orElse(fetch()) and optional.orElseGet(() -> fetch())?',
           options: [
             'orElseGet() throws an exception if the Optional is present',
             'orElse() always invokes fetch() even when the Optional already contains a value, whereas orElseGet() is lazy',
@@ -1056,8 +1179,18 @@ public class GenericMax {
           table: {
             headers: ['ប្រភេទ', 'Class មេ', 'ការត្រួតពិនិត្យ Compiler', 'របៀបដោះស្រាយ'],
             rows: [
-              ['Checked Exception', 'Exception (មិនមែន Runtime)', 'បង្ខំ (catch ឬ throws)', 'កំហុសខាងក្រៅដែលអាចស្ដារបាន (I/O, parsing)'],
-              ['Unchecked Exception', 'RuntimeException', 'មិនបង្ខំ', 'កំហុសផ្ទៀងផ្ទាត់ទិន្នន័យ ច្បាប់អាជីវកម្ម កំហុសកូដ'],
+              [
+                'Checked Exception',
+                'Exception (មិនមែន Runtime)',
+                'បង្ខំ (catch ឬ throws)',
+                'កំហុសខាងក្រៅដែលអាចស្ដារបាន (I/O, parsing)',
+              ],
+              [
+                'Unchecked Exception',
+                'RuntimeException',
+                'មិនបង្ខំ',
+                'កំហុសផ្ទៀងផ្ទាត់ទិន្នន័យ ច្បាប់អាជីវកម្ម កំហុសកូដ',
+              ],
               ['Error', 'Error', 'មិនបង្ខំ', 'បញ្ហាធ្ងន់ធ្ងររបស់ JVM (OOM) — មិនត្រូវ catch'],
             ],
           },
@@ -1088,7 +1221,8 @@ public class GenericMax {
       },
       quiz: [
         {
-          question: 'តាមច្បាប់ PECS តើអនុគមន៍ដែលគ្រាន់តែអានលេខ Number ចេញពី List គួរទទួលប៉ារ៉ាម៉ែត្រប្រភេទណា?',
+          question:
+            'តាមច្បាប់ PECS តើអនុគមន៍ដែលគ្រាន់តែអានលេខ Number ចេញពី List គួរទទួលប៉ារ៉ាម៉ែត្រប្រភេទណា?',
           options: [
             'List<Number>',
             'List<? extends Number>',
@@ -1100,7 +1234,8 @@ public class GenericMax {
             'PECS មានន័យថា Producer Extends, Consumer Super។ List ដែលយើងអានទិន្នន័យចេញគឺជា producer ដូច្នេះ List<? extends Number> អាចទទួល List<Integer>, List<Double> និង List<Number> ដោយសុវត្ថិភាព។',
         },
         {
-          question: 'តើភាពខុសគ្នាសំខាន់ខាងល្បឿនរវាង optional.orElse(fetch()) និង optional.orElseGet(() -> fetch()) គឺជាអ្វី?',
+          question:
+            'តើភាពខុសគ្នាសំខាន់ខាងល្បឿនរវាង optional.orElse(fetch()) និង optional.orElseGet(() -> fetch()) គឺជាអ្វី?',
           options: [
             'orElseGet() បោះកំហុសពេល Optional មានតម្លៃ',
             'orElse() ហៅ fetch() ជានិច្ចទោះ Optional មានតម្លៃរួចហើយ ចំណែក orElseGet() ដំណើរការតែពេលទទេប៉ុណ្ណោះ',
@@ -1141,11 +1276,31 @@ public class GenericMax {
           table: {
             headers: ['Concurrency Tool', 'Mechanism', 'Best Fit'],
             rows: [
-              ['Virtual Threads', 'JVM-scheduled lightweight threads', 'High-concurrency blocking I/O (HTTP, SQL)'],
-              ['ConcurrentHashMap', 'Fine-grained lock striping / CAS', 'Thread-safe caches & shared registries'],
-              ['AtomicLong / LongAdder', 'Lock-free CPU compare-and-swap', 'Metrics, request counters, sequence IDs'],
-              ['ReentrantLock', 'Explicit lock (virtual-thread friendly)', 'Critical sections needing fairness or timeouts'],
-              ['CompletableFuture', 'Composable async pipelines', 'Fan-out/fan-in calls with timeouts & fallbacks'],
+              [
+                'Virtual Threads',
+                'JVM-scheduled lightweight threads',
+                'High-concurrency blocking I/O (HTTP, SQL)',
+              ],
+              [
+                'ConcurrentHashMap',
+                'Fine-grained lock striping / CAS',
+                'Thread-safe caches & shared registries',
+              ],
+              [
+                'AtomicLong / LongAdder',
+                'Lock-free CPU compare-and-swap',
+                'Metrics, request counters, sequence IDs',
+              ],
+              [
+                'ReentrantLock',
+                'Explicit lock (virtual-thread friendly)',
+                'Critical sections needing fairness or timeouts',
+              ],
+              [
+                'CompletableFuture',
+                'Composable async pipelines',
+                'Fan-out/fan-in calls with timeouts & fallbacks',
+              ],
             ],
           },
           warning:
@@ -1229,7 +1384,8 @@ public class RateCounter {
       },
       quiz: [
         {
-          question: 'Why should you prefer ReentrantLock over synchronized around blocking I/O when using Java 21 Virtual Threads?',
+          question:
+            'Why should you prefer ReentrantLock over synchronized around blocking I/O when using Java 21 Virtual Threads?',
           options: [
             'synchronized does not compile in Java 21',
             'Blocking inside synchronized on Java 21 pins the virtual thread to its carrier OS thread, hurting scalability',
@@ -1241,7 +1397,8 @@ public class RateCounter {
             'On Java 21, holding a synchronized monitor during blocking I/O prevents the JVM from unmounting the virtual thread from its carrier platform thread (pinning). ReentrantLock avoids pinning.',
         },
         {
-          question: 'What is the main advantage of constructor injection over field injection in Java services?',
+          question:
+            'What is the main advantage of constructor injection over field injection in Java services?',
           options: [
             'It eliminates the need for interfaces',
             'Dependencies can be private final, required at creation time, and trivially faked in plain unit tests',
@@ -1279,11 +1436,31 @@ public class RateCounter {
           table: {
             headers: ['ឧបករណ៍ Concurrency', 'យន្តការ', 'ស័ក្តិសមបំផុតសម្រាប់'],
             rows: [
-              ['Virtual Threads', 'Thread ស្រាលគ្រប់គ្រងដោយ JVM', 'ការងារ blocking I/O ច្រើនស្របគ្នា (HTTP, SQL)'],
-              ['ConcurrentHashMap', 'Lock កម្រិតតូច / CAS', 'Cache និងតារាងទិន្នន័យរួមមានសុវត្ថិភាព'],
-              ['AtomicLong / LongAdder', 'CPU compare-and-swap គ្មាន lock', 'Metrics អថេររាប់សំណើ និងលេខរៀង ID'],
-              ['ReentrantLock', 'Lock ច្បាស់លាស់ (ស័ក្តិសមនឹង Virtual Threads)', 'តំបន់កូដត្រូវការ timeout ឬការចូលតាមលំដាប់'],
-              ['CompletableFuture', 'ខ្សែសង្វាក់ async អាចភ្ជាប់គ្នាបាន', 'ហៅសេវាច្រើនព្រមគ្នា មាន timeout និង fallback'],
+              [
+                'Virtual Threads',
+                'Thread ស្រាលគ្រប់គ្រងដោយ JVM',
+                'ការងារ blocking I/O ច្រើនស្របគ្នា (HTTP, SQL)',
+              ],
+              [
+                'ConcurrentHashMap',
+                'Lock កម្រិតតូច / CAS',
+                'Cache និងតារាងទិន្នន័យរួមមានសុវត្ថិភាព',
+              ],
+              [
+                'AtomicLong / LongAdder',
+                'CPU compare-and-swap គ្មាន lock',
+                'Metrics អថេររាប់សំណើ និងលេខរៀង ID',
+              ],
+              [
+                'ReentrantLock',
+                'Lock ច្បាស់លាស់ (ស័ក្តិសមនឹង Virtual Threads)',
+                'តំបន់កូដត្រូវការ timeout ឬការចូលតាមលំដាប់',
+              ],
+              [
+                'CompletableFuture',
+                'ខ្សែសង្វាក់ async អាចភ្ជាប់គ្នាបាន',
+                'ហៅសេវាច្រើនព្រមគ្នា មាន timeout និង fallback',
+              ],
             ],
           },
           warning:
@@ -1313,7 +1490,8 @@ public class RateCounter {
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីគួរប្រើ ReentrantLock ជំនួស synchronized ជុំវិញ blocking I/O ពេលប្រើ Java 21 Virtual Threads?',
+          question:
+            'ហេតុអ្វីគួរប្រើ ReentrantLock ជំនួស synchronized ជុំវិញ blocking I/O ពេលប្រើ Java 21 Virtual Threads?',
           options: [
             'synchronized មិនអាច compile ក្នុង Java 21 បានទេ',
             'Blocking I/O ក្នុង synchronized លើ Java 21 ធ្វើឱ្យ virtual thread ជាប់នឹង carrier OS thread (pinning) កាត់បន្ថយលទ្ធភាពពង្រីក',
@@ -1325,7 +1503,8 @@ public class RateCounter {
             'លើ Java 21 ការកាន់ monitor របស់ synchronized ពេល blocking I/O រារាំង JVM មិនឱ្យដក virtual thread ចេញពី carrier OS thread ទេ។ ReentrantLock ជៀសវាងបញ្ហានេះ។',
         },
         {
-          question: 'តើអ្វីជាអត្ថប្រយោជន៍សំខាន់នៃ constructor injection ធៀបនឹង field injection ក្នុង Java services?',
+          question:
+            'តើអ្វីជាអត្ថប្រយោជន៍សំខាន់នៃ constructor injection ធៀបនឹង field injection ក្នុង Java services?',
           options: [
             'វាលុបបំបាត់តម្រូវការប្រើ interface',
             'អាចកំណត់ភាពពឹងផ្អែកជា private final បង្ខំឱ្យបញ្ជូនពេលបង្កើត និងងាយដាក់ fake ក្នុង unit tests',
@@ -1371,7 +1550,12 @@ public class RateCounter {
             rows: [
               ['int', 'Value (32-bit)', '-2.1B to +2.1B', 'Counters, loop indices, counts'],
               ['long', 'Value (64-bit)', '±9.2 quintillion', 'Database IDs, byte sizes, ticks'],
-              ['decimal', 'Value (128-bit)', '28–29 decimal digits', 'Money, prices, accounting (suffix m)'],
+              [
+                'decimal',
+                'Value (128-bit)',
+                '28–29 decimal digits',
+                'Money, prices, accounting (suffix m)',
+              ],
               ['double', 'Value (64-bit)', '~15–17 binary digits', 'Scientific math, coordinates'],
               ['string', 'Reference (immutable)', 'UTF-16 text', 'Names, messages, JSON payloads'],
             ],
@@ -1450,7 +1634,8 @@ Console.WriteLine(ParsePriceOrDefault("abc", 9.99m));`,
             'Binary floating-point types (float/double) cannot represent exact base-10 decimals like 0.1. C# decimal stores base-10 digits precisely, making it essential for financial calculations.',
         },
         {
-          question: 'What does string name = input?.Trim() ?? "Anonymous"; evaluate to when input is null?',
+          question:
+            'What does string name = input?.Trim() ?? "Anonymous"; evaluate to when input is null?',
           options: [
             'Throws a NullReferenceException',
             'Evaluates to null',
@@ -1490,7 +1675,12 @@ Console.WriteLine(ParsePriceOrDefault("abc", 9.99m));`,
             rows: [
               ['int', 'Value (32-bit)', '-2.1B ដល់ +2.1B', 'អថេររាប់ លេខរៀង ចំនួនគត់'],
               ['long', 'Value (64-bit)', '±9.2 quintillion', 'ID មូលដ្ឋានទិន្នន័យ ទំហំបៃ ticks'],
-              ['decimal', 'Value (128-bit)', '28–29 ខ្ទង់គោលដប់', 'ប្រាក់ តម្លៃទំនិញ គណនេយ្យ (ដាក់ m)'],
+              [
+                'decimal',
+                'Value (128-bit)',
+                '28–29 ខ្ទង់គោលដប់',
+                'ប្រាក់ តម្លៃទំនិញ គណនេយ្យ (ដាក់ m)',
+              ],
               ['double', 'Value (64-bit)', '~15–17 ខ្ទង់គោលពីរ', 'គណនាវិទ្យាសាស្ត្រ កូអរដោនេ'],
               ['string', 'Reference (immutable)', 'អត្ថបទ UTF-16', 'ឈ្មោះ សារ ទិន្នន័យ JSON'],
             ],
@@ -1534,7 +1724,8 @@ Console.WriteLine(ParsePriceOrDefault("abc", 9.99m));`,
             'ប្រភេទគោលពីរ (float/double) មិនអាចតំណាង 0.1 ជាក់លាក់ទេ។ C# decimal រក្សាខ្ទង់គោលដប់យ៉ាងជាក់លាក់ ស័ក្តិសមសម្រាប់ហិរញ្ញវត្ថុ។',
         },
         {
-          question: 'តើ string name = input?.Trim() ?? "Anonymous"; ផ្ដល់លទ្ធផលអ្វីនៅពេល input ជា null?',
+          question:
+            'តើ string name = input?.Trim() ?? "Anonymous"; ផ្ដល់លទ្ធផលអ្វីនៅពេល input ជា null?',
           options: [
             'បោះកំហុស NullReferenceException',
             'ផ្ដល់លទ្ធផល null',
@@ -1575,11 +1766,27 @@ Console.WriteLine(ParsePriceOrDefault("abc", 9.99m));`,
           table: {
             headers: ['Modifier', 'Behavior', 'Common Use Case'],
             rows: [
-              ['(default)', 'Passed by value (copy of value or reference)', '95% of all C# method parameters'],
-              ['out', 'Callee MUST assign before returning', 'TryParse / TryGetValue lookup patterns'],
-              ['ref', 'Two-way alias to caller variable', 'Low-level swaps or in-place struct mutation'],
+              [
+                '(default)',
+                'Passed by value (copy of value or reference)',
+                '95% of all C# method parameters',
+              ],
+              [
+                'out',
+                'Callee MUST assign before returning',
+                'TryParse / TryGetValue lookup patterns',
+              ],
+              [
+                'ref',
+                'Two-way alias to caller variable',
+                'Low-level swaps or in-place struct mutation',
+              ],
               ['in', 'Read-only reference (no copy)', 'Passing large structs in hot loops'],
-              ['params', 'Packs trailing arguments into array/span', 'Variadic helpers like Sum(1, 2, 3)'],
+              [
+                'params',
+                'Packs trailing arguments into array/span',
+                'Variadic helpers like Sum(1, 2, 3)',
+              ],
             ],
           },
           example: {
@@ -1653,7 +1860,8 @@ Console.WriteLine($"Passed: {report.Passed}, Failed: {report.Failed}, Rate: {rep
       },
       quiz: [
         {
-          question: 'What happens if you call list.Remove(item) inside a foreach (var item in list) loop in C#?',
+          question:
+            'What happens if you call list.Remove(item) inside a foreach (var item in list) loop in C#?',
           options: [
             'C# adjusts the iterator automatically',
             'The loop exits early with no error',
@@ -1703,10 +1911,18 @@ Console.WriteLine($"Passed: {report.Passed}, Failed: {report.Failed}, Rate: {rep
           table: {
             headers: ['Modifier', 'ឥរិយាបថ', 'ការប្រើប្រាស់ទូទៅ'],
             rows: [
-              ['(លំនាំដើម)', 'បញ្ជូនតាមតម្លៃ (ចម្លង value ឬ reference)', '95% នៃប៉ារ៉ាម៉ែត្រ C# ទាំងអស់'],
+              [
+                '(លំនាំដើម)',
+                'បញ្ជូនតាមតម្លៃ (ចម្លង value ឬ reference)',
+                '95% នៃប៉ារ៉ាម៉ែត្រ C# ទាំងអស់',
+              ],
               ['out', 'អនុគមន៍ត្រូវតែផ្ដល់តម្លៃមុន return', 'គំរូ TryParse / TryGetValue'],
               ['ref', 'ភ្ជាប់ផ្ទាល់ពីរទិសទៅអថេរអ្នកហៅ', 'ប្ដូរតម្លៃគ្នា ឬកែ struct នៅនឹងកន្លែង'],
-              ['in', 'Reference សម្រាប់អានតែប៉ុណ្ណោះ (មិនចម្លង)', 'បញ្ជូន struct ធំៗក្នុងកូដត្រូវការល្បឿន'],
+              [
+                'in',
+                'Reference សម្រាប់អានតែប៉ុណ្ណោះ (មិនចម្លង)',
+                'បញ្ជូន struct ធំៗក្នុងកូដត្រូវការល្បឿន',
+              ],
               ['params', 'ប្រមូលអាគុយម៉ង់ខាងក្រោយជា array/span', 'អនុគមន៍ដូច Sum(1, 2, 3)'],
             ],
           },
@@ -1737,7 +1953,8 @@ Console.WriteLine($"Passed: {report.Passed}, Failed: {report.Failed}, Rate: {rep
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងបើអ្នកហៅ list.Remove(item) ក្នុងរង្វិលជុំ foreach (var item in list) ក្នុង C#?',
+          question:
+            'តើមានអ្វីកើតឡើងបើអ្នកហៅ list.Remove(item) ក្នុងរង្វិលជុំ foreach (var item in list) ក្នុង C#?',
           options: [
             'C# កែសម្រួល iterator ដោយស្វ័យប្រវត្តិ',
             'រង្វិលជុំចាកចេញមុនដោយគ្មានកំហុស',
@@ -1790,10 +2007,30 @@ Console.WriteLine($"Passed: {report.Passed}, Failed: {report.Failed}, Rate: {rep
           table: {
             headers: ['Type Kind', 'Allocation', 'Equality Default', 'Best Use Case'],
             rows: [
-              ['class', 'Heap (reference)', 'Reference identity', 'Services, mutable entities with lifecycle'],
-              ['record class', 'Heap (reference)', 'Value-based (all props)', 'API DTOs, domain events, config snapshots'],
-              ['struct', 'Stack / inline', 'Value (reflection slow)', 'Low-level perf types (prefer readonly)'],
-              ['readonly record struct', 'Stack / inline', 'Fast generated value', 'Small immutable values (Money, Coordinate)'],
+              [
+                'class',
+                'Heap (reference)',
+                'Reference identity',
+                'Services, mutable entities with lifecycle',
+              ],
+              [
+                'record class',
+                'Heap (reference)',
+                'Value-based (all props)',
+                'API DTOs, domain events, config snapshots',
+              ],
+              [
+                'struct',
+                'Stack / inline',
+                'Value (reflection slow)',
+                'Low-level perf types (prefer readonly)',
+              ],
+              [
+                'readonly record struct',
+                'Stack / inline',
+                'Fast generated value',
+                'Small immutable values (Money, Coordinate)',
+              ],
             ],
           },
           example: {
@@ -1858,7 +2095,8 @@ Console.WriteLine($"{line.Sku}: {line.Subtotal:F2} -> {updated.Subtotal:F2}");`,
       },
       quiz: [
         {
-          question: 'Why might two instances of record Cart(List<string> Items) with identical items ("Book") return false when compared with ==?',
+          question:
+            'Why might two instances of record Cart(List<string> Items) with identical items ("Book") return false when compared with ==?',
           options: [
             'Records do not support the == operator',
             'Record equality compares each property with its default equality, and List<string> uses reference equality rather than element-by-element comparison',
@@ -1870,7 +2108,8 @@ Console.WriteLine($"{line.Sku}: {line.Subtotal:F2} -> {updated.Subtotal:F2}");`,
             'Auto-generated record equality checks EqualityComparer<T>.Default for each property. Since List<string> uses reference equality, two separate List instances with identical items are not considered equal.',
         },
         {
-          question: 'What does declaring a property as public required string Email { get; init; } enforce?',
+          question:
+            'What does declaring a property as public required string Email { get; init; } enforce?',
           options: [
             'Email can be changed at any time after construction',
             'Callers must set Email during object initialization, and it cannot be reassigned afterward',
@@ -1908,10 +2147,30 @@ Console.WriteLine($"{line.Sku}: {line.Subtotal:F2} -> {updated.Subtotal:F2}");`,
           table: {
             headers: ['ប្រភេទ Type', 'អង្គចងចាំ', 'ការប្រៀបធៀបលំនាំដើម', 'ស័ក្តិសមបំផុតសម្រាប់'],
             rows: [
-              ['class', 'Heap (reference)', 'តាមអាសយដ្ឋាន', 'Services និង entities ដែលមានវដ្ដជីវិតកែប្រែ'],
-              ['record class', 'Heap (reference)', 'តាមតម្លៃគ្រប់ property', 'API DTOs, domain events, config snapshots'],
-              ['struct', 'Stack / inline', 'តាមតម្លៃ (reflection យឺត)', 'ប្រភេទល្បឿនខ្ពស់ (គួរដាក់ readonly)'],
-              ['readonly record struct', 'Stack / inline', 'តាមតម្លៃបង្កើតដោយ compiler (លឿន)', 'តម្លៃតូចមិនកែប្រែ (Money, Coordinate)'],
+              [
+                'class',
+                'Heap (reference)',
+                'តាមអាសយដ្ឋាន',
+                'Services និង entities ដែលមានវដ្ដជីវិតកែប្រែ',
+              ],
+              [
+                'record class',
+                'Heap (reference)',
+                'តាមតម្លៃគ្រប់ property',
+                'API DTOs, domain events, config snapshots',
+              ],
+              [
+                'struct',
+                'Stack / inline',
+                'តាមតម្លៃ (reflection យឺត)',
+                'ប្រភេទល្បឿនខ្ពស់ (គួរដាក់ readonly)',
+              ],
+              [
+                'readonly record struct',
+                'Stack / inline',
+                'តាមតម្លៃបង្កើតដោយ compiler (លឿន)',
+                'តម្លៃតូចមិនកែប្រែ (Money, Coordinate)',
+              ],
             ],
           },
           exampleTitle: 'required + init Properties, Records និងការកែដោយ with',
@@ -1941,7 +2200,8 @@ Console.WriteLine($"{line.Sku}: {line.Subtotal:F2} -> {updated.Subtotal:F2}");`,
       },
       quiz: [
         {
-          question: 'ហេតុអ្វី instance ពីរនៃ record Cart(List<string> Items) ដែលមានធាតុដូចគ្នា ("Book") ត្រឡប់ false ពេលប្រៀបធៀប ==?',
+          question:
+            'ហេតុអ្វី instance ពីរនៃ record Cart(List<string> Items) ដែលមានធាតុដូចគ្នា ("Book") ត្រឡប់ false ពេលប្រៀបធៀប ==?',
           options: [
             'Record មិនគាំទ្រសញ្ញា == ទេ',
             'Record ប្រៀបធៀប property នីមួយៗតាមលំនាំដើម ហើយ List<string> ប្រើការប្រៀបធៀបតាមអាសយដ្ឋាន មិនមែនតាមធាតុខាងក្នុងទេ',
@@ -1997,8 +2257,16 @@ Console.WriteLine($"{line.Sku}: {line.Subtotal:F2} -> {updated.Subtotal:F2}");`,
               ['Where / Select', 'Deferred', 'Filter elements & project into new shapes'],
               ['SelectMany', 'Deferred', 'Flatten nested collections (1-to-many)'],
               ['GroupBy', 'Deferred', 'Partition items by key for aggregation'],
-              ['Any / FirstOrDefault', 'Immediate (short-circuit)', 'Stop as soon as first match is found'],
-              ['ToList / ToDictionary', 'Immediate (full scan)', 'Materialize into memory or O(1) lookup map'],
+              [
+                'Any / FirstOrDefault',
+                'Immediate (short-circuit)',
+                'Stop as soon as first match is found',
+              ],
+              [
+                'ToList / ToDictionary',
+                'Immediate (full scan)',
+                'Materialize into memory or O(1) lookup map',
+              ],
             ],
           },
           example: {
@@ -2090,7 +2358,8 @@ foreach (var row in deptSummary)
             'Any() short-circuits as soon as one element exists (and translates to SQL EXISTS in EF Core), while Count() iterates all elements if the underlying source does not expose a fast count.',
         },
         {
-          question: 'What happens if you call dbContext.Orders.ToList().Where(o => o.Total > 100) in EF Core?',
+          question:
+            'What happens if you call dbContext.Orders.ToList().Where(o => o.Total > 100) in EF Core?',
           options: [
             'EF Core still runs the WHERE clause in SQL automatically',
             'It downloads the entire Orders table into server memory first, then filters in C#',
@@ -2132,7 +2401,11 @@ foreach (var row in deptSummary)
               ['SelectMany', 'Deferred (រង់ចាំ)', 'ពន្លាតបញ្ជីជាន់គ្នា (1-ទៅ-ច្រើន)'],
               ['GroupBy', 'Deferred (រង់ចាំ)', 'បែងចែកធាតុជាក្រុមតាម key ដើម្បីសង្ខេប'],
               ['Any / FirstOrDefault', 'Immediate (ឈប់ឆាប់)', 'ឈប់ភ្លាមពេលរកឃើញធាតុដំបូង'],
-              ['ToList / ToDictionary', 'Immediate (អានទាំងអស់)', 'ទាញចូលអង្គចងចាំ ឬបង្កើតតារាង O(1)'],
+              [
+                'ToList / ToDictionary',
+                'Immediate (អានទាំងអស់)',
+                'ទាញចូលអង្គចងចាំ ឬបង្កើតតារាង O(1)',
+              ],
             ],
           },
           exampleTitle: 'ការផ្ដុំទិន្នន័យលក់តាមផ្នែក និងបង្កើតសន្ទស្សន៍ ToDictionary',
@@ -2174,7 +2447,8 @@ foreach (var row in deptSummary)
             'Any() បញ្ឈប់ភ្លាមពេលឃើញធាតុដំបូង (និងបកប្រែជា SQL EXISTS ក្នុង EF Core) ចំណែក Count() ត្រូវដើរកាត់ធាតុទាំងអស់។',
         },
         {
-          question: 'តើមានអ្វីកើតឡើងប្រសិនបើអ្នកសរសេរ dbContext.Orders.ToList().Where(o => o.Total > 100) ក្នុង EF Core?',
+          question:
+            'តើមានអ្វីកើតឡើងប្រសិនបើអ្នកសរសេរ dbContext.Orders.ToList().Where(o => o.Total > 100) ក្នុង EF Core?',
           options: [
             'EF Core នៅតែដំណើរការ WHERE ក្នុង SQL ដោយស្វ័យប្រវត្តិ',
             'វាទាញតារាង Orders ទាំងមូលចូលអង្គចងចាំ server សិន រួចទើបត្រងក្នុង C#',
@@ -2215,11 +2489,31 @@ foreach (var row in deptSummary)
           table: {
             headers: ['Async Tool / Pattern', 'Purpose', 'Production Note'],
             rows: [
-              ['await task', 'Suspend method without blocking thread', 'Always prefer over .Result / .Wait()'],
-              ['Task.WhenAll(tasks)', 'Run independent I/O concurrently', 'Bound concurrency for large lists'],
-              ['Task.WhenAny(tasks)', 'React to whichever task finishes first', 'Cancel losing tasks with a CancellationToken'],
-              ['CancellationToken', 'Cooperative cancellation & timeouts', 'Forward to every downstream async API'],
-              ['IAsyncEnumerable<T>', 'Stream async results one by one', 'Consume with await foreach (...)'],
+              [
+                'await task',
+                'Suspend method without blocking thread',
+                'Always prefer over .Result / .Wait()',
+              ],
+              [
+                'Task.WhenAll(tasks)',
+                'Run independent I/O concurrently',
+                'Bound concurrency for large lists',
+              ],
+              [
+                'Task.WhenAny(tasks)',
+                'React to whichever task finishes first',
+                'Cancel losing tasks with a CancellationToken',
+              ],
+              [
+                'CancellationToken',
+                'Cooperative cancellation & timeouts',
+                'Forward to every downstream async API',
+              ],
+              [
+                'IAsyncEnumerable<T>',
+                'Stream async results one by one',
+                'Consume with await foreach (...)',
+              ],
             ],
           },
           example: {
@@ -2297,7 +2591,8 @@ Console.WriteLine(string.Join(", ", output));`,
       },
       quiz: [
         {
-          question: 'Why should you avoid calling task.Result or task.Wait() inside C# applications?',
+          question:
+            'Why should you avoid calling task.Result or task.Wait() inside C# applications?',
           options: [
             'They only work on .NET Framework 4',
             'They synchronously block the calling thread, risking deadlocks and ASP.NET Core thread-pool starvation',
@@ -2309,7 +2604,8 @@ Console.WriteLine(string.Join(", ", output));`,
             'Blocking a thread with .Result or .Wait() prevents it from handling other work and causes deadlocks when the awaited continuation requires the blocked SynchronizationContext.',
         },
         {
-          question: 'Why is async void dangerous for regular C# methods (outside UI event handlers)?',
+          question:
+            'Why is async void dangerous for regular C# methods (outside UI event handlers)?',
           options: [
             'It cannot use the await keyword inside the body',
             'Callers cannot await it, and any unhandled exception escapes directly to crash the process',
@@ -2347,11 +2643,31 @@ Console.WriteLine(string.Join(", ", output));`,
           table: {
             headers: ['ឧបករណ៍ / គំរូ Async', 'គោលបំណង', 'ចំណាំសម្រាប់ប្រព័ន្ធពិត'],
             rows: [
-              ['await task', 'ផ្អាកអនុគមន៍ដោយមិនបង្កក thread', 'ប្រើជំនួស .Result / .Wait() ជានិច្ច'],
-              ['Task.WhenAll(tasks)', 'ដំណើរការ I/O ឯករាជ្យព្រមគ្នា', 'កំណត់ដែនស្របគ្នាសម្រាប់បញ្ជីធំៗ'],
-              ['Task.WhenAny(tasks)', 'ឆ្លើយតបនឹង task ដែលចប់មុនគេ', 'បោះបង់ task ដែលនៅសល់ដោយ CancellationToken'],
-              ['CancellationToken', 'បញ្ឈប់កិច្ចការ និងកំណត់ timeout', 'បញ្ជូនបន្តទៅគ្រប់ async API ខាងក្រោម'],
-              ['IAsyncEnumerable<T>', 'បញ្ជូនទិន្នន័យ async ម្ដងមួយៗ', 'អានដោយ await foreach (...)'],
+              [
+                'await task',
+                'ផ្អាកអនុគមន៍ដោយមិនបង្កក thread',
+                'ប្រើជំនួស .Result / .Wait() ជានិច្ច',
+              ],
+              [
+                'Task.WhenAll(tasks)',
+                'ដំណើរការ I/O ឯករាជ្យព្រមគ្នា',
+                'កំណត់ដែនស្របគ្នាសម្រាប់បញ្ជីធំៗ',
+              ],
+              [
+                'Task.WhenAny(tasks)',
+                'ឆ្លើយតបនឹង task ដែលចប់មុនគេ',
+                'បោះបង់ task ដែលនៅសល់ដោយ CancellationToken',
+              ],
+              [
+                'CancellationToken',
+                'បញ្ឈប់កិច្ចការ និងកំណត់ timeout',
+                'បញ្ជូនបន្តទៅគ្រប់ async API ខាងក្រោម',
+              ],
+              [
+                'IAsyncEnumerable<T>',
+                'បញ្ជូនទិន្នន័យ async ម្ដងមួយៗ',
+                'អានដោយ await foreach (...)',
+              ],
             ],
           },
           exampleTitle: 'Timeout ជាមួយ CancellationTokenSource និង Parallel.ForEachAsync',
@@ -2393,7 +2709,8 @@ Console.WriteLine(string.Join(", ", output));`,
             'ការបង្កក thread ដោយ .Result ឬ .Wait() រារាំងវាមិនឱ្យធ្វើការងារផ្សេង និងបង្ក deadlock ពេល continuation ត្រូវការ SynchronizationContext ដែលកំពុងជាប់គាំង។',
         },
         {
-          question: 'ហេតុអ្វី async void គ្រោះថ្នាក់សម្រាប់អនុគមន៍ C# ទូទៅ (ក្រៅពី UI event handlers)?',
+          question:
+            'ហេតុអ្វី async void គ្រោះថ្នាក់សម្រាប់អនុគមន៍ C# ទូទៅ (ក្រៅពី UI event handlers)?',
           options: [
             'វាមិនអាចប្រើ await ខាងក្នុងបានទេ',
             'អ្នកហៅមិនអាច await វាបាន ហើយកំហុសដែលមិនបាន catch នឹងធ្វើឱ្យកម្មវិធីគាំងទាំងមូល',
@@ -2434,9 +2751,24 @@ Console.WriteLine(string.Join(", ", output));`,
           table: {
             headers: ['Lifetime', 'Instance Created', 'Typical Services', 'Main Risk'],
             rows: [
-              ['Transient', 'Every injection', 'Lightweight stateless helpers, validators', 'Allocates frequently; do not hold shared state'],
-              ['Scoped', 'Once per HTTP request', 'EF Core DbContext, repositories, user context', 'Never inject into a Singleton (captive dependency)'],
-              ['Singleton', 'Once per app lifetime', 'IMemoryCache, config, stateless clients', 'Must be 100% thread-safe for concurrent requests'],
+              [
+                'Transient',
+                'Every injection',
+                'Lightweight stateless helpers, validators',
+                'Allocates frequently; do not hold shared state',
+              ],
+              [
+                'Scoped',
+                'Once per HTTP request',
+                'EF Core DbContext, repositories, user context',
+                'Never inject into a Singleton (captive dependency)',
+              ],
+              [
+                'Singleton',
+                'Once per app lifetime',
+                'IMemoryCache, config, stateless clients',
+                'Must be 100% thread-safe for concurrent requests',
+              ],
             ],
           },
           warning:
@@ -2520,7 +2852,8 @@ static async Task<Results<Created<Note>, ValidationProblem>> CreateNoteHandler(
       },
       quiz: [
         {
-          question: 'What happens if you inject a Scoped service (like EF Core DbContext) into a Singleton service in ASP.NET Core?',
+          question:
+            'What happens if you inject a Scoped service (like EF Core DbContext) into a Singleton service in ASP.NET Core?',
           options: [
             'ASP.NET Core creates a fresh DbContext automatically on every method call',
             'It causes a captive dependency bug: the Scoped service lives forever inside the Singleton and fails under concurrent requests',
@@ -2532,7 +2865,8 @@ static async Task<Results<Created<Note>, ValidationProblem>> CreateNoteHandler(
             'A Singleton is constructed once for the app lifetime, trapping any Scoped dependency inside it forever. In Development, ASP.NET Core’s ValidateScopes throws an InvalidOperationException at startup to prevent this bug.',
         },
         {
-          question: 'Why should .NET backends use IHttpClientFactory (AddHttpClient) instead of creating new HttpClient() inside each request?',
+          question:
+            'Why should .NET backends use IHttpClientFactory (AddHttpClient) instead of creating new HttpClient() inside each request?',
           options: [
             'HttpClient does not support HTTPS without IHttpClientFactory',
             'Repeatedly creating and disposing HttpClient exhausts OS sockets in TIME_WAIT; IHttpClientFactory pools handlers and respects DNS changes',
@@ -2570,9 +2904,24 @@ static async Task<Results<Created<Note>, ValidationProblem>> CreateNoteHandler(
           table: {
             headers: ['Lifetime', 'ពេលបង្កើត Instance', 'សេវាកម្មទូទៅ', 'ហានិភ័យសំខាន់'],
             rows: [
-              ['Transient', 'រាល់ពេល inject', 'Helpers ស្រាលគ្មានស្ថានភាព validators', 'បង្កើត object ញឹកញាប់ មិនរក្សាស្ថានភាពរួម'],
-              ['Scoped', 'ម្ដងក្នុងមួយសំណើ HTTP', 'EF Core DbContext, repositories, user context', 'ហាម inject ចូល Singleton (captive dependency)'],
-              ['Singleton', 'ម្ដងពេញអាយុកាល app', 'IMemoryCache, config, stateless clients', 'ត្រូវមានសុវត្ថិភាព thread 100% សម្រាប់សំណើស្របគ្នា'],
+              [
+                'Transient',
+                'រាល់ពេល inject',
+                'Helpers ស្រាលគ្មានស្ថានភាព validators',
+                'បង្កើត object ញឹកញាប់ មិនរក្សាស្ថានភាពរួម',
+              ],
+              [
+                'Scoped',
+                'ម្ដងក្នុងមួយសំណើ HTTP',
+                'EF Core DbContext, repositories, user context',
+                'ហាម inject ចូល Singleton (captive dependency)',
+              ],
+              [
+                'Singleton',
+                'ម្ដងពេញអាយុកាល app',
+                'IMemoryCache, config, stateless clients',
+                'ត្រូវមានសុវត្ថិភាព thread 100% សម្រាប់សំណើស្របគ្នា',
+              ],
             ],
           },
           warning:
@@ -2602,7 +2951,8 @@ static async Task<Results<Created<Note>, ValidationProblem>> CreateNoteHandler(
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងប្រសិនបើអ្នក inject Scoped service (ដូច EF Core DbContext) ចូល Singleton service ក្នុង ASP.NET Core?',
+          question:
+            'តើមានអ្វីកើតឡើងប្រសិនបើអ្នក inject Scoped service (ដូច EF Core DbContext) ចូល Singleton service ក្នុង ASP.NET Core?',
           options: [
             'ASP.NET Core បង្កើត DbContext ថ្មីរាល់ពេលហៅអនុគមន៍',
             'បង្កកំហុស captive dependency៖ Scoped service ជាប់រហូតក្នុង Singleton ហើយគាំងពេលមានសំណើស្របគ្នា',
@@ -2614,7 +2964,8 @@ static async Task<Results<Created<Note>, ValidationProblem>> CreateNoteHandler(
             'Singleton បង្កើតតែម្ដងពេញអាយុកាល app ធ្វើឱ្យ Scoped dependency ជាប់នៅខាងក្នុងជារៀងរហូត។ ValidateScopes ក្នុង Development នឹងបោះកំហុសភ្លាមពេលបើក app ដើម្បីការពារបញ្ហានេះ។',
         },
         {
-          question: 'ហេតុអ្វី backend .NET គួរប្រើ IHttpClientFactory (AddHttpClient) ជំនួសការបង្កើត new HttpClient() ក្នុងរាល់សំណើ?',
+          question:
+            'ហេតុអ្វី backend .NET គួរប្រើ IHttpClientFactory (AddHttpClient) ជំនួសការបង្កើត new HttpClient() ក្នុងរាល់សំណើ?',
           options: [
             'HttpClient មិនគាំទ្រ HTTPS បើគ្មាន IHttpClientFactory',
             'ការបង្កើត និង dispose HttpClient ញឹកញាប់ធ្វើឱ្យអស់ OS sockets (TIME_WAIT) ចំណែក IHttpClientFactory ប្រើឡើងវិញ handler ដោយសុវត្ថិភាព',
@@ -2658,10 +3009,30 @@ static async Task<Results<Created<Note>, ValidationProblem>> CreateNoteHandler(
           table: {
             headers: ['Environment', 'Purpose', 'Data Source', 'Triggered By'],
             rows: [
-              ['Local', 'Rapid coding & unit testing', 'Seeded / mocked data', 'Developer saving & running locally'],
-              ['CI', 'Automated lint, tests & build gate', 'Ephemeral test DBs', 'Every git push & Pull Request'],
-              ['Staging', 'Pre-release QA & integration checks', 'Anonymized prod-like data', 'Merge to main / release branch'],
-              ['Production', 'Serving real end users reliably', 'Live customer database', 'Approved release / CD pipeline'],
+              [
+                'Local',
+                'Rapid coding & unit testing',
+                'Seeded / mocked data',
+                'Developer saving & running locally',
+              ],
+              [
+                'CI',
+                'Automated lint, tests & build gate',
+                'Ephemeral test DBs',
+                'Every git push & Pull Request',
+              ],
+              [
+                'Staging',
+                'Pre-release QA & integration checks',
+                'Anonymized prod-like data',
+                'Merge to main / release branch',
+              ],
+              [
+                'Production',
+                'Serving real end users reliably',
+                'Live customer database',
+                'Approved release / CD pipeline',
+              ],
             ],
           },
           example: {
@@ -2778,7 +3149,8 @@ console.log(evaluateRelease([
       },
       quiz: [
         {
-          question: 'Why do engineering teams use a Staging environment before deploying to Production?',
+          question:
+            'Why do engineering teams use a Staging environment before deploying to Production?',
           options: [
             'Staging replaces the need for automated unit tests',
             'Staging mirrors production configuration so teams can verify migrations, integrations, and builds before real users are affected',
@@ -2828,10 +3200,30 @@ console.log(evaluateRelease([
           table: {
             headers: ['បរិស្ថាន', 'គោលបំណង', 'ប្រភពទិន្នន័យ', 'ពេលដំណើរការ'],
             rows: [
-              ['Local', 'សរសេរកូដ និងតេស្តលឿន', 'ទិន្នន័យគំរូ / mock', 'ពេលអ្នកអភិវឌ្ឍកែ និងរត់លើម៉ាស៊ីនផ្ទាល់'],
-              ['CI', 'ត្រួតពិនិត្យ lint, tests និង build ស្វ័យប្រវត្តិ', 'DB តេស្តបណ្ដោះអាសន្ន', 'រាល់ git push និង Pull Request'],
-              ['Staging', 'ផ្ទៀងផ្ទាត់ QA និង integration មុនបញ្ចេញ', 'ទិន្នន័យស្រដៀង prod (លាក់ព័ត៌មានឯកជន)', 'ពេល merge ចូល main ឬ release branch'],
-              ['Production', 'បម្រើអ្នកប្រើប្រាស់ពិតប្រាកដ', 'មូលដ្ឋានទិន្នន័យអតិថិជនពិត', 'ពេលអនុម័ត release / CD pipeline'],
+              [
+                'Local',
+                'សរសេរកូដ និងតេស្តលឿន',
+                'ទិន្នន័យគំរូ / mock',
+                'ពេលអ្នកអភិវឌ្ឍកែ និងរត់លើម៉ាស៊ីនផ្ទាល់',
+              ],
+              [
+                'CI',
+                'ត្រួតពិនិត្យ lint, tests និង build ស្វ័យប្រវត្តិ',
+                'DB តេស្តបណ្ដោះអាសន្ន',
+                'រាល់ git push និង Pull Request',
+              ],
+              [
+                'Staging',
+                'ផ្ទៀងផ្ទាត់ QA និង integration មុនបញ្ចេញ',
+                'ទិន្នន័យស្រដៀង prod (លាក់ព័ត៌មានឯកជន)',
+                'ពេល merge ចូល main ឬ release branch',
+              ],
+              [
+                'Production',
+                'បម្រើអ្នកប្រើប្រាស់ពិតប្រាកដ',
+                'មូលដ្ឋានទិន្នន័យអតិថិជនពិត',
+                'ពេលអនុម័ត release / CD pipeline',
+              ],
             ],
           },
           exampleTitle: 'កម្មវិធីសាកល្បង CI/CD Release Gate អន្តរកម្ម',
@@ -2915,10 +3307,30 @@ console.log(evaluateRelease([
             headers: ['Git Command', 'Rewrites History?', 'Safe on Shared main?', 'Best Use Case'],
             rows: [
               ['git merge', 'No', 'Yes', 'Integrating completed PRs with full context'],
-              ['git rebase', 'Yes (new SHAs)', 'NO (local/PR only)', 'Updating a private feature branch onto main'],
-              ['git revert <sha>', 'No (adds commit)', 'Yes', 'Safely rolling back a bad production commit'],
-              ['git reset --hard', 'Yes (moves HEAD)', 'NO (local only)', 'Discarding local unpushed work completely'],
-              ['git bisect', 'No (read-only)', 'Yes', 'Binary-searching history to find a bug commit'],
+              [
+                'git rebase',
+                'Yes (new SHAs)',
+                'NO (local/PR only)',
+                'Updating a private feature branch onto main',
+              ],
+              [
+                'git revert <sha>',
+                'No (adds commit)',
+                'Yes',
+                'Safely rolling back a bad production commit',
+              ],
+              [
+                'git reset --hard',
+                'Yes (moves HEAD)',
+                'NO (local only)',
+                'Discarding local unpushed work completely',
+              ],
+              [
+                'git bisect',
+                'No (read-only)',
+                'Yes',
+                'Binary-searching history to find a bug commit',
+              ],
             ],
           },
           warning:
@@ -3033,7 +3445,8 @@ console.log(summarizeCommits([
       },
       quiz: [
         {
-          question: 'A faulty commit was already merged and pushed to the shared main branch. What is the safest Git command to undo it?',
+          question:
+            'A faulty commit was already merged and pushed to the shared main branch. What is the safest Git command to undo it?',
           options: [
             'git reset --hard HEAD~1 && git push --force',
             'git revert <commit-hash> and push the new revert commit',
@@ -3045,7 +3458,8 @@ console.log(summarizeCommits([
             'git revert creates a brand-new commit that cleanly reverses the faulty commit without rewriting shared history, keeping every teammate’s clone in sync.',
         },
         {
-          question: 'Why is git push --force-with-lease safer than git push --force on a feature branch after rebasing?',
+          question:
+            'Why is git push --force-with-lease safer than git push --force on a feature branch after rebasing?',
           options: [
             'It skips running server-side Git hooks',
             'It refuses to overwrite the remote branch if someone else pushed new commits you have not fetched yet',
@@ -3081,13 +3495,38 @@ console.log(summarizeCommits([
             'ប្រើ git reflog ជាសំណាញ់សុវត្ថិភាព ដើម្បីទាញយក commit មកវិញក្រោយ reset ច្រឡំ។',
           ],
           table: {
-            headers: ['ពាក្យបញ្ជា Git', 'សរសេរប្រវត្តិឡើងវិញ?', 'សុវត្ថិភាពលើ main រួម?', 'ការប្រើប្រាស់ស័ក្តិសមបំផុត'],
+            headers: [
+              'ពាក្យបញ្ជា Git',
+              'សរសេរប្រវត្តិឡើងវិញ?',
+              'សុវត្ថិភាពលើ main រួម?',
+              'ការប្រើប្រាស់ស័ក្តិសមបំផុត',
+            ],
             rows: [
               ['git merge', 'ទេ', 'បាទ/ចាស', 'បញ្ចូល PR ដែលចប់រួចរាល់ដោយរក្សាបរិបទពេញ'],
-              ['git rebase', 'បាទ/ចាស (SHA ថ្មី)', 'ទេ (តែ local/PR)', 'ធ្វើបច្ចុប្បន្នភាព feature branch ផ្ទាល់ខ្លួនលើ main'],
-              ['git revert <sha>', 'ទេ (បន្ថែម commit)', 'បាទ/ចាស', 'ដក commit ដែលខូចចេញពី production ដោយសុវត្ថិភាព'],
-              ['git reset --hard', 'បាទ/ចាស (រំកិល HEAD)', 'ទេ (តែក្នុងម៉ាស៊ីន)', 'បោះចោលការកែក្នុងម៉ាស៊ីនដែលមិនទាន់ push'],
-              ['git bisect', 'ទេ (អានប៉ុណ្ណោះ)', 'បាទ/ចាស', 'ស្វែងរក commit បង្ក bug តាមបែប binary search'],
+              [
+                'git rebase',
+                'បាទ/ចាស (SHA ថ្មី)',
+                'ទេ (តែ local/PR)',
+                'ធ្វើបច្ចុប្បន្នភាព feature branch ផ្ទាល់ខ្លួនលើ main',
+              ],
+              [
+                'git revert <sha>',
+                'ទេ (បន្ថែម commit)',
+                'បាទ/ចាស',
+                'ដក commit ដែលខូចចេញពី production ដោយសុវត្ថិភាព',
+              ],
+              [
+                'git reset --hard',
+                'បាទ/ចាស (រំកិល HEAD)',
+                'ទេ (តែក្នុងម៉ាស៊ីន)',
+                'បោះចោលការកែក្នុងម៉ាស៊ីនដែលមិនទាន់ push',
+              ],
+              [
+                'git bisect',
+                'ទេ (អានប៉ុណ្ណោះ)',
+                'បាទ/ចាស',
+                'ស្វែងរក commit បង្ក bug តាមបែប binary search',
+              ],
             ],
           },
           warning:
@@ -3117,7 +3556,8 @@ console.log(summarizeCommits([
       },
       quiz: [
         {
-          question: 'មាន commit ខូចមួយត្រូវបាន merge និង push ទៅ main រួមរួចហើយ។ តើពាក្យបញ្ជា Git ណាសុវត្ថិភាពបំផុតដើម្បីដកវាចេញ?',
+          question:
+            'មាន commit ខូចមួយត្រូវបាន merge និង push ទៅ main រួមរួចហើយ។ តើពាក្យបញ្ជា Git ណាសុវត្ថិភាពបំផុតដើម្បីដកវាចេញ?',
           options: [
             'git reset --hard HEAD~1 && git push --force',
             'git revert <commit-hash> ហើយ push commit ថ្មីនោះ',
@@ -3129,7 +3569,8 @@ console.log(summarizeCommits([
             'git revert បង្កើត commit ថ្មីដែលបញ្ច្រាស commit ខូចដោយមិនសរសេរប្រវត្តិរួមឡើងវិញ ធ្វើឱ្យម៉ាស៊ីនមិត្តរួមក្រុមទាំងអស់ស៊ីសង្វាក់គ្នា។',
         },
         {
-          question: 'ហេតុអ្វី git push --force-with-lease សុវត្ថិភាពជាង git push --force លើ feature branch ក្រោយ rebase?',
+          question:
+            'ហេតុអ្វី git push --force-with-lease សុវត្ថិភាពជាង git push --force លើ feature branch ក្រោយ rebase?',
           options: [
             'វារំលង Git hooks លើ server',
             'វាបដិសេធមិនសរសេរជាន់លើ remote branch បើមានអ្នកផ្សេង push commit ថ្មីដែលអ្នកមិនទាន់បាន fetch',
@@ -3283,7 +3724,8 @@ console.log(findPairWithSum([1, 2, 3], 10));`,
       },
       quiz: [
         {
-          question: 'What is the time complexity of filtering an array of size n by checking bannedList.includes(item) where bannedList also has size n?',
+          question:
+            'What is the time complexity of filtering an array of size n by checking bannedList.includes(item) where bannedList also has size n?',
           options: [
             'O(1)',
             'O(log n)',
@@ -3295,7 +3737,8 @@ console.log(findPairWithSum([1, 2, 3], 10));`,
             'Calling an O(n) scan (.includes / .find / .indexOf) inside an O(n) loop multiplies to O(n^2). Converting bannedList into a Set once drops membership checks to O(1) and total time to O(n).',
         },
         {
-          question: 'Which traversal algorithm is best suited for finding the shortest path (fewest hops) in an unweighted graph?',
+          question:
+            'Which traversal algorithm is best suited for finding the shortest path (fewest hops) in an unweighted graph?',
           options: [
             'Depth-First Search (DFS) using recursion',
             'Breadth-First Search (BFS) using a FIFO queue',
@@ -3367,7 +3810,8 @@ console.log(findPairWithSum([1, 2, 3], 10));`,
       },
       quiz: [
         {
-          question: 'តើ time complexity នៃការត្រង array ទំហំ n ដោយពិនិត្យ bannedList.includes(item) ដែល bannedList ក៏មានទំហំ n ដែរ គឺប៉ុន្មាន?',
+          question:
+            'តើ time complexity នៃការត្រង array ទំហំ n ដោយពិនិត្យ bannedList.includes(item) ដែល bannedList ក៏មានទំហំ n ដែរ គឺប៉ុន្មាន?',
           options: [
             'O(1)',
             'O(log n)',
@@ -3379,7 +3823,8 @@ console.log(findPairWithSum([1, 2, 3], 10));`,
             'ការហៅប្រតិបត្តិការ O(n) (.includes / .find) នៅក្នុងរង្វិលជុំ O(n) ផ្ដល់ O(n^2)។ បម្លែង bannedList ជា Set ម្ដងដើម្បីឱ្យការពិនិត្យចុះមក O(1) និងពេលសរុបជា O(n)។',
         },
         {
-          question: 'តើក្បួនដោះស្រាយណាស័ក្តិសមបំផុតដើម្បីរកផ្លូវខ្លីបំផុត (ជំហានតិចបំផុត) ក្នុងក្រាហ្វគ្មានទម្ងន់?',
+          question:
+            'តើក្បួនដោះស្រាយណាស័ក្តិសមបំផុតដើម្បីរកផ្លូវខ្លីបំផុត (ជំហានតិចបំផុត) ក្នុងក្រាហ្វគ្មានទម្ងន់?',
           options: [
             'Depth-First Search (DFS) ដោយ recursion',
             'Breadth-First Search (BFS) ដោយ FIFO queue',
@@ -3420,11 +3865,31 @@ console.log(findPairWithSum([1, 2, 3], 10));`,
           table: {
             headers: ['Principle', 'Core Idea', 'Practical Signal'],
             rows: [
-              ['S — Single Responsibility', 'One clear reason to change', 'Split billing math from PDF rendering & email'],
-              ['O — Open / Closed', 'Open to extend, closed to modify', 'Strategy map/plugins instead of growing if/else'],
-              ['L — Liskov Substitution', 'Subtypes honor parent contract', 'Never throw NotImplemented in a subclass method'],
-              ['I — Interface Segregation', 'Small, focused contracts', 'Callers only depend on methods they actually use'],
-              ['D — Dependency Inversion', 'Depend on abstractions, not concretions', 'Pass PaymentGateway interface, not StripeClient'],
+              [
+                'S — Single Responsibility',
+                'One clear reason to change',
+                'Split billing math from PDF rendering & email',
+              ],
+              [
+                'O — Open / Closed',
+                'Open to extend, closed to modify',
+                'Strategy map/plugins instead of growing if/else',
+              ],
+              [
+                'L — Liskov Substitution',
+                'Subtypes honor parent contract',
+                'Never throw NotImplemented in a subclass method',
+              ],
+              [
+                'I — Interface Segregation',
+                'Small, focused contracts',
+                'Callers only depend on methods they actually use',
+              ],
+              [
+                'D — Dependency Inversion',
+                'Depend on abstractions, not concretions',
+                'Pass PaymentGateway interface, not StripeClient',
+              ],
             ],
           },
           warning:
@@ -3526,7 +3991,8 @@ console.log(canPublish({ id: 2, role: 'writer', isActive: true }, { authorId: 1,
       },
       quiz: [
         {
-          question: 'Which SOLID principle is demonstrated when you replace a growing if/else chain of payment providers with an extensible registry/interface?',
+          question:
+            'Which SOLID principle is demonstrated when you replace a growing if/else chain of payment providers with an extensible registry/interface?',
           options: [
             'Liskov Substitution Principle only',
             'Open/Closed Principle (open for extension with new providers, closed for modifying core checkout logic)',
@@ -3538,7 +4004,8 @@ console.log(canPublish({ id: 2, role: 'writer', isActive: true }, { authorId: 1,
             'Using a strategy map or interface lets you add new payment providers without editing and risking bugs in the existing checkout function—the essence of the Open/Closed Principle.',
         },
         {
-          question: 'What does the "Rule of Three" advise regarding creating reusable abstractions?',
+          question:
+            'What does the "Rule of Three" advise regarding creating reusable abstractions?',
           options: [
             'Every function must have at least three parameters',
             'Wait until you observe three concrete occurrences of a pattern before extracting a shared abstraction, avoiding wrong premature abstractions',
@@ -3576,11 +4043,31 @@ console.log(canPublish({ id: 2, role: 'writer', isActive: true }, { authorId: 1,
           table: {
             headers: ['គោលការណ៍', 'ខ្លឹមសារស្នូល', 'ឧទាហរណ៍ជាក់ស្ដែង'],
             rows: [
-              ['S — Single Responsibility', 'មានមូលហេតុផ្លាស់ប្ដូរច្បាស់តែមួយ', 'បំបែកការគណនាវិក្កយបត្រចេញពីការបង្កើត PDF និងផ្ញើអ៊ីមែល'],
-              ['O — Open / Closed', 'បើកសម្រាប់ពង្រីក បិទសម្រាប់កែប្រែ', 'ប្រើ strategy map/plugin ជំនួស if/else ដែលរីកវែង'],
-              ['L — Liskov Substitution', 'ប្រភេទកូនគោរពកិច្ចសន្យាប្រភេទមេ', 'កុំបោះ NotImplemented ក្នុង method របស់ subclass'],
-              ['I — Interface Segregation', 'កិច្ចសន្យាតូច និងផ្ដោតច្បាស់', 'អ្នកហៅពឹងផ្អែកតែលើ methods ដែលខ្លួនពិតជាប្រើ'],
-              ['D — Dependency Inversion', 'ពឹងលើ abstraction មិនមែន class ផ្ទាល់', 'បញ្ជូន PaymentGateway interface ជំនួស StripeClient'],
+              [
+                'S — Single Responsibility',
+                'មានមូលហេតុផ្លាស់ប្ដូរច្បាស់តែមួយ',
+                'បំបែកការគណនាវិក្កយបត្រចេញពីការបង្កើត PDF និងផ្ញើអ៊ីមែល',
+              ],
+              [
+                'O — Open / Closed',
+                'បើកសម្រាប់ពង្រីក បិទសម្រាប់កែប្រែ',
+                'ប្រើ strategy map/plugin ជំនួស if/else ដែលរីកវែង',
+              ],
+              [
+                'L — Liskov Substitution',
+                'ប្រភេទកូនគោរពកិច្ចសន្យាប្រភេទមេ',
+                'កុំបោះ NotImplemented ក្នុង method របស់ subclass',
+              ],
+              [
+                'I — Interface Segregation',
+                'កិច្ចសន្យាតូច និងផ្ដោតច្បាស់',
+                'អ្នកហៅពឹងផ្អែកតែលើ methods ដែលខ្លួនពិតជាប្រើ',
+              ],
+              [
+                'D — Dependency Inversion',
+                'ពឹងលើ abstraction មិនមែន class ផ្ទាល់',
+                'បញ្ជូន PaymentGateway interface ជំនួស StripeClient',
+              ],
             ],
           },
           warning:
@@ -3610,7 +4097,8 @@ console.log(canPublish({ id: 2, role: 'writer', isActive: true }, { authorId: 1,
       },
       quiz: [
         {
-          question: 'តើគោលការណ៍ SOLID មួយណាត្រូវបានបង្ហាញពេលអ្នកជំនួសខ្សែ if/else នៃប្រព័ន្ធទូទាត់ប្រាក់ដោយ strategy map ឬ interface ដែលអាចបន្ថែមថ្មីបាន?',
+          question:
+            'តើគោលការណ៍ SOLID មួយណាត្រូវបានបង្ហាញពេលអ្នកជំនួសខ្សែ if/else នៃប្រព័ន្ធទូទាត់ប្រាក់ដោយ strategy map ឬ interface ដែលអាចបន្ថែមថ្មីបាន?',
           options: [
             'Liskov Substitution Principle តែប៉ុណ្ណោះ',
             'Open/Closed Principle (បើកសម្រាប់ពង្រីកប្រព័ន្ធថ្មី បិទសម្រាប់ការកែកូដស្នូល)',
@@ -3663,10 +4151,30 @@ console.log(canPublish({ id: 2, role: 'writer', isActive: true }, { authorId: 1,
           table: {
             headers: ['Test Layer', 'Speed', 'Scope', 'What It Catches Best'],
             rows: [
-              ['Static / Types', 'Instant (<1s)', 'Single file / module', 'Null access, typos, mismatched types'],
-              ['Unit Tests', 'Milliseconds', 'Single function / class', 'Business rules, edge cases, math, branching'],
-              ['Integration Tests', 'Seconds', 'API + DB / multiple modules', 'SQL queries, serialization, DI wiring, auth'],
-              ['End-to-End (E2E)', 'Tens of seconds', 'Full browser + live backend', 'Critical user flows (login, checkout)'],
+              [
+                'Static / Types',
+                'Instant (<1s)',
+                'Single file / module',
+                'Null access, typos, mismatched types',
+              ],
+              [
+                'Unit Tests',
+                'Milliseconds',
+                'Single function / class',
+                'Business rules, edge cases, math, branching',
+              ],
+              [
+                'Integration Tests',
+                'Seconds',
+                'API + DB / multiple modules',
+                'SQL queries, serialization, DI wiring, auth',
+              ],
+              [
+                'End-to-End (E2E)',
+                'Tens of seconds',
+                'Full browser + live backend',
+                'Critical user flows (login, checkout)',
+              ],
             ],
           },
           warning:
@@ -3766,7 +4274,8 @@ assertEqual('inactive when null', isSessionActive(null, 1000), false);`,
       },
       quiz: [
         {
-          question: 'What is the most effective way to prevent a time-sensitive unit test from becoming flaky?',
+          question:
+            'What is the most effective way to prevent a time-sensitive unit test from becoming flaky?',
           options: [
             'Add a 5-second setTimeout before every assertion',
             'Inject the current timestamp/clock as a parameter so tests pass fixed deterministic timestamps',
@@ -3778,7 +4287,8 @@ assertEqual('inactive when null', isSessionActive(null, 1000), false);`,
             'Passing an explicit clock/timestamp (nowMs = Date.now()) decouples business logic from real wall-clock time, making boundary tests instant and 100% repeatable.',
         },
         {
-          question: 'Why are integration tests still essential even if your codebase has 100% unit test coverage?',
+          question:
+            'Why are integration tests still essential even if your codebase has 100% unit test coverage?',
           options: [
             'Unit tests cannot test math functions',
             'Integration tests verify real boundaries—like SQL queries, JSON serialization, HTTP routing, and DI wiring—that mocked unit tests cannot catch',
@@ -3816,10 +4326,30 @@ assertEqual('inactive when null', isSessionActive(null, 1000), false);`,
           table: {
             headers: ['ស្រទាប់តេស្ត', 'ល្បឿន', 'វិសាលភាព', 'ចាប់កំហុសបានល្អបំផុតលើ'],
             rows: [
-              ['Static / Types', 'ភ្លាមៗ (<1 វិនាទី)', 'ឯកសារ / module មួយ', 'Null access, សរសេរឈ្មោះខុស ប្រភេទទិន្នន័យខុស'],
-              ['Unit Tests', 'មិល្លីវិនាទី', 'អនុគមន៍ / class មួយ', 'ច្បាប់អាជីវកម្ម ករណីគែម ការគណនា'],
-              ['Integration Tests', 'ប៉ុន្មានវិនាទី', 'API + DB / ច្រើន module', 'SQL queries, JSON serialization, DI, auth'],
-              ['End-to-End (E2E)', 'រាប់សិបវិនាទី', 'Browser ពេញ + backend ពិត', 'លំហូរសំខាន់របស់អ្នកប្រើ (login, checkout)'],
+              [
+                'Static / Types',
+                'ភ្លាមៗ (<1 វិនាទី)',
+                'ឯកសារ / module មួយ',
+                'Null access, សរសេរឈ្មោះខុស ប្រភេទទិន្នន័យខុស',
+              ],
+              [
+                'Unit Tests',
+                'មិល្លីវិនាទី',
+                'អនុគមន៍ / class មួយ',
+                'ច្បាប់អាជីវកម្ម ករណីគែម ការគណនា',
+              ],
+              [
+                'Integration Tests',
+                'ប៉ុន្មានវិនាទី',
+                'API + DB / ច្រើន module',
+                'SQL queries, JSON serialization, DI, auth',
+              ],
+              [
+                'End-to-End (E2E)',
+                'រាប់សិបវិនាទី',
+                'Browser ពេញ + backend ពិត',
+                'លំហូរសំខាន់របស់អ្នកប្រើ (login, checkout)',
+              ],
             ],
           },
           warning:
@@ -3849,7 +4379,8 @@ assertEqual('inactive when null', isSessionActive(null, 1000), false);`,
       },
       quiz: [
         {
-          question: 'តើវិធីណាមានប្រសិទ្ធភាពបំផុតដើម្បីកុំឱ្យ unit test ដែលពាក់ព័ន្ធពេលវេលាក្លាយជា flaky?',
+          question:
+            'តើវិធីណាមានប្រសិទ្ធភាពបំផុតដើម្បីកុំឱ្យ unit test ដែលពាក់ព័ន្ធពេលវេលាក្លាយជា flaky?',
           options: [
             'បន្ថែម setTimeout 5 វិនាទីមុនគ្រប់ការផ្ទៀងផ្ទាត់',
             'បញ្ជូន timestamp/នាឡិកាជាប៉ារ៉ាម៉ែត្រ ដើម្បីឱ្យតេស្តប្រើពេលវេលាថេរជាក់លាក់',
@@ -3861,7 +4392,8 @@ assertEqual('inactive when null', isSessionActive(null, 1000), false);`,
             'ការបញ្ជូននាឡិកា (nowMs = Date.now()) ផ្ដាច់តក្កវិជ្ជាចេញពីម៉ោងពិត ធ្វើឱ្យតេស្តករណីផុតកំណត់លឿន និងផ្ដល់លទ្ធផលដូចគ្នា 100% គ្រប់ពេល។',
         },
         {
-          question: 'ហេតុអ្វី integration tests នៅតែចាំបាច់ ទោះបីកូដមាន unit test coverage 100% ក៏ដោយ?',
+          question:
+            'ហេតុអ្វី integration tests នៅតែចាំបាច់ ទោះបីកូដមាន unit test coverage 100% ក៏ដោយ?',
           options: [
             'Unit tests មិនអាចតេស្តអនុគមន៍គណិតវិទ្យាបានទេ',
             'Integration tests ផ្ទៀងផ្ទាត់ព្រំដែនពិតដូច SQL queries, JSON serialization, HTTP routing និង DI ដែល unit test ប្រើ mock មិនអាចរកឃើញ',
@@ -3902,11 +4434,31 @@ assertEqual('inactive when null', isSessionActive(null, 1000), false);`,
           table: {
             headers: ['Status Code', 'Meaning', 'Client Action'],
             rows: [
-              ['200 OK / 201 Created', 'Success / New resource created', 'Process response body (read Location on 201)'],
-              ['400 / 422', 'Malformed JSON / Validation failed', 'Do NOT retry; show field errors to user'],
-              ['401 vs 403', 'Unauthenticated vs Forbidden', '401: refresh token/login; 403: show access denied'],
-              ['409 Conflict', 'Duplicate key or stale version clash', 'Reload latest state or use idempotency key'],
-              ['429 / 503', 'Rate limited / Temporarily unavailable', 'Retry with exponential backoff + jitter'],
+              [
+                '200 OK / 201 Created',
+                'Success / New resource created',
+                'Process response body (read Location on 201)',
+              ],
+              [
+                '400 / 422',
+                'Malformed JSON / Validation failed',
+                'Do NOT retry; show field errors to user',
+              ],
+              [
+                '401 vs 403',
+                'Unauthenticated vs Forbidden',
+                '401: refresh token/login; 403: show access denied',
+              ],
+              [
+                '409 Conflict',
+                'Duplicate key or stale version clash',
+                'Reload latest state or use idempotency key',
+              ],
+              [
+                '429 / 503',
+                'Rate limited / Temporarily unavailable',
+                'Retry with exponential backoff + jitter',
+              ],
             ],
           },
           warning:
@@ -4042,7 +4594,8 @@ console.log(rl.allow('u1', 1200));`,
       },
       quiz: [
         {
-          question: 'What is the difference between HTTP status codes 401 Unauthorized and 403 Forbidden?',
+          question:
+            'What is the difference between HTTP status codes 401 Unauthorized and 403 Forbidden?',
           options: [
             '401 means the server crashed; 403 means the URL does not exist',
             '401 means the client is not authenticated (missing/invalid credentials); 403 means the client is authenticated but lacks permission',
@@ -4092,11 +4645,31 @@ console.log(rl.allow('u1', 1200));`,
           table: {
             headers: ['Status Code', 'អត្ថន័យ', 'សកម្មភាពរបស់ Client'],
             rows: [
-              ['200 OK / 201 Created', 'ជោគជ័យ / បង្កើតធនធានថ្មីរួចរាល់', 'ដំណើរការទិន្នន័យឆ្លើយតប (អាន Location លើ 201)'],
-              ['400 / 422', 'JSON ខុសទម្រង់ / Validation បរាជ័យ', 'ហាម retry — បង្ហាញកំហុសលើប្រអប់បញ្ចូលដល់អ្នកប្រើ'],
-              ['401 vs 403', 'មិនទាន់ login ធៀបនឹងគ្មានសិទ្ធិ', '401៖ ប្ដូរ token/login; 403៖ បង្ហាញគ្មានសិទ្ធិ'],
-              ['409 Conflict', 'ជាន់ key ស្ទួន ឬ version ចាស់', 'ទាញស្ថានភាពថ្មីបំផុត ឬប្រើ idempotency key'],
-              ['429 / 503', 'ជាប់ rate limit / សេវាផ្អាកបណ្ដោះអាសន្ន', 'Retry ដោយប្រើ exponential backoff + jitter'],
+              [
+                '200 OK / 201 Created',
+                'ជោគជ័យ / បង្កើតធនធានថ្មីរួចរាល់',
+                'ដំណើរការទិន្នន័យឆ្លើយតប (អាន Location លើ 201)',
+              ],
+              [
+                '400 / 422',
+                'JSON ខុសទម្រង់ / Validation បរាជ័យ',
+                'ហាម retry — បង្ហាញកំហុសលើប្រអប់បញ្ចូលដល់អ្នកប្រើ',
+              ],
+              [
+                '401 vs 403',
+                'មិនទាន់ login ធៀបនឹងគ្មានសិទ្ធិ',
+                '401៖ ប្ដូរ token/login; 403៖ បង្ហាញគ្មានសិទ្ធិ',
+              ],
+              [
+                '409 Conflict',
+                'ជាន់ key ស្ទួន ឬ version ចាស់',
+                'ទាញស្ថានភាពថ្មីបំផុត ឬប្រើ idempotency key',
+              ],
+              [
+                '429 / 503',
+                'ជាប់ rate limit / សេវាផ្អាកបណ្ដោះអាសន្ន',
+                'Retry ដោយប្រើ exponential backoff + jitter',
+              ],
             ],
           },
           warning:
@@ -4126,7 +4699,8 @@ console.log(rl.allow('u1', 1200));`,
       },
       quiz: [
         {
-          question: 'តើភាពខុសគ្នារវាង HTTP status code 401 Unauthorized និង 403 Forbidden គឺជាអ្វី?',
+          question:
+            'តើភាពខុសគ្នារវាង HTTP status code 401 Unauthorized និង 403 Forbidden គឺជាអ្វី?',
           options: [
             '401 មានន័យថា server គាំង ហើយ 403 មានន័យថារក URL មិនឃើញ',
             '401 មានន័យថា client មិនទាន់ផ្ទៀងផ្ទាត់អត្តសញ្ញាណ (ខ្វះ/ខុស credentials) ចំណែក 403 មានន័យថាផ្ទៀងផ្ទាត់រួចតែគ្មានសិទ្ធិប្រើ',

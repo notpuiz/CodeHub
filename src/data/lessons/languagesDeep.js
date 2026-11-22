@@ -114,7 +114,8 @@ Overheat alert at 105C! Stopping.`,
             'range(start, stop, step) starts at 2, adds 3 each step (2, 5, 8), and stops before reaching 10 (the next value 11 is >= 10).',
         },
         {
-          question: 'What happens if you run age = input("Age: "); print(age + 1) and the user types 20?',
+          question:
+            'What happens if you run age = input("Age: "); print(age + 1) and the user types 20?',
           options: [
             'It prints 21',
             'It prints "201"',
@@ -192,7 +193,8 @@ Overheat alert at 105C! Stopping.`,
             'range(start, stop, step) ចាប់ផ្ដើមពី 2 បូកថែម 3 ក្នុងមួយជុំ (2, 5, 8) ហើយឈប់មុន 10 ព្រោះជំហានបន្ទាប់គឺ 11។',
         },
         {
-          question: 'តើមានអ្វីកើតឡើងបើដំណើរការ age = input("Age: "); print(age + 1) ហើយអ្នកប្រើវាយលេខ 20?',
+          question:
+            'តើមានអ្វីកើតឡើងបើដំណើរការ age = input("Age: "); print(age + 1) ហើយអ្នកប្រើវាយលេខ 20?',
           options: [
             'បង្ហាញ 21',
             'បង្ហាញ "201"',
@@ -383,11 +385,11 @@ print(f"{name.title()}: {amount:,.2f} {currency.upper()}")`,
           question: 'តើលទ្ធផលនៃ 9 / 2 និង 9 // 2 ក្នុង Python 3 គឺជាអ្វី?',
           options: ['4 និង 4', '4.5 និង 4', '4.5 និង 5', '4.0 និង 4.5'],
           answer: 1,
-          explanation:
-            'សញ្ញា / តែងតែចែកជាទសភាគ (4.5) ចំណែក // ចែកយកផលគត់ (4)។',
+          explanation: 'សញ្ញា / តែងតែចែកជាទសភាគ (4.5) ចំណែក // ចែកយកផលគត់ (4)។',
         },
         {
-          question: 'ហេតុអ្វីបានជាការកែ b បន្ទាប់ពី b = a ធ្វើឱ្យ a ផ្លាស់ប្ដូរដែរពេល a = [1, 2, 3]?',
+          question:
+            'ហេតុអ្វីបានជាការកែ b បន្ទាប់ពី b = a ធ្វើឱ្យ a ផ្លាស់ប្ដូរដែរពេល a = [1, 2, 3]?',
           options: [
             'Lists ជា global ដោយស្វ័យប្រវត្តិក្នុង Python',
             'ទាំង a និង b ចង្អុលទៅ list object តែមួយក្នុងអង្គចងចាំ',
@@ -520,7 +522,8 @@ for category, total in ranked:
             'dict.get(key, default) returns the fallback value ("guest") safely without mutating the dictionary or raising KeyError.',
         },
         {
-          question: 'Which collection gives O(1) average time for checking if an item exists (x in col)?',
+          question:
+            'Which collection gives O(1) average time for checking if an item exists (x in col)?',
           options: ['list', 'tuple', 'set', 'str'],
           answer: 2,
           explanation:
@@ -551,7 +554,13 @@ for category, total in ranked:
             'Tuple អាចធ្វើជា key របស់ dict បាន ព្រោះវាជា immutable (ប្រសិនបើធាតុខាងក្នុងក៏ជា immutable)។',
           ],
           table: {
-            headers: ['ប្រភេទ Collection', 'មានលំដាប់', 'អាចកែប្រែ', 'តម្លៃ/Key មិនស្ទួន', 'ល្បឿនស្វែងរក (in)'],
+            headers: [
+              'ប្រភេទ Collection',
+              'មានលំដាប់',
+              'អាចកែប្រែ',
+              'តម្លៃ/Key មិនស្ទួន',
+              'ល្បឿនស្វែងរក (in)',
+            ],
             rows: [
               ['list [1, 2]', 'មាន', 'បាន', 'អនុញ្ញាតស្ទួន', 'O(n)'],
               ['tuple (1, 2)', 'មាន', 'មិនបាន', 'អនុញ្ញាតស្ទួន', 'O(n)'],
@@ -636,8 +645,16 @@ for category, total in ranked:
             rows: [
               ['def f(a, b=10)', 'Positional or keyword, optional b', 'Standard defaults'],
               ['def f(a, *, debug=False)', 'debug must be passed by name', 'Prevent flag mix-ups'],
-              ['def f(*args)', 'Any count of positional args (tuple)', 'Variadic helpers, wrappers'],
-              ['def f(**kwargs)', 'Any count of keyword args (dict)', 'Config forwarding, decorators'],
+              [
+                'def f(*args)',
+                'Any count of positional args (tuple)',
+                'Variadic helpers, wrappers',
+              ],
+              [
+                'def f(**kwargs)',
+                'Any count of keyword args (dict)',
+                'Config forwarding, decorators',
+              ],
             ],
           },
           example: {
@@ -732,7 +749,8 @@ print(flaky_parse(), "after", attempts, "attempts")`,
       },
       quiz: [
         {
-          question: 'What is printed if you call add(1) then add(2) on: def add(x, buf=[]): buf.append(x); return buf?',
+          question:
+            'What is printed if you call add(1) then add(2) on: def add(x, buf=[]): buf.append(x); return buf?',
           options: ['[1] then [2]', '[1] then [1, 2]', '[] then [2]', 'Raises TypeError'],
           answer: 1,
           explanation:
@@ -779,8 +797,16 @@ print(flaky_parse(), "after", attempts, "attempts")`,
             rows: [
               ['def f(a, b=10)', 'តាមលំដាប់ ឬតាមឈ្មោះ (b មានតម្លៃលំនាំដើម)', 'តម្លៃលំនាំដើមទូទៅ'],
               ['def f(a, *, debug=False)', 'debug ត្រូវតែបញ្ជូនតាមឈ្មោះ', 'ការពារការច្រឡំ flag'],
-              ['def f(*args)', 'ប៉ារ៉ាម៉ែត្រតាមលំដាប់ច្រើន (tuple)', 'អនុគមន៍ទទួលធាតុច្រើន, wrappers'],
-              ['def f(**kwargs)', 'ប៉ារ៉ាម៉ែត្រតាមឈ្មោះច្រើន (dict)', 'បញ្ជូនការកំណត់បន្ត, decorators'],
+              [
+                'def f(*args)',
+                'ប៉ារ៉ាម៉ែត្រតាមលំដាប់ច្រើន (tuple)',
+                'អនុគមន៍ទទួលធាតុច្រើន, wrappers',
+              ],
+              [
+                'def f(**kwargs)',
+                'ប៉ារ៉ាម៉ែត្រតាមឈ្មោះច្រើន (dict)',
+                'បញ្ជូនការកំណត់បន្ត, decorators',
+              ],
             ],
           },
           exampleTitle: 'Decorator កត់ត្រាការហៅអនុគមន៍ជាមួយ functools.wraps',
@@ -810,7 +836,8 @@ print(flaky_parse(), "after", attempts, "attempts")`,
       },
       quiz: [
         {
-          question: 'តើអ្វីនឹងត្រឡប់មកវិញបើហៅ add(1) រួច add(2) លើ៖ def add(x, buf=[]): buf.append(x); return buf?',
+          question:
+            'តើអ្វីនឹងត្រឡប់មកវិញបើហៅ add(1) រួច add(2) លើ៖ def add(x, buf=[]): buf.append(x); return buf?',
           options: ['[1] រួច [2]', '[1] រួច [1, 2]', '[] រួច [2]', 'កើតកំហុស TypeError'],
           answer: 1,
           explanation:
@@ -981,7 +1008,8 @@ print(item.to_json())`,
             'else runs strictly if the try block succeeded without raising an exception, while finally runs unconditionally.',
         },
         {
-          question: 'Why should you always pass encoding="utf-8" when opening text files in Python?',
+          question:
+            'Why should you always pass encoding="utf-8" when opening text files in Python?',
           options: [
             'Without it, Python opens files in binary mode',
             'Default system encodings vary by OS (e.g., cp1252 on Windows), causing UnicodeDecodeError on non-ASCII text',
@@ -1105,11 +1133,27 @@ print(item.to_json())`,
           table: {
             headers: ['asyncio Tool', 'Role', 'When to Use'],
             rows: [
-              ['asyncio.gather()', 'Run coroutines concurrently', 'Collecting fixed set of results'],
-              ['asyncio.TaskGroup', 'Structured task lifecycle (3.11+)', 'Auto-cancel siblings on failure'],
-              ['asyncio.Semaphore(n)', 'Limit active concurrent tasks', 'Respecting API/DB rate limits'],
+              [
+                'asyncio.gather()',
+                'Run coroutines concurrently',
+                'Collecting fixed set of results',
+              ],
+              [
+                'asyncio.TaskGroup',
+                'Structured task lifecycle (3.11+)',
+                'Auto-cancel siblings on failure',
+              ],
+              [
+                'asyncio.Semaphore(n)',
+                'Limit active concurrent tasks',
+                'Respecting API/DB rate limits',
+              ],
               ['asyncio.wait_for()', 'Enforce max wait time', 'Preventing hung network requests'],
-              ['asyncio.to_thread()', 'Run blocking func in worker thread', 'Bridging legacy sync libraries'],
+              [
+                'asyncio.to_thread()',
+                'Run blocking func in worker thread',
+                'Bridging legacy sync libraries',
+              ],
             ],
           },
           example: {
@@ -1255,11 +1299,27 @@ asyncio.run(main())`,
           table: {
             headers: ['ឧបករណ៍ asyncio', 'តួនាទី', 'ពេលណាគួរប្រើ'],
             rows: [
-              ['asyncio.gather()', 'ដំណើរការ coroutines ព្រមគ្នា', 'ប្រមូលលទ្ធផលពីកិច្ចការមួយក្រុម'],
-              ['asyncio.TaskGroup', 'គ្រប់គ្រងអាយុកាល task (3.11+)', 'បោះបង់ task ផ្សេងស្វ័យប្រវត្តិពេលមានកំហុស'],
-              ['asyncio.Semaphore(n)', 'កំណត់ចំនួន task សកម្មព្រមគ្នា', 'គោរព rate limit របស់ API/DB'],
+              [
+                'asyncio.gather()',
+                'ដំណើរការ coroutines ព្រមគ្នា',
+                'ប្រមូលលទ្ធផលពីកិច្ចការមួយក្រុម',
+              ],
+              [
+                'asyncio.TaskGroup',
+                'គ្រប់គ្រងអាយុកាល task (3.11+)',
+                'បោះបង់ task ផ្សេងស្វ័យប្រវត្តិពេលមានកំហុស',
+              ],
+              [
+                'asyncio.Semaphore(n)',
+                'កំណត់ចំនួន task សកម្មព្រមគ្នា',
+                'គោរព rate limit របស់ API/DB',
+              ],
               ['asyncio.wait_for()', 'កំណត់ពេលរង់ចាំអតិបរមា', 'ការពារសំណើបណ្ដាញដែលគាំងយូរ'],
-              ['asyncio.to_thread()', 'ដំណើរការកូដ blocking ក្នុង thread ផ្សេង', 'ភ្ជាប់ជាមួយបណ្ណាល័យ sync ចាស់ៗ'],
+              [
+                'asyncio.to_thread()',
+                'ដំណើរការកូដ blocking ក្នុង thread ផ្សេង',
+                'ភ្ជាប់ជាមួយបណ្ណាល័យ sync ចាស់ៗ',
+              ],
             ],
           },
           exampleTitle: 'ការហៅ API មានកំណត់ចំនួនជាមួយ Semaphore និង Timeout',
@@ -1434,7 +1494,8 @@ int main(void) {
             'Both 5 and 2 are int, so integer division happens first (producing 2), and only then is 2 converted to double 2.0. Write 5.0 / 2.0 or (double)5 / 2 for 2.5.',
         },
         {
-          question: 'Which printf format specifier is standard for printing the result of sizeof(int)?',
+          question:
+            'Which printf format specifier is standard for printing the result of sizeof(int)?',
           options: ['%d', '%ld', '%zu', '%p'],
           answer: 2,
           explanation:
@@ -1508,11 +1569,11 @@ int main(void) {
             'ទាំង 5 និង 2 ជា int ដូច្នេះវាចែកលេខគត់មុន (បាន 2) ទើបបំប្លែងជា double 2.0។ ត្រូវសរសេរ 5.0 / 2.0 ឬ (double)5 / 2 ដើម្បីបាន 2.5។',
         },
         {
-          question: 'តើ printf format specifier ណាមួយដែលត្រឹមត្រូវតាមស្តង់ដារសម្រាប់បង្ហាញ sizeof(int)?',
+          question:
+            'តើ printf format specifier ណាមួយដែលត្រឹមត្រូវតាមស្តង់ដារសម្រាប់បង្ហាញ sizeof(int)?',
           options: ['%d', '%ld', '%zu', '%p'],
           answer: 2,
-          explanation:
-            'sizeof ត្រឡប់ប្រភេទ size_t ដែលមាន format specifier ស្តង់ដារគឺ %zu។',
+          explanation: 'sizeof ត្រឡប់ប្រភេទ size_t ដែលមាន format specifier ស្តង់ដារគឺ %zu។',
         },
       ],
     },
@@ -1548,7 +1609,11 @@ int main(void) {
               ['switch / case', 'Jump on int/char/enum', 'State machines, command dispatch'],
               ['for (init; cond; step)', 'Before each iteration', 'Counted loops and array scans'],
               ['while (cond)', 'Before each iteration', 'Sentinel loops, GCD, stream reads'],
-              ['do { } while (cond);', 'After each iteration', 'Prompt/retry loops running >= 1 time'],
+              [
+                'do { } while (cond);',
+                'After each iteration',
+                'Prompt/retry loops running >= 1 time',
+              ],
             ],
           },
           example: {
@@ -1673,7 +1738,8 @@ int is_prime(int n) {
             'C switch cases fall through by default until a break;, return;, or the closing brace of switch is reached.',
         },
         {
-          question: 'What does putting static in front of a helper function definition in a .c file do?',
+          question:
+            'What does putting static in front of a helper function definition in a .c file do?',
           options: [
             'Makes the function run faster on the heap',
             'Restricts the function’s visibility (linkage) to that single .c translation unit',
@@ -1745,7 +1811,8 @@ int is_prime(int n) {
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងក្នុង C ប្រសិនបើ case ក្នុង switch ភ្លេចដាក់ break; មុន case បន្ទាប់?',
+          question:
+            'តើមានអ្វីកើតឡើងក្នុង C ប្រសិនបើ case ក្នុង switch ភ្លេចដាក់ break; មុន case បន្ទាប់?',
           options: [
             'Compiler តែងតែបដិសេធកូដជា syntax error',
             'កម្មវិធីចេញពីប្លុក switch ដោយស្វ័យប្រវត្តិ',
@@ -1896,7 +1963,8 @@ int main(void) {
       },
       quiz: [
         {
-          question: 'If int *p points to address 0x1000 and sizeof(int) is 4, what address does p + 2 represent?',
+          question:
+            'If int *p points to address 0x1000 and sizeof(int) is 4, what address does p + 2 represent?',
           options: ['0x1002', '0x1004', '0x1008', '0x1010'],
           answer: 2,
           explanation:
@@ -1974,7 +2042,8 @@ int main(void) {
       },
       quiz: [
         {
-          question: 'ប្រសិនបើ int *p ចង្អុលទៅអាសយដ្ឋាន 0x1000 ហើយ sizeof(int) ស្មើ 4 តើ p + 2 ចង្អុលទៅអាសយដ្ឋានណា?',
+          question:
+            'ប្រសិនបើ int *p ចង្អុលទៅអាសយដ្ឋាន 0x1000 ហើយ sizeof(int) ស្មើ 4 តើ p + 2 ចង្អុលទៅអាសយដ្ឋានណា?',
           options: ['0x1002', '0x1004', '0x1008', '0x1010'],
           answer: 2,
           explanation:
@@ -2024,8 +2093,16 @@ int main(void) {
             rows: [
               ['strlen(s)', 'Length excluding \\0', 'O(n) scan; s must be null-terminated'],
               ['strcmp(a, b)', 'Lexicographical compare', 'Returns 0 on exact match'],
-              ['snprintf(buf, n, fmt, ...)', 'Bounded formatted string', 'Always writes \\0 when n > 0'],
-              ['memcpy(dst, src, n)', 'Copy n raw bytes', 'Buffers must not overlap (else memmove)'],
+              [
+                'snprintf(buf, n, fmt, ...)',
+                'Bounded formatted string',
+                'Always writes \\0 when n > 0',
+              ],
+              [
+                'memcpy(dst, src, n)',
+                'Copy n raw bytes',
+                'Buffers must not overlap (else memmove)',
+              ],
               ['strchr(s, ch)', 'Find first occurrence of ch', 'Returns pointer or NULL'],
             ],
           },
@@ -2120,7 +2197,8 @@ int main(void) {
       },
       quiz: [
         {
-          question: 'Why does sizeof(arr) / sizeof(arr[0]) give the wrong count inside void process(int arr[])?',
+          question:
+            'Why does sizeof(arr) / sizeof(arr[0]) give the wrong count inside void process(int arr[])?',
           options: [
             'sizeof cannot be used inside helper functions',
             'Array parameters decay to a pointer (int *), so sizeof(arr) returns the pointer size (e.g., 8 bytes) instead of the array’s total size',
@@ -2168,7 +2246,11 @@ int main(void) {
               ['strlen(s)', 'ប្រវែងមិនរាប់ \\0', 'ស្កេន O(n); s ត្រូវតែមាន \\0'],
               ['strcmp(a, b)', 'ប្រៀបធៀបអត្ថបទ', 'ត្រឡប់ 0 ពេលដូចគ្នាបេះបិទ'],
               ['snprintf(buf, n, fmt, ...)', 'បង្កើតអត្ថបទមានដែនកំណត់', 'តែងតែដាក់ \\0 ពេល n > 0'],
-              ['memcpy(dst, src, n)', 'ចម្លងទិន្នន័យ n បៃ', 'អង្គចងចាំមិនត្រូវត្រួតគ្នា (បើត្រួតប្រើ memmove)'],
+              [
+                'memcpy(dst, src, n)',
+                'ចម្លងទិន្នន័យ n បៃ',
+                'អង្គចងចាំមិនត្រូវត្រួតគ្នា (បើត្រួតប្រើ memmove)',
+              ],
               ['strchr(s, ch)', 'ស្វែងរកតួអក្សរ ch ដំបូង', 'ត្រឡប់ pointer ឬ NULL'],
             ],
           },
@@ -2199,7 +2281,8 @@ int main(void) {
       },
       quiz: [
         {
-          question: 'ហេតុអ្វី sizeof(arr) / sizeof(arr[0]) ផ្ដល់ចំនួនខុសនៅខាងក្នុង void process(int arr[])?',
+          question:
+            'ហេតុអ្វី sizeof(arr) / sizeof(arr[0]) ផ្ដល់ចំនួនខុសនៅខាងក្នុង void process(int arr[])?',
           options: [
             'sizeof មិនអាចប្រើក្នុងអនុគមន៍ជំនួយបានទេ',
             'ប៉ារ៉ាម៉ែត្រ array ត្រូវបាន decay ជា pointer (int *) ដូច្នេះ sizeof(arr) ត្រឡប់ទំហំ pointer (ឧ. 8 bytes) ជំនួសឱ្យទំហំ array ទាំងមូល',
@@ -2247,9 +2330,24 @@ int main(void) {
           table: {
             headers: ['Function (<stdlib.h>)', 'Memory Initialized?', 'On Failure', 'Typical Use'],
             rows: [
-              ['malloc(bytes)', 'No (garbage)', 'Returns NULL', 'Buffers you overwrite immediately'],
-              ['calloc(n, size)', 'Yes (all zero)', 'Returns NULL', 'Arrays/structs needing zero state'],
-              ['realloc(ptr, bytes)', 'Old kept, new raw', 'Returns NULL (old intact)', 'Growing dynamic arrays'],
+              [
+                'malloc(bytes)',
+                'No (garbage)',
+                'Returns NULL',
+                'Buffers you overwrite immediately',
+              ],
+              [
+                'calloc(n, size)',
+                'Yes (all zero)',
+                'Returns NULL',
+                'Arrays/structs needing zero state',
+              ],
+              [
+                'realloc(ptr, bytes)',
+                'Old kept, new raw',
+                'Returns NULL (old intact)',
+                'Growing dynamic arrays',
+              ],
               ['free(ptr)', 'Releases to heap', 'No return (void)', 'Exactly once per allocation'],
             ],
           },
@@ -2381,7 +2479,8 @@ int main(void) {
             'When realloc() fails, it returns NULL and leaves the old allocation untouched. Always assign to a temporary pointer first.',
         },
         {
-          question: 'What is the main difference between malloc(10 * sizeof(int)) and calloc(10, sizeof(int))?',
+          question:
+            'What is the main difference between malloc(10 * sizeof(int)) and calloc(10, sizeof(int))?',
           options: [
             'calloc allocates on the stack while malloc uses the heap',
             'calloc initializes all allocated bytes to zero, while malloc leaves memory uninitialized',
@@ -2420,9 +2519,24 @@ int main(void) {
             headers: ['អនុគមន៍ (<stdlib.h>)', 'កំណត់តម្លៃដំបូង?', 'ពេលបរាជ័យ', 'ការប្រើប្រាស់ទូទៅ'],
             rows: [
               ['malloc(bytes)', 'ទេ (ទិន្នន័យសំរាម)', 'ត្រឡប់ NULL', 'Buffer ដែលសរសេរចូលភ្លាម'],
-              ['calloc(n, size)', 'បាទ (សូន្យទាំងអស់)', 'ត្រឡប់ NULL', 'Array/Struct ត្រូវការតម្លៃ 0'],
-              ['realloc(ptr, bytes)', 'រក្សាចាស់, ថ្មីមិនសម្អាត', 'ត្រឡប់ NULL (ចាស់នៅដដែល)', 'ពង្រីកទំហំ dynamic array'],
-              ['free(ptr)', 'ដោះលែងទៅ heap', 'គ្មានតម្លៃត្រឡប់ (void)', 'ហៅតែម្ដងគត់ក្នុងមួយការកក់'],
+              [
+                'calloc(n, size)',
+                'បាទ (សូន្យទាំងអស់)',
+                'ត្រឡប់ NULL',
+                'Array/Struct ត្រូវការតម្លៃ 0',
+              ],
+              [
+                'realloc(ptr, bytes)',
+                'រក្សាចាស់, ថ្មីមិនសម្អាត',
+                'ត្រឡប់ NULL (ចាស់នៅដដែល)',
+                'ពង្រីកទំហំ dynamic array',
+              ],
+              [
+                'free(ptr)',
+                'ដោះលែងទៅ heap',
+                'គ្មានតម្លៃត្រឡប់ (void)',
+                'ហៅតែម្ដងគត់ក្នុងមួយការកក់',
+              ],
             ],
           },
           exampleTitle: 'Dynamic Array (IntVec) ដោយប្រើ realloc មានសុវត្ថិភាព',
@@ -2464,7 +2578,8 @@ int main(void) {
             'ពេល realloc() បរាជ័យ វាត្រឡប់ NULL ហើយទុកប្លុកអង្គចងចាំដើមនៅដដែល។ ត្រូវរក្សាលទ្ធផលក្នុង pointer បណ្ដោះអាសន្នជាមុនជានិច្ច។',
         },
         {
-          question: 'តើអ្វីជាភាពខុសគ្នាសំខាន់រវាង malloc(10 * sizeof(int)) និង calloc(10, sizeof(int))?',
+          question:
+            'តើអ្វីជាភាពខុសគ្នាសំខាន់រវាង malloc(10 * sizeof(int)) និង calloc(10, sizeof(int))?',
           options: [
             'calloc កក់លើ stack ចំណែក malloc កក់លើ heap',
             'calloc កំណត់គ្រប់បៃជាសូន្យទាំងអស់ ចំណែក malloc ទុកអង្គចងចាំមិនសម្អាត',
@@ -2607,7 +2722,7 @@ Success: true`,
       challenge: {
         prompt:
           'Write a C function Status parse_port(const char *text, uint16_t *out_port) using enum Status { OK, ERR_NULL, ERR_FORMAT, ERR_RANGE } that parses text with strtol and validates that the port is between 1 and 65535.',
-        hint: 'Check if (text == NULL || out_port == NULL) return ERR_NULL;. Call long val = strtol(text, &end, 10); verify end != text && *end == \'\\0\' (else ERR_FORMAT) and 1 <= val && val <= 65535 (else ERR_RANGE).',
+        hint: "Check if (text == NULL || out_port == NULL) return ERR_NULL;. Call long val = strtol(text, &end, 10); verify end != text && *end == '\\0' (else ERR_FORMAT) and 1 <= val && val <= 65535 (else ERR_RANGE).",
         language: 'c',
         solutionCode: `#include <stdint.h>
 #include <stdio.h>
@@ -2634,7 +2749,8 @@ int main(void) {
       },
       quiz: [
         {
-          question: 'What linker error occurs if you define int global_count = 0; directly inside a .h file included by two .c files?',
+          question:
+            'What linker error occurs if you define int global_count = 0; directly inside a .h file included by two .c files?',
           options: [
             'Undefined reference',
             'Multiple definition of global_count',
@@ -2646,7 +2762,8 @@ int main(void) {
             'Each .c file is compiled as a separate translation unit, so both emit a definition of global_count and the linker fails with multiple definition. Declare extern int global_count; in .h and define it in one .c file.',
         },
         {
-          question: 'Why must all resource pointers be initialized to NULL when using the goto cleanup; pattern?',
+          question:
+            'Why must all resource pointers be initialized to NULL when using the goto cleanup; pattern?',
           options: [
             'C forbids uninitialized pointers from compiling',
             'So that jumping to cleanup after an early failure can safely call free(ptr) on unallocated pointers (free(NULL) is a no-op)',
@@ -2714,11 +2831,12 @@ int main(void) {
       challenge: {
         prompt:
           'សរសេរអនុគមន៍ Status parse_port(const char *text, uint16_t *out_port) ដោយប្រើ enum Status { OK, ERR_NULL, ERR_FORMAT, ERR_RANGE } ដែលបំប្លែង text ដោយ strtol និងផ្ទៀងផ្ទាត់ថា port ស្ថិតក្នុងចន្លោះ 1 ដល់ 65535។',
-        hint: 'ពិនិត្យ text == NULL || out_port == NULL (ត្រឡប់ ERR_NULL)។ ហៅ strtol(text, &end, 10) ផ្ទៀងផ្ទាត់ end != text && *end == \'\\0\' (ERR_FORMAT) និង 1 <= val && val <= 65535 (ERR_RANGE)។',
+        hint: "ពិនិត្យ text == NULL || out_port == NULL (ត្រឡប់ ERR_NULL)។ ហៅ strtol(text, &end, 10) ផ្ទៀងផ្ទាត់ end != text && *end == '\\0' (ERR_FORMAT) និង 1 <= val && val <= 65535 (ERR_RANGE)។",
       },
       quiz: [
         {
-          question: 'តើកំហុស linker អ្វីនឹងកើតឡើងប្រសិនបើកំណត់ int global_count = 0; ផ្ទាល់ក្នុងឯកសារ .h ដែលត្រូវបាន include ដោយឯកសារ .c ពីរ?',
+          question:
+            'តើកំហុស linker អ្វីនឹងកើតឡើងប្រសិនបើកំណត់ int global_count = 0; ផ្ទាល់ក្នុងឯកសារ .h ដែលត្រូវបាន include ដោយឯកសារ .c ពីរ?',
           options: [
             'Undefined reference',
             'Multiple definition of global_count',
@@ -2772,9 +2890,17 @@ int main(void) {
             headers: ['C++ Syntax', 'Purpose', 'Example'],
             rows: [
               ['int n{42};', 'Brace init (blocks narrowing)', 'int n{3.9}; // Compile error!'],
-              ['constexpr double kPi{3.14};', 'Compile-time typed constant', 'Zero runtime cost, type-checked'],
+              [
+                'constexpr double kPi{3.14};',
+                'Compile-time typed constant',
+                'Zero runtime cost, type-checked',
+              ],
               ['std::string s{"CodeHub"};', 'Safe dynamic text (<string>)', 's.size() == 7'],
-              ['std::cout << x << "\\n";', 'Fast buffered newline output', 'Avoids extra flush of std::endl'],
+              [
+                'std::cout << x << "\\n";',
+                'Fast buffered newline output',
+                'Avoids extra flush of std::endl',
+              ],
             ],
           },
           example: {
@@ -2997,7 +3123,12 @@ int main() {
           table: {
             headers: ['Parameter Style', 'Copies?', 'Mutates Caller?', 'Use When'],
             rows: [
-              ['int / double (by value)', 'Cheap register copy', 'No', 'Built-in scalars & tiny types (<= 16B)'],
+              [
+                'int / double (by value)',
+                'Cheap register copy',
+                'No',
+                'Built-in scalars & tiny types (<= 16B)',
+              ],
               ['const T&', 'No', 'No', 'Read-only structs, vectors, strings'],
               ['T&', 'No', 'Yes', 'In-place mutation / out-parameters'],
               ['std::string_view', 'No (ptr + len)', 'No', 'Read-only text from string or literal'],
@@ -3098,7 +3229,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'What happens when you write for (auto s : names) where names is a std::vector<std::string>?',
+          question:
+            'What happens when you write for (auto s : names) where names is a std::vector<std::string>?',
           options: [
             's is automatically a const reference with zero copies',
             'Each std::string element is copied by value because plain auto drops references and const',
@@ -3181,7 +3313,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងពេលសរសេរ for (auto s : names) ដែល names ជា std::vector<std::string>?',
+          question:
+            'តើមានអ្វីកើតឡើងពេលសរសេរ for (auto s : names) ដែល names ជា std::vector<std::string>?',
           options: [
             's ជា const reference ដោយស្វ័យប្រវត្តិគ្មានការចម្លង',
             'រាល់ធាតុ std::string ត្រូវបានចម្លងថ្មីទាំងអស់ ព្រោះ auto ទទេដក reference និង const ចេញ',
@@ -3234,11 +3367,36 @@ int main() {
           table: {
             headers: ['STL Container', 'Memory Layout', 'Lookup / Access', 'Best Use Case'],
             rows: [
-              ['std::vector<T>', 'Contiguous heap', 'O(1) index', 'Default dynamic list (90% of cases)'],
-              ['std::array<T, N>', 'Contiguous stack', 'O(1) index', 'Fixed compile-time size buffers'],
-              ['std::unordered_map', 'Hash table', 'O(1) avg key', 'Fast key-value lookup, no order needed'],
-              ['std::map', 'Red-black tree', 'O(log n) key', 'Sorted keys, range queries (lower_bound)'],
-              ['std::unordered_set', 'Hash table', 'O(1) avg', 'Deduplication & fast membership tests'],
+              [
+                'std::vector<T>',
+                'Contiguous heap',
+                'O(1) index',
+                'Default dynamic list (90% of cases)',
+              ],
+              [
+                'std::array<T, N>',
+                'Contiguous stack',
+                'O(1) index',
+                'Fixed compile-time size buffers',
+              ],
+              [
+                'std::unordered_map',
+                'Hash table',
+                'O(1) avg key',
+                'Fast key-value lookup, no order needed',
+              ],
+              [
+                'std::map',
+                'Red-black tree',
+                'O(log n) key',
+                'Sorted keys, range queries (lower_bound)',
+              ],
+              [
+                'std::unordered_set',
+                'Hash table',
+                'O(1) avg',
+                'Deduplication & fast membership tests',
+              ],
             ],
           },
           example: {
@@ -3343,7 +3501,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'What happens when you evaluate prices["missing"] on a std::unordered_map<std::string, int>?',
+          question:
+            'What happens when you evaluate prices["missing"] on a std::unordered_map<std::string, int>?',
           options: [
             'It throws std::out_of_range',
             'It returns std::nullopt',
@@ -3391,13 +3550,38 @@ int main() {
             'ប្រើ C++20 std::erase_if(vec, pred) ដើម្បីលុបធាតុតាមលក្ខខណ្ឌយ៉ាងស្អាតក្នុង O(n)។',
           ],
           table: {
-            headers: ['STL Container', 'រចនាសម្ព័ន្ធអង្គចងចាំ', 'ល្បឿនស្វែងរក', 'ការប្រើប្រាស់ល្អបំផុត'],
+            headers: [
+              'STL Container',
+              'រចនាសម្ព័ន្ធអង្គចងចាំ',
+              'ល្បឿនស្វែងរក',
+              'ការប្រើប្រាស់ល្អបំផុត',
+            ],
             rows: [
-              ['std::vector<T>', 'ជាប់គ្នាលើ heap', 'O(1) តាមសន្ទស្សន៍', 'បញ្ជីលំនាំដើម (90% នៃករណី)'],
-              ['std::array<T, N>', 'ជាប់គ្នាលើ stack', 'O(1) តាមសន្ទស្សន៍', 'Buffer ទំហំថេរពេល compile'],
-              ['std::unordered_map', 'Hash table', 'O(1) មធ្យម', 'ស្វែងរក key-value លឿន មិនត្រូវការលំដាប់'],
+              [
+                'std::vector<T>',
+                'ជាប់គ្នាលើ heap',
+                'O(1) តាមសន្ទស្សន៍',
+                'បញ្ជីលំនាំដើម (90% នៃករណី)',
+              ],
+              [
+                'std::array<T, N>',
+                'ជាប់គ្នាលើ stack',
+                'O(1) តាមសន្ទស្សន៍',
+                'Buffer ទំហំថេរពេល compile',
+              ],
+              [
+                'std::unordered_map',
+                'Hash table',
+                'O(1) មធ្យម',
+                'ស្វែងរក key-value លឿន មិនត្រូវការលំដាប់',
+              ],
               ['std::map', 'Red-black tree', 'O(log n)', 'Key តម្រៀបតាមលំដាប់ និង range queries'],
-              ['std::unordered_set', 'Hash table', 'O(1) មធ្យម', 'លុបតម្លៃស្ទួន និងពិនិត្យវត្តមានលឿន'],
+              [
+                'std::unordered_set',
+                'Hash table',
+                'O(1) មធ្យម',
+                'លុបតម្លៃស្ទួន និងពិនិត្យវត្តមានលឿន',
+              ],
             ],
           },
           exampleTitle: 'ការកក់ Capacity ទុកមុនជាមួយ reserve() និង .at()',
@@ -3427,7 +3611,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងពេលដំណើរការ prices["missing"] លើ std::unordered_map<std::string, int>?',
+          question:
+            'តើមានអ្វីកើតឡើងពេលដំណើរការ prices["missing"] លើ std::unordered_map<std::string, int>?',
           options: [
             'បោះ exception std::out_of_range',
             'ត្រឡប់ std::nullopt',
@@ -3439,7 +3624,8 @@ int main() {
             'operator[] លើ map បង្កើតធាតុថ្មីដែលមានតម្លៃលំនាំដើម (0) ប្រសិនបើគ្មាន key នោះ។ ត្រូវប្រើ .find() ឬ .at() សម្រាប់ការអាន។',
         },
         {
-          question: 'ហេតុអ្វីការរក្សា reference int& r = v[0]; ឆ្លងកាត់ v.push_back(99); មានគ្រោះថ្នាក់?',
+          question:
+            'ហេតុអ្វីការរក្សា reference int& r = v[0]; ឆ្លងកាត់ v.push_back(99); មានគ្រោះថ្នាក់?',
           options: [
             'std::vector ហាមមិនឱ្យយក reference ទៅធាតុ',
             'push_back អាចកក់ buffer ថ្មីនៅអាសយដ្ឋានផ្សេង ធ្វើឱ្យ r ក្លាយជា dangling reference',
@@ -3480,10 +3666,30 @@ int main() {
           table: {
             headers: ['Pointer Type', 'Ownership', 'Overhead', 'When to Use'],
             rows: [
-              ['std::unique_ptr<T>', 'Exclusive (move-only)', 'Zero vs raw T*', 'Default heap ownership, factories, PIMPL'],
-              ['std::shared_ptr<T>', 'Shared (ref-counted)', 'Control block + atomic', 'Multiple owners with unclear last survivor'],
-              ['std::weak_ptr<T>', 'Non-owning observer', 'Locks to shared_ptr', 'Breaking shared_ptr cycles, caches'],
-              ['T* / T& (raw)', 'Non-owning borrow', 'Zero', 'Passing/observing objects owned elsewhere'],
+              [
+                'std::unique_ptr<T>',
+                'Exclusive (move-only)',
+                'Zero vs raw T*',
+                'Default heap ownership, factories, PIMPL',
+              ],
+              [
+                'std::shared_ptr<T>',
+                'Shared (ref-counted)',
+                'Control block + atomic',
+                'Multiple owners with unclear last survivor',
+              ],
+              [
+                'std::weak_ptr<T>',
+                'Non-owning observer',
+                'Locks to shared_ptr',
+                'Breaking shared_ptr cycles, caches',
+              ],
+              [
+                'T* / T& (raw)',
+                'Non-owning borrow',
+                'Zero',
+                'Passing/observing objects owned elsewhere',
+              ],
             ],
           },
           example: {
@@ -3607,7 +3813,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'What happens if you delete a Derived object through a Base* (or std::unique_ptr<Base>) when ~Base() is NOT virtual?',
+          question:
+            'What happens if you delete a Derived object through a Base* (or std::unique_ptr<Base>) when ~Base() is NOT virtual?',
           options: [
             'Both ~Derived() and ~Base() run normally',
             'Undefined Behavior—Derived’s destructor is skipped and its resources may leak',
@@ -3619,7 +3826,8 @@ int main() {
             'Deleting a derived object via a base pointer without a virtual base destructor is Undefined Behavior. Always write virtual ~Base() = default;.',
         },
         {
-          question: 'Which smart pointer breaks circular ownership cycles between two std::shared_ptr objects?',
+          question:
+            'Which smart pointer breaks circular ownership cycles between two std::shared_ptr objects?',
           options: ['std::unique_ptr', 'std::weak_ptr', 'std::auto_ptr', 'std::span'],
           answer: 1,
           explanation:
@@ -3652,10 +3860,30 @@ int main() {
           table: {
             headers: ['ប្រភេទ Pointer', 'កម្មសិទ្ធិ', 'ការចំណាយបន្ថែម', 'ពេលណាគួរប្រើ'],
             rows: [
-              ['std::unique_ptr<T>', 'ផ្ដាច់មុខ (move-only)', 'គ្មាន (ស្មើ raw T*)', 'កម្មសិទ្ធិលើ heap លំនាំដើម, factories'],
-              ['std::shared_ptr<T>', 'កម្មសិទ្ធិរួម (ref-count)', 'Control block + atomic', 'ម្ចាស់ច្រើនដែលមិនដឹងអ្នកណាចប់ក្រោយគេ'],
-              ['std::weak_ptr<T>', 'តាមដានគ្មានកម្មសិទ្ធិ', 'Lock ទៅ shared_ptr', 'បំបែកវដ្ដ shared_ptr, caches'],
-              ['T* / T& (raw)', 'ខ្ចីប្រើគ្មានកម្មសិទ្ធិ', 'គ្មាន', 'បញ្ជូន object ដែលមានម្ចាស់រួចហើយ'],
+              [
+                'std::unique_ptr<T>',
+                'ផ្ដាច់មុខ (move-only)',
+                'គ្មាន (ស្មើ raw T*)',
+                'កម្មសិទ្ធិលើ heap លំនាំដើម, factories',
+              ],
+              [
+                'std::shared_ptr<T>',
+                'កម្មសិទ្ធិរួម (ref-count)',
+                'Control block + atomic',
+                'ម្ចាស់ច្រើនដែលមិនដឹងអ្នកណាចប់ក្រោយគេ',
+              ],
+              [
+                'std::weak_ptr<T>',
+                'តាមដានគ្មានកម្មសិទ្ធិ',
+                'Lock ទៅ shared_ptr',
+                'បំបែកវដ្ដ shared_ptr, caches',
+              ],
+              [
+                'T* / T& (raw)',
+                'ខ្ចីប្រើគ្មានកម្មសិទ្ធិ',
+                'គ្មាន',
+                'បញ្ជូន object ដែលមានម្ចាស់រួចហើយ',
+              ],
             ],
           },
           exampleTitle: 'RAII Scope Guard និងការផ្ទេរកម្មសិទ្ធិ unique_ptr',
@@ -3685,7 +3913,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'តើមានអ្វីកើតឡើងប្រសិនបើលុប Derived object តាមរយៈ Base* (ឬ std::unique_ptr<Base>) នៅពេល ~Base() មិនមែនជា virtual?',
+          question:
+            'តើមានអ្វីកើតឡើងប្រសិនបើលុប Derived object តាមរយៈ Base* (ឬ std::unique_ptr<Base>) នៅពេល ~Base() មិនមែនជា virtual?',
           options: [
             'ទាំង ~Derived() និង ~Base() ដំណើរការធម្មតា',
             'Undefined Behavior—destructor របស់ Derived មិនដំណើរការ ហើយធនធានរបស់វាអាចលេចធ្លាយ',
@@ -3697,7 +3926,8 @@ int main() {
             'ការលុប derived object តាម base pointer ដោយគ្មាន virtual destructor គឺជា Undefined Behavior។ ត្រូវប្រកាស virtual ~Base() = default; ជានិច្ច។',
         },
         {
-          question: 'តើ smart pointer ណាមួយប្រើសម្រាប់បំបែកវដ្ដកម្មសិទ្ធិ (circular cycle) រវាង std::shared_ptr ពីរ?',
+          question:
+            'តើ smart pointer ណាមួយប្រើសម្រាប់បំបែកវដ្ដកម្មសិទ្ធិ (circular cycle) រវាង std::shared_ptr ពីរ?',
           options: ['std::unique_ptr', 'std::weak_ptr', 'std::auto_ptr', 'std::span'],
           answer: 1,
           explanation:
@@ -3848,7 +4078,8 @@ int main() {
             'If a lambda outlives the scope where its [&]-captured local variables live, calling it accesses dangling references (Undefined Behavior).',
         },
         {
-          question: 'Why are C++ template definitions normally placed in header files (.h / .hpp) instead of .cpp files?',
+          question:
+            'Why are C++ template definitions normally placed in header files (.h / .hpp) instead of .cpp files?',
           options: [
             'The preprocessor deletes templates inside .cpp files',
             'The compiler must see the full template definition at each call site to instantiate code for each concrete type T',
@@ -3932,7 +4163,8 @@ int main() {
             'ប្រសិនបើ lambda ត្រូវបានហៅប្រើបន្ទាប់ពី scope របស់អថេរ [&] បានបញ្ចប់ វានឹងអាន dangling reference (Undefined Behavior)។',
         },
         {
-          question: 'ហេតុអ្វីនិយមន័យ C++ template ជាទូទៅត្រូវដាក់ក្នុងឯកសារ header (.h / .hpp) ជំនួសឱ្យ .cpp?',
+          question:
+            'ហេតុអ្វីនិយមន័យ C++ template ជាទូទៅត្រូវដាក់ក្នុងឯកសារ header (.h / .hpp) ជំនួសឱ្យ .cpp?',
           options: [
             'Preprocessor លុប templates ក្នុងឯកសារ .cpp',
             'Compiler ត្រូវការឃើញនិយមន័យ template ពេញលេញនៅកន្លែងហៅប្រើ ដើម្បីបង្កើតកូដសម្រាប់ប្រភេទ T ជាក់លាក់នីមួយៗ',
@@ -3973,10 +4205,30 @@ int main() {
           table: {
             headers: ['Mechanism', 'Cost', 'Ownership', 'Watch Out For'],
             rows: [
-              ['Copy (T a = b;)', 'O(n) deep copy', 'Both own separate data', 'Expensive for big strings/vectors'],
-              ['Move (T a = std::move(b);)', 'O(1) pointer steal', 'Transferred to a', 'Do not read moved-from b’s old value'],
-              ['std::string_view', 'O(1) (16 bytes)', 'Non-owning view', 'Must not outlive underlying string!'],
-              ['std::span<const T>', 'O(1) (16 bytes)', 'Non-owning slice', 'Must not outlive underlying buffer!'],
+              [
+                'Copy (T a = b;)',
+                'O(n) deep copy',
+                'Both own separate data',
+                'Expensive for big strings/vectors',
+              ],
+              [
+                'Move (T a = std::move(b);)',
+                'O(1) pointer steal',
+                'Transferred to a',
+                'Do not read moved-from b’s old value',
+              ],
+              [
+                'std::string_view',
+                'O(1) (16 bytes)',
+                'Non-owning view',
+                'Must not outlive underlying string!',
+              ],
+              [
+                'std::span<const T>',
+                'O(1) (16 bytes)',
+                'Non-owning slice',
+                'Must not outlive underlying buffer!',
+              ],
             ],
           },
           example: {
@@ -4084,7 +4336,8 @@ int main() {
             'std::string_view does not own the characters it points to. Binding it to a temporary std::string creates a dangling view immediately after the statement ends.',
         },
         {
-          question: 'What happens when a joinable std::thread object goes out of scope without .join() or .detach() being called?',
+          question:
+            'What happens when a joinable std::thread object goes out of scope without .join() or .detach() being called?',
           options: [
             'It automatically joins and waits for the thread to finish',
             'It detaches the thread cleanly in the background',
@@ -4122,10 +4375,30 @@ int main() {
           table: {
             headers: ['យន្តការ', 'ល្បឿន/ការចំណាយ', 'កម្មសិទ្ធិ', 'ចំណុចត្រូវប្រយ័ត្ន'],
             rows: [
-              ['Copy (T a = b;)', 'O(n) deep copy', 'ទាំងពីរមានទិន្នន័យដាច់ដោយឡែក', 'យឺតសម្រាប់ string/vector ធំៗ'],
-              ['Move (T a = std::move(b);)', 'O(1) ផ្ទេរ pointer', 'ផ្ទេរកម្មសិទ្ធិទៅ a', 'កុំអានតម្លៃចាស់ពី b ដែល move រួច'],
-              ['std::string_view', 'O(1) (16 bytes)', 'View គ្មានកម្មសិទ្ធិ', 'មិនត្រូវរស់យូរជាង string ដើម!'],
-              ['std::span<const T>', 'O(1) (16 bytes)', 'Slice គ្មានកម្មសិទ្ធិ', 'មិនត្រូវរស់យូរជាង buffer ដើម!'],
+              [
+                'Copy (T a = b;)',
+                'O(n) deep copy',
+                'ទាំងពីរមានទិន្នន័យដាច់ដោយឡែក',
+                'យឺតសម្រាប់ string/vector ធំៗ',
+              ],
+              [
+                'Move (T a = std::move(b);)',
+                'O(1) ផ្ទេរ pointer',
+                'ផ្ទេរកម្មសិទ្ធិទៅ a',
+                'កុំអានតម្លៃចាស់ពី b ដែល move រួច',
+              ],
+              [
+                'std::string_view',
+                'O(1) (16 bytes)',
+                'View គ្មានកម្មសិទ្ធិ',
+                'មិនត្រូវរស់យូរជាង string ដើម!',
+              ],
+              [
+                'std::span<const T>',
+                'O(1) (16 bytes)',
+                'Slice គ្មានកម្មសិទ្ធិ',
+                'មិនត្រូវរស់យូរជាង buffer ដើម!',
+              ],
             ],
           },
           exampleTitle: 'ការផ្ទេរកម្មសិទ្ធិ O(1) ដោយ std::move',
@@ -4155,7 +4428,8 @@ int main() {
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា std::string_view sv = std::string("hello") + "!"; ជាកំហុសធ្ងន់ធ្ងរ?',
+          question:
+            'ហេតុអ្វីបានជា std::string_view sv = std::string("hello") + "!"; ជាកំហុសធ្ងន់ធ្ងរ?',
           options: [
             'std::string_view មិនអាចផ្ទុកសញ្ញាឧទាន !',
             'Temporary std::string ត្រូវបានបំផ្លាញត្រង់សញ្ញា ; ធ្វើឱ្យ sv ចង្អុលទៅអង្គចងចាំដែលត្រូវបានដោះលែង (dangling view)',
@@ -4167,7 +4441,8 @@ int main() {
             'std::string_view មិនមែនជាម្ចាស់ទិន្នន័យទេ ដូច្នេះការភ្ជាប់វាទៅ temporary std::string បន្សល់ទុក dangling view ភ្លាមក្រោយបញ្ចប់បន្ទាត់។',
         },
         {
-          question: 'តើមានអ្វីកើតឡើងនៅពេល std::thread ដែល joinable ចាកចេញពី scope ដោយមិនបានហៅ .join() ឬ .detach()?',
+          question:
+            'តើមានអ្វីកើតឡើងនៅពេល std::thread ដែល joinable ចាកចេញពី scope ដោយមិនបានហៅ .join() ឬ .detach()?',
           options: [
             'វាធ្វើ join ដោយស្វ័យប្រវត្តិ និងរង់ចាំ thread បញ្ចប់',
             'វា detach ដោយស្វ័យប្រវត្តិ',

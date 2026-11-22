@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
@@ -7,10 +7,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
     />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09090b" />
-    <title>CodeHub — Web Dev, Languages &amp; Software Engineering</title>
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#09090b" />
+    <title>CodeHub — គេហទំព័រ ភាសាសរសេរកូដ និងវិស្វកម្មកម្មវិធី</title>
+    <script>
+      ;(function () {
+        try {
+          var t = localStorage.getItem('codehub-theme')
+          if (t === 'light') {
+            document.documentElement.classList.remove('dark')
+          }
+          var l = localStorage.getItem('codehub-locale')
+          if (l === 'en') {
+            document.documentElement.lang = 'en'
+          }
+        } catch {}
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

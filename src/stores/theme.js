@@ -3,10 +3,10 @@ import { ref, watch } from 'vue'
 
 export const useThemeStore = defineStore('theme', () => {
   const getInitialTheme = () => {
-    if (typeof window === 'undefined') return 'light'
+    if (typeof window === 'undefined') return 'dark'
     const stored = localStorage.getItem('codehub-theme')
     if (stored === 'dark' || stored === 'light') return stored
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return 'dark'
   }
 
   const theme = ref(getInitialTheme())

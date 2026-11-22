@@ -28,11 +28,31 @@ export const webDeep = {
           table: {
             headers: ['Element', 'Category', 'Purpose'],
             rows: [
-              ['<!DOCTYPE html>', 'Declaration', 'Triggers modern HTML5 standards mode in every browser.'],
-              ['<meta charset="UTF-8">', 'Void / Head', 'Supports English, Khmer, emojis, and all Unicode characters.'],
-              ['<meta name="viewport" ...>', 'Void / Head', 'Matches page width to mobile screens instead of zooming out.'],
-              ['<div> / <p>', 'Block', 'Starts on a new line and stretches across available width.'],
-              ['<span> / <a> / <strong>', 'Inline', 'Flows horizontally inside text and wraps only its content.'],
+              [
+                '<!DOCTYPE html>',
+                'Declaration',
+                'Triggers modern HTML5 standards mode in every browser.',
+              ],
+              [
+                '<meta charset="UTF-8">',
+                'Void / Head',
+                'Supports English, Khmer, emojis, and all Unicode characters.',
+              ],
+              [
+                '<meta name="viewport" ...>',
+                'Void / Head',
+                'Matches page width to mobile screens instead of zooming out.',
+              ],
+              [
+                '<div> / <p>',
+                'Block',
+                'Starts on a new line and stretches across available width.',
+              ],
+              [
+                '<span> / <a> / <strong>',
+                'Inline',
+                'Flows horizontally inside text and wraps only its content.',
+              ],
             ],
           },
           warning:
@@ -106,7 +126,8 @@ h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: 
       },
       quiz: [
         {
-          question: 'Why must every modern responsive web page include <meta name="viewport" content="width=device-width, initial-scale=1.0">?',
+          question:
+            'Why must every modern responsive web page include <meta name="viewport" content="width=device-width, initial-scale=1.0">?',
           options: [
             'It downloads mobile CSS files automatically',
             'It tells mobile browsers to match the page width to the device screen at 100% scale',
@@ -155,11 +176,27 @@ h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: 
           table: {
             headers: ['ធាតុ (Element)', 'ប្រភេទ', 'តួនាទី'],
             rows: [
-              ['<!DOCTYPE html>', 'ប្រកាសឯកសារ', 'បើកម៉ូដស្តង់ដារ HTML5 ទំនើបក្នុងកម្មវិធីរុករកទាំងអស់។'],
-              ['<meta charset="UTF-8">', 'Void / Head', 'គាំទ្រអក្សរខ្មែរ អង់គ្លេស Emoji និងតួអក្សរ Unicode ទាំងអស់។'],
-              ['<meta name="viewport" ...>', 'Void / Head', 'កំណត់ទទឹងទំព័រឱ្យត្រូវតាមអេក្រង់ទូរស័ព្ទជំនួសឱ្យការបង្រួមតូច។'],
+              [
+                '<!DOCTYPE html>',
+                'ប្រកាសឯកសារ',
+                'បើកម៉ូដស្តង់ដារ HTML5 ទំនើបក្នុងកម្មវិធីរុករកទាំងអស់។',
+              ],
+              [
+                '<meta charset="UTF-8">',
+                'Void / Head',
+                'គាំទ្រអក្សរខ្មែរ អង់គ្លេស Emoji និងតួអក្សរ Unicode ទាំងអស់។',
+              ],
+              [
+                '<meta name="viewport" ...>',
+                'Void / Head',
+                'កំណត់ទទឹងទំព័រឱ្យត្រូវតាមអេក្រង់ទូរស័ព្ទជំនួសឱ្យការបង្រួមតូច។',
+              ],
               ['<div> / <p>', 'Block', 'ចាប់ផ្ដើមលើបន្ទាត់ថ្មី និងលាតពេញទទឹងដែលមាន។'],
-              ['<span> / <a> / <strong>', 'Inline', 'រៀបជាជួរដេកក្នុងអត្ថបទ និងយកទំហំត្រឹមមាតិការបស់វា។'],
+              [
+                '<span> / <a> / <strong>',
+                'Inline',
+                'រៀបជាជួរដេកក្នុងអត្ថបទ និងយកទំហំត្រឹមមាតិការបស់វា។',
+              ],
             ],
           },
           warning:
@@ -183,7 +220,8 @@ h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: 
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជាគេហទំព័រទំនើបត្រូវតែមាន <meta name="viewport" content="width=device-width, initial-scale=1.0">?',
+          question:
+            'ហេតុអ្វីបានជាគេហទំព័រទំនើបត្រូវតែមាន <meta name="viewport" content="width=device-width, initial-scale=1.0">?',
           options: [
             'ដើម្បីទាញយកឯកសារ CSS ទូរស័ព្ទដោយស្វ័យប្រវត្តិ',
             'ដើម្បីប្រាប់កម្មវិធីរុករកទូរស័ព្ទឱ្យកំណត់ទទឹងទំព័រតាមអេក្រង់ឧបករណ៍នៅមាត្រដ្ឋាន 100%',
@@ -229,11 +267,31 @@ h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: 
           table: {
             headers: ['Landmark', 'Role on Page', 'Common Use Case'],
             rows: [
-              ['<header>', 'Introductory area', 'Site logo/topbar or an article title + author byline.'],
-              ['<nav>', 'Major navigation links', 'Primary navbar, sidebar menu, or breadcrumb trail.'],
-              ['<main>', 'Unique primary content', 'Main article or dashboard content (one per page).'],
-              ['<article>', 'Self-contained item', 'Blog post, news story, forum comment, or lesson card.'],
-              ['<aside> / <footer>', 'Tangential / Closing info', 'Table of contents sidebar, copyright, and legal links.'],
+              [
+                '<header>',
+                'Introductory area',
+                'Site logo/topbar or an article title + author byline.',
+              ],
+              [
+                '<nav>',
+                'Major navigation links',
+                'Primary navbar, sidebar menu, or breadcrumb trail.',
+              ],
+              [
+                '<main>',
+                'Unique primary content',
+                'Main article or dashboard content (one per page).',
+              ],
+              [
+                '<article>',
+                'Self-contained item',
+                'Blog post, news story, forum comment, or lesson card.',
+              ],
+              [
+                '<aside> / <footer>',
+                'Tangential / Closing info',
+                'Table of contents sidebar, copyright, and legal links.',
+              ],
             ],
           },
           warning:
@@ -323,7 +381,8 @@ blockquote footer { font-size: 13px; color: #52525b; }`,
             '<article> denotes independent, reusable content (blog post, news item, product card), whereas <section> groups thematically related parts inside a larger document.',
         },
         {
-          question: 'Why is <time datetime="2026-03-14">March 14, 2026</time> better than plain text?',
+          question:
+            'Why is <time datetime="2026-03-14">March 14, 2026</time> better than plain text?',
           options: [
             'It automatically converts the date to the user’s local timezone',
             'It renders a built-in calendar date picker',
@@ -356,9 +415,17 @@ blockquote footer { font-size: 13px; color: #52525b; }`,
             rows: [
               ['<header>', 'ផ្នែកណែនាំ', 'ឡូហ្គោ/របារខាងលើ ឬចំណងជើងអត្ថបទ និងឈ្មោះអ្នកនិពន្ធ។'],
               ['<nav>', 'តំណភ្ជាប់រុករកសំខាន់ៗ', 'របារម៉ឺនុយចម្បង ម៉ឺនុយចំហៀង ឬ breadcrumb។'],
-              ['<main>', 'មាតិកាចម្បងតែមួយគត់', 'អត្ថបទសំខាន់ ឬផ្ទាំងគ្រប់គ្រង (មួយក្នុងមួយទំព័រ)។'],
+              [
+                '<main>',
+                'មាតិកាចម្បងតែមួយគត់',
+                'អត្ថបទសំខាន់ ឬផ្ទាំងគ្រប់គ្រង (មួយក្នុងមួយទំព័រ)។',
+              ],
               ['<article>', 'មាតិកាឯករាជ្យ', 'អត្ថបទប្លុក ព័ត៌មាន មតិយោបល់ ឬកាតមេរៀន។'],
-              ['<aside> / <footer>', 'ព័ត៌មានបន្ទាប់បន្សំ / ផ្នែកបាត', 'មាតិកាចំហៀង សិទ្ធិអ្នកនិពន្ធ និងតំណភ្ជាប់ផ្លូវច្បាប់។'],
+              [
+                '<aside> / <footer>',
+                'ព័ត៌មានបន្ទាប់បន្សំ / ផ្នែកបាត',
+                'មាតិកាចំហៀង សិទ្ធិអ្នកនិពន្ធ និងតំណភ្ជាប់ផ្លូវច្បាប់។',
+              ],
             ],
           },
           warning:
@@ -399,7 +466,8 @@ blockquote footer { font-size: 13px; color: #52525b; }`,
             '<article> បង្ហាញពីមាតិកាឯករាជ្យដែលអាចយកទៅចែករំលែកដាច់ដោយឡែកបាន ចំណែក <section> ប្រើសម្រាប់ចែកក្រុមមាតិកាដែលពាក់ព័ន្ធគ្នាក្នុងឯកសារតែមួយ។',
         },
         {
-          question: 'ហេតុអ្វីបានជា <time datetime="2026-03-14">March 14, 2026</time> ល្អជាងអត្ថបទធម្មតា?',
+          question:
+            'ហេតុអ្វីបានជា <time datetime="2026-03-14">March 14, 2026</time> ល្អជាងអត្ថបទធម្មតា?',
           options: [
             'វាប្ដូរកាលបរិច្ឆេទតាមតំបន់ម៉ោងអ្នកប្រើដោយស្វ័យប្រវត្តិ',
             'វាបង្ហាញប្រតិទិនជ្រើសរើសថ្ងៃភ្ជាប់មកស្រាប់',
@@ -528,7 +596,8 @@ figcaption { margin-top: 8px; font-size: 13px; color: #52525b; }
       },
       quiz: [
         {
-          question: 'How should you write the alt attribute for a purely decorative icon next to a text label?',
+          question:
+            'How should you write the alt attribute for a purely decorative icon next to a text label?',
           options: [
             'Omit the alt attribute completely',
             'Set alt="" (empty string) so screen readers skip it',
@@ -540,7 +609,8 @@ figcaption { margin-top: 8px; font-size: 13px; color: #52525b; }
             'An empty alt="" marks an image as presentational so screen readers ignore it; omitting alt altogether often causes screen readers to announce the image file URL.',
         },
         {
-          question: 'Why should you add width and height HTML attributes on <img> even when CSS sets width: 100%; height: auto?',
+          question:
+            'Why should you add width and height HTML attributes on <img> even when CSS sets width: 100%; height: auto?',
           options: [
             'It crops the image file on the server automatically',
             'It prevents browsers from caching the image',
@@ -604,7 +674,8 @@ figcaption { margin-top: 8px; font-size: 13px; color: #52525b; }
       },
       quiz: [
         {
-          question: 'តើអ្នកគួរសរសេរគុណលក្ខណៈ alt យ៉ាងដូចម្ដេចសម្រាប់រូបតំណាងតុបតែងសុទ្ធដែលនៅក្បែរអក្សរ?',
+          question:
+            'តើអ្នកគួរសរសេរគុណលក្ខណៈ alt យ៉ាងដូចម្ដេចសម្រាប់រូបតំណាងតុបតែងសុទ្ធដែលនៅក្បែរអក្សរ?',
           options: [
             'មិនបាច់ដាក់គុណលក្ខណៈ alt ទេ',
             'កំណត់ alt="" (អត្ថបទទទេ) ដើម្បីឱ្យកម្មវិធីអានអេក្រង់រំលង',
@@ -616,7 +687,8 @@ figcaption { margin-top: 8px; font-size: 13px; color: #52525b; }
             'ការដាក់ alt="" ប្រាប់កម្មវិធីអានអេក្រង់ថារូបភាពនេះគ្រាន់តែសម្រាប់តុបតែង រីឯការមិនដាក់ alt សោះអាចធ្វើឱ្យវាអានឈ្មោះឯកសារជំនួស។',
         },
         {
-          question: 'ហេតុអ្វីគួរដាក់ width និង height ក្នុង HTML លើ <img> ទោះជា CSS មាន width: 100%; height: auto ហើយក៏ដោយ?',
+          question:
+            'ហេតុអ្វីគួរដាក់ width និង height ក្នុង HTML លើ <img> ទោះជា CSS មាន width: 100%; height: auto ហើយក៏ដោយ?',
           options: [
             'ដើម្បីកាត់រូបភាពលើម៉ាស៊ីនមេដោយស្វ័យប្រវត្តិ',
             'ដើម្បីកុំឱ្យកម្មវិធីរុករករក្សាទុករូបភាពក្នុង cache',
@@ -717,11 +789,31 @@ dd { margin: 2px 0 0; font-size: 14px; color: #52525b; }
           table: {
             headers: ['Tag / Attribute', 'Where Used', 'Purpose'],
             rows: [
-              ['<caption>', 'First child of <table>', 'Provides an accessible title describing the table’s data.'],
-              ['<th scope="col">', 'Inside <thead>', 'Marks a column header associated with cells below it.'],
-              ['<th scope="row">', 'First cell in <tbody> <tr>', 'Marks a row header associated with cells to its right.'],
-              ['<tfoot>', 'Inside <table>', 'Groups summary or total rows separately from body rows.'],
-              ['colspan / rowspan', 'On <th> or <td>', 'Merges a cell across multiple columns or rows.'],
+              [
+                '<caption>',
+                'First child of <table>',
+                'Provides an accessible title describing the table’s data.',
+              ],
+              [
+                '<th scope="col">',
+                'Inside <thead>',
+                'Marks a column header associated with cells below it.',
+              ],
+              [
+                '<th scope="row">',
+                'First cell in <tbody> <tr>',
+                'Marks a row header associated with cells to its right.',
+              ],
+              [
+                '<tfoot>',
+                'Inside <table>',
+                'Groups summary or total rows separately from body rows.',
+              ],
+              [
+                'colspan / rowspan',
+                'On <th> or <td>',
+                'Merges a cell across multiple columns or rows.',
+              ],
             ],
           },
           warning:
@@ -820,8 +912,16 @@ dd { margin: 2px 0 0; font-size: 14px; color: #52525b; }
             headers: ['ស្លាក / គុណលក្ខណៈ', 'ទីតាំងប្រើ', 'តួនាទី'],
             rows: [
               ['<caption>', 'កូនដំបូងក្នុង <table>', 'ផ្ដល់ចំណងជើងច្បាស់លាស់ពណ៌នាទិន្នន័យតារាង។'],
-              ['<th scope="col">', 'ខាងក្នុង <thead>', 'សម្គាល់ក្បាលជួរឈរសម្រាប់ប្រអប់ទិន្នន័យខាងក្រោម។'],
-              ['<th scope="row">', 'ប្រអប់ដំបូងក្នុង <tbody> <tr>', 'សម្គាល់ក្បាលជួរដេកសម្រាប់ទិន្នន័យនៅខាងស្ដាំ។'],
+              [
+                '<th scope="col">',
+                'ខាងក្នុង <thead>',
+                'សម្គាល់ក្បាលជួរឈរសម្រាប់ប្រអប់ទិន្នន័យខាងក្រោម។',
+              ],
+              [
+                '<th scope="row">',
+                'ប្រអប់ដំបូងក្នុង <tbody> <tr>',
+                'សម្គាល់ក្បាលជួរដេកសម្រាប់ទិន្នន័យនៅខាងស្ដាំ។',
+              ],
               ['<tfoot>', 'ខាងក្នុង <table>', 'ផ្ដុំជួរសរុបដាច់ដោយឡែកពីជួរទិន្នន័យធម្មតា។'],
               ['colspan / rowspan', 'លើ <th> ឬ <td>', 'បញ្ចូលប្រអប់ច្រើនជួរឈរ ឬច្រើនជួរដេកតែមួយ។'],
             ],
@@ -883,11 +983,31 @@ dd { margin: 2px 0 0; font-size: 14px; color: #52525b; }
           table: {
             headers: ['Control / Attribute', 'Purpose', 'UX Benefit'],
             rows: [
-              ['type="email" / "tel"', 'Email or phone field', 'Opens @ or numeric keypad automatically on phones.'],
-              ['type="radio"', 'Single choice in a group', 'Sharing one name enforces mutually exclusive selection.'],
-              ['<select> + <option>', 'Dropdown choice list', 'Compact way to pick from 5+ predefined options.'],
-              ['<fieldset> + <legend>', 'Accessible group wrapper', 'Gives screen readers context for radio/checkbox groups.'],
-              ['autocomplete="email"', 'Autofill hint', 'Lets password managers and browsers fill forms in 1 tap.'],
+              [
+                'type="email" / "tel"',
+                'Email or phone field',
+                'Opens @ or numeric keypad automatically on phones.',
+              ],
+              [
+                'type="radio"',
+                'Single choice in a group',
+                'Sharing one name enforces mutually exclusive selection.',
+              ],
+              [
+                '<select> + <option>',
+                'Dropdown choice list',
+                'Compact way to pick from 5+ predefined options.',
+              ],
+              [
+                '<fieldset> + <legend>',
+                'Accessible group wrapper',
+                'Gives screen readers context for radio/checkbox groups.',
+              ],
+              [
+                'autocomplete="email"',
+                'Autofill hint',
+                'Lets password managers and browsers fill forms in 1 tap.',
+              ],
             ],
           },
           warning:
@@ -989,7 +1109,8 @@ form.addEventListener('submit', (e) => {
       },
       quiz: [
         {
-          question: 'Why does a button inside a <form> accidentally submit the form when clicked if you omit the type attribute?',
+          question:
+            'Why does a button inside a <form> accidentally submit the form when clicked if you omit the type attribute?',
           options: [
             'Because browsers treat all buttons on a page as submit triggers',
             'Because the default type of <button> inside a <form> is "submit"',
@@ -1001,7 +1122,8 @@ form.addEventListener('submit', (e) => {
             'A <button> without a type attribute defaults to type="submit". Always write type="button" for non-submitting actions like Cancel or Show Password.',
         },
         {
-          question: 'What happens if an <input> inside a <form> has an id attribute but no name attribute?',
+          question:
+            'What happens if an <input> inside a <form> has an id attribute but no name attribute?',
           options: [
             'The browser throws a syntax error and hides the input',
             'The input cannot receive keyboard focus',
@@ -1032,11 +1154,31 @@ form.addEventListener('submit', (e) => {
           table: {
             headers: ['ធាតុ / គុណលក្ខណៈ', 'តួនាទី', 'អត្ថប្រយោជន៍ UX'],
             rows: [
-              ['type="email" / "tel"', 'ប្រអប់អ៊ីមែល ឬទូរស័ព្ទ', 'បើកក្ដារចុចមាន @ ឬលេខដោយស្វ័យប្រវត្តិលើទូរស័ព្ទ។'],
-              ['type="radio"', 'ជម្រើសតែមួយក្នុងក្រុម', 'ការប្រើ name ដូចគ្នាអនុញ្ញាតឱ្យជ្រើសបានតែមួយគត់។'],
-              ['<select> + <option>', 'បញ្ជីជម្រើសទម្លាក់ចុះ', 'សន្សំទំហំសម្រាប់ជម្រើសដែលមានច្រើនជាង 5។'],
-              ['<fieldset> + <legend>', 'ប្រអប់ផ្ដុំក្រុមមានន័យ', 'ផ្ដល់បរិបទដល់កម្មវិធីអានអេក្រង់សម្រាប់ radio/checkbox។'],
-              ['autocomplete="email"', 'ជំនួយបំពេញស្វ័យប្រវត្តិ', 'អនុញ្ញាតឱ្យកម្មវិធីរុករកបំពេញទិន្នន័យដោយចុចតែម្ដង។'],
+              [
+                'type="email" / "tel"',
+                'ប្រអប់អ៊ីមែល ឬទូរស័ព្ទ',
+                'បើកក្ដារចុចមាន @ ឬលេខដោយស្វ័យប្រវត្តិលើទូរស័ព្ទ។',
+              ],
+              [
+                'type="radio"',
+                'ជម្រើសតែមួយក្នុងក្រុម',
+                'ការប្រើ name ដូចគ្នាអនុញ្ញាតឱ្យជ្រើសបានតែមួយគត់។',
+              ],
+              [
+                '<select> + <option>',
+                'បញ្ជីជម្រើសទម្លាក់ចុះ',
+                'សន្សំទំហំសម្រាប់ជម្រើសដែលមានច្រើនជាង 5។',
+              ],
+              [
+                '<fieldset> + <legend>',
+                'ប្រអប់ផ្ដុំក្រុមមានន័យ',
+                'ផ្ដល់បរិបទដល់កម្មវិធីអានអេក្រង់សម្រាប់ radio/checkbox។',
+              ],
+              [
+                'autocomplete="email"',
+                'ជំនួយបំពេញស្វ័យប្រវត្តិ',
+                'អនុញ្ញាតឱ្យកម្មវិធីរុករកបំពេញទិន្នន័យដោយចុចតែម្ដង។',
+              ],
             ],
           },
           warning:
@@ -1065,7 +1207,8 @@ form.addEventListener('submit', (e) => {
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា <button> នៅក្នុង <form> ច្រឡំដាក់ស្នើទម្រង់ពេលចុច បើអ្នកភ្លេចដាក់គុណលក្ខណៈ type?',
+          question:
+            'ហេតុអ្វីបានជា <button> នៅក្នុង <form> ច្រឡំដាក់ស្នើទម្រង់ពេលចុច បើអ្នកភ្លេចដាក់គុណលក្ខណៈ type?',
           options: [
             'ព្រោះកម្មវិធីរុករកចាត់ទុកគ្រប់ប៊ូតុងលើទំព័រជាប៊ូតុង submit',
             'ព្រោះតម្លៃលំនាំដើមរបស់ <button> នៅក្នុង <form> គឺ type="submit"',
@@ -1077,7 +1220,8 @@ form.addEventListener('submit', (e) => {
             '<button> ដែលគ្មាន type នៅក្នុង <form> មានតម្លៃលំនាំដើមជា type="submit"។ គួរសរសេរ type="button" សម្រាប់ប៊ូតុងដូចជា បោះបង់ ឬ បង្ហាញពាក្យសម្ងាត់។',
         },
         {
-          question: 'តើនឹងមានអ្វីកើតឡើងប្រសិនបើ <input> ក្នុង <form> មាន id ប៉ុន្តែគ្មានគុណលក្ខណៈ name?',
+          question:
+            'តើនឹងមានអ្វីកើតឡើងប្រសិនបើ <input> ក្នុង <form> មាន id ប៉ុន្តែគ្មានគុណលក្ខណៈ name?',
           options: [
             'កម្មវិធីរុករកបង្ហាញកំហុស ហើយលាក់ប្រអប់បញ្ចូលនោះ',
             'ប្រអប់បញ្ចូលមិនអាចចុច Tab ចូលបានទេ',
@@ -1111,11 +1255,31 @@ form.addEventListener('submit', (e) => {
           table: {
             headers: ['Attribute / Pattern', 'Use Case', 'What It Announces'],
             rows: [
-              ['aria-label="Close"', 'Icon-only <button>', 'Gives an accessible name when there is no visible text.'],
-              ['aria-expanded="false"', 'Accordion / dropdown trigger', 'Tells screen readers whether the panel is open or closed.'],
-              ['aria-live="polite"', 'Toast / status message', 'Reads dynamic updates once the user finishes current speech.'],
-              ['aria-current="page"', 'Active link in <nav>', 'Identifies which navigation link matches the current page.'],
-              ['aria-hidden="true"', 'Decorative SVG icons', 'Hides purely visual icons from the accessibility tree.'],
+              [
+                'aria-label="Close"',
+                'Icon-only <button>',
+                'Gives an accessible name when there is no visible text.',
+              ],
+              [
+                'aria-expanded="false"',
+                'Accordion / dropdown trigger',
+                'Tells screen readers whether the panel is open or closed.',
+              ],
+              [
+                'aria-live="polite"',
+                'Toast / status message',
+                'Reads dynamic updates once the user finishes current speech.',
+              ],
+              [
+                'aria-current="page"',
+                'Active link in <nav>',
+                'Identifies which navigation link matches the current page.',
+              ],
+              [
+                'aria-hidden="true"',
+                'Decorative SVG icons',
+                'Hides purely visual icons from the accessibility tree.',
+              ],
             ],
           },
           warning:
@@ -1200,7 +1364,8 @@ btn.addEventListener('click', () => {
       },
       quiz: [
         {
-          question: 'Which approach follows the First Rule of ARIA for an interactive action button?',
+          question:
+            'Which approach follows the First Rule of ARIA for an interactive action button?',
           options: [
             '<div role="button" tabindex="0" onclick="save()">Save</div>',
             '<span role="button" aria-clickable="true">Save</span>',
@@ -1212,7 +1377,8 @@ btn.addEventListener('click', () => {
             'A native <button type="button"> automatically gives you keyboard focus, Enter/Space activation, disabled behavior, and screen-reader role without extra ARIA or JS.',
         },
         {
-          question: 'Why should an icon-only <button> include aria-label and mark its inner <svg> with aria-hidden="true"?',
+          question:
+            'Why should an icon-only <button> include aria-label and mark its inner <svg> with aria-hidden="true"?',
           options: [
             'To make the SVG render faster on mobile GPUs',
             'So screen readers announce a clear button name instead of an unlabeled button or raw SVG noise',
@@ -1243,11 +1409,31 @@ btn.addEventListener('click', () => {
           table: {
             headers: ['គុណលក្ខណៈ / គំរូ', 'ករណីប្រើប្រាស់', 'អ្វីដែលវាប្រាប់កម្មវិធីអាន'],
             rows: [
-              ['aria-label="Close"', 'ប៊ូតុងមានតែរូបតំណាង', 'ផ្ដល់ឈ្មោះច្បាស់លាស់នៅពេលគ្មានអក្សរមើលឃើញ។'],
-              ['aria-expanded="false"', 'ប៊ូតុងបើក/បិទ Accordion', 'ប្រាប់ថាផ្ទាំងខាងក្រោមកំពុងបើក ឬបិទ។'],
-              ['aria-live="polite"', 'សារជូនដំណឹង / Toast', 'អានការផ្លាស់ប្ដូរថ្មីៗដោយមិនកាត់ផ្ដាច់ការអានបច្ចុប្បន្ន។'],
-              ['aria-current="page"', 'តំណភ្ជាប់ទំព័របច្ចុប្បន្នក្នុង <nav>', 'សម្គាល់ថាតំណភ្ជាប់ណាត្រូវនឹងទំព័រដែលកំពុងបើក។'],
-              ['aria-hidden="true"', 'រូបតំណាង SVG តុបតែង', 'លាក់រូបតំណាងតុបតែងចេញពីកម្មវិធីអានអេក្រង់។'],
+              [
+                'aria-label="Close"',
+                'ប៊ូតុងមានតែរូបតំណាង',
+                'ផ្ដល់ឈ្មោះច្បាស់លាស់នៅពេលគ្មានអក្សរមើលឃើញ។',
+              ],
+              [
+                'aria-expanded="false"',
+                'ប៊ូតុងបើក/បិទ Accordion',
+                'ប្រាប់ថាផ្ទាំងខាងក្រោមកំពុងបើក ឬបិទ។',
+              ],
+              [
+                'aria-live="polite"',
+                'សារជូនដំណឹង / Toast',
+                'អានការផ្លាស់ប្ដូរថ្មីៗដោយមិនកាត់ផ្ដាច់ការអានបច្ចុប្បន្ន។',
+              ],
+              [
+                'aria-current="page"',
+                'តំណភ្ជាប់ទំព័របច្ចុប្បន្នក្នុង <nav>',
+                'សម្គាល់ថាតំណភ្ជាប់ណាត្រូវនឹងទំព័រដែលកំពុងបើក។',
+              ],
+              [
+                'aria-hidden="true"',
+                'រូបតំណាង SVG តុបតែង',
+                'លាក់រូបតំណាងតុបតែងចេញពីកម្មវិធីអានអេក្រង់។',
+              ],
             ],
           },
           warning:
@@ -1288,7 +1474,8 @@ btn.addEventListener('click', () => {
             '<button type="button"> ដើមរបស់ HTML ផ្ដល់ keyboard focus, ការចុច Enter/Space, ស្ថានភាព disabled និង role ដោយស្វ័យប្រវត្តិ។',
         },
         {
-          question: 'ហេតុអ្វីប៊ូតុងដែលមានតែរូបតំណាងត្រូវការ aria-label ហើយដាក់ aria-hidden="true" លើ <svg>?',
+          question:
+            'ហេតុអ្វីប៊ូតុងដែលមានតែរូបតំណាងត្រូវការ aria-label ហើយដាក់ aria-hidden="true" លើ <svg>?',
           options: [
             'ដើម្បីឱ្យ SVG បង្ហាញលឿនជាងមុនលើ GPU ទូរស័ព្ទ',
             'ដើម្បីឱ្យកម្មវិធីអានអេក្រង់អានឈ្មោះប៊ូតុងបានច្បាស់ ជំនួសឱ្យការអានកូដ SVG រញ៉េរញ៉ៃ',
@@ -1327,10 +1514,26 @@ btn.addEventListener('click', () => {
             headers: ['Unit', 'Relative To', 'Best Used For'],
             rows: [
               ['px', 'CSS pixel (fixed)', '1px hairlines, subtle shadows, and border-radius.'],
-              ['rem', 'Root <html> font-size (16px default)', 'Font sizes, padding, margins, and scalable spacing.'],
-              ['em', 'Current element’s font-size', 'Icon spacing or button padding scaling with text size.'],
-              ['%', 'Parent element’s dimension', 'Fluid image widths (max-width: 100%) and column splits.'],
-              ['ch', 'Width of the "0" glyph', 'Readable line length (max-width: 65ch) on articles.'],
+              [
+                'rem',
+                'Root <html> font-size (16px default)',
+                'Font sizes, padding, margins, and scalable spacing.',
+              ],
+              [
+                'em',
+                'Current element’s font-size',
+                'Icon spacing or button padding scaling with text size.',
+              ],
+              [
+                '%',
+                'Parent element’s dimension',
+                'Fluid image widths (max-width: 100%) and column splits.',
+              ],
+              [
+                'ch',
+                'Width of the "0" glyph',
+                'Readable line length (max-width: 65ch) on articles.',
+              ],
             ],
           },
           warning:
@@ -1460,8 +1663,16 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
             headers: ['ខ្នាត (Unit)', 'យោងតាម', 'ស័ក្តិសមបំផុតសម្រាប់'],
             rows: [
               ['px', 'ភីកសែលថេរ', 'ស៊ុម 1px ស្រមោលស្រាល និង border-radius។'],
-              ['rem', 'ទំហំអក្សរ <html> (លំនាំដើម 16px)', 'ទំហំអក្សរ padding, margin និងគម្លាតប្លង់។'],
-              ['em', 'ទំហំអក្សរនៃធាតុបច្ចុប្បន្ន', 'គម្លាតរូបតំណាង ឬ padding ប៊ូតុងដែលប្រែតាមអក្សរ។'],
+              [
+                'rem',
+                'ទំហំអក្សរ <html> (លំនាំដើម 16px)',
+                'ទំហំអក្សរ padding, margin និងគម្លាតប្លង់។',
+              ],
+              [
+                'em',
+                'ទំហំអក្សរនៃធាតុបច្ចុប្បន្ន',
+                'គម្លាតរូបតំណាង ឬ padding ប៊ូតុងដែលប្រែតាមអក្សរ។',
+              ],
               ['%', 'ទំហំធាតុមេ', 'ទទឹងរូបភាពឆ្លើយតប (max-width: 100%) និងជួរឈរ។'],
               ['ch', 'ទទឹងតួអក្សរ "0"', 'កម្រិតប្រវែងជួរអត្ថបទងាយអាន (max-width: 65ch)។'],
             ],
@@ -1544,7 +1755,11 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
             headers: ['Selector', 'Specificity', 'What It Matches'],
             rows: [
               ['p / ::before', '(0, 0, 1)', 'Element type or pseudo-element.'],
-              ['.btn / [disabled] / :hover', '(0, 1, 0)', 'Class, attribute selector, or pseudo-class.'],
+              [
+                '.btn / [disabled] / :hover',
+                '(0, 1, 0)',
+                'Class, attribute selector, or pseudo-class.',
+              ],
               ['.card > h2', '(0, 1, 1)', 'Direct <h2> child inside .card.'],
               ['#main-nav a', '(1, 0, 1)', 'Any <a> inside #main-nav (high specificity!).'],
               [':where(.card h2)', '(0, 0, 0)', 'Zero-specificity wrapper for easy overrides.'],
@@ -1616,7 +1831,8 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
       },
       quiz: [
         {
-          question: 'Which selector wins if all four apply to the same <a id="cta" class="btn primary"> element?',
+          question:
+            'Which selector wins if all four apply to the same <a id="cta" class="btn primary"> element?',
           options: [
             'a.btn.primary.active (0, 3, 1)',
             '#cta (1, 0, 0)',
@@ -1665,7 +1881,11 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
             headers: ['Selector', 'ពិន្ទុ Specificity', 'អ្វីដែលវាជ្រើស'],
             rows: [
               ['p / ::before', '(0, 0, 1)', 'ប្រភេទធាតុ ឬ pseudo-element។'],
-              ['.btn / [disabled] / :hover', '(0, 1, 0)', 'Class, attribute selector ឬ pseudo-class។'],
+              [
+                '.btn / [disabled] / :hover',
+                '(0, 1, 0)',
+                'Class, attribute selector ឬ pseudo-class។',
+              ],
               ['.card > h2', '(0, 1, 1)', '<h2> ដែលជាកូនផ្ទាល់ក្នុង .card។'],
               ['#main-nav a', '(1, 0, 1)', '<a> ណាមួយក្នុង #main-nav (specificity ខ្ពស់!)។'],
               [':where(.card h2)', '(0, 0, 0)', 'សូន្យ specificity ងាយស្រួលបំពានស្ទីលនៅពេលក្រោយ។'],
@@ -1692,7 +1912,8 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
       },
       quiz: [
         {
-          question: 'តើ selector មួយណាឈ្នះ ប្រសិនបើទាំងបួនត្រូវគ្នានឹង <a id="cta" class="btn primary"> តែមួយ?',
+          question:
+            'តើ selector មួយណាឈ្នះ ប្រសិនបើទាំងបួនត្រូវគ្នានឹង <a id="cta" class="btn primary"> តែមួយ?',
           options: [
             'a.btn.primary.active (0, 3, 1)',
             '#cta (1, 0, 0)',
@@ -1738,11 +1959,31 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
           table: {
             headers: ['Property / Value', 'Behavior', 'When To Use'],
             rows: [
-              ['box-sizing: border-box', 'width includes padding & border', 'Global reset on *, *::before, *::after.'],
-              ['display: inline-block', 'Flows inline, accepts width/height', 'Badges, inline buttons, and icon chips.'],
-              ['overflow: hidden / clip', 'Cuts overflowing children', 'Rounding image corners or clipping decorative blur.'],
-              ['overflow-x: auto', 'Adds horizontal scrollbar only when needed', 'Wide data tables and code blocks on mobile.'],
-              ['outline: 2px solid ...', 'Draws outside border without changing box size', 'Focus rings that never cause layout jitter.'],
+              [
+                'box-sizing: border-box',
+                'width includes padding & border',
+                'Global reset on *, *::before, *::after.',
+              ],
+              [
+                'display: inline-block',
+                'Flows inline, accepts width/height',
+                'Badges, inline buttons, and icon chips.',
+              ],
+              [
+                'overflow: hidden / clip',
+                'Cuts overflowing children',
+                'Rounding image corners or clipping decorative blur.',
+              ],
+              [
+                'overflow-x: auto',
+                'Adds horizontal scrollbar only when needed',
+                'Wide data tables and code blocks on mobile.',
+              ],
+              [
+                'outline: 2px solid ...',
+                'Draws outside border without changing box size',
+                'Focus rings that never cause layout jitter.',
+              ],
             ],
           },
           warning:
@@ -1813,14 +2054,16 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
       },
       quiz: [
         {
-          question: 'An element has box-sizing: content-box, width: 200px, padding: 16px, and border: 2px solid black. What is its total rendered width?',
+          question:
+            'An element has box-sizing: content-box, width: 200px, padding: 16px, and border: 2px solid black. What is its total rendered width?',
           options: ['200px', '218px', '232px', '236px'],
           answer: 3,
           explanation:
             'Under content-box, padding and border add to both left and right sides: 200 + (16 × 2) + (2 × 2) = 236px.',
         },
         {
-          question: 'Two stacked <p> elements have margin-bottom: 20px (top) and margin-top: 12px (bottom) inside a normal block <div>. What is the vertical space between them?',
+          question:
+            'Two stacked <p> elements have margin-bottom: 20px (top) and margin-top: 12px (bottom) inside a normal block <div>. What is the vertical space between them?',
           options: ['32px', '20px', '12px', '8px'],
           answer: 1,
           explanation:
@@ -1846,11 +2089,31 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
           table: {
             headers: ['លក្ខណៈសម្បត្តិ / តម្លៃ', 'ឥរិយាបថ', 'ពេលណាគួរប្រើ'],
             rows: [
-              ['box-sizing: border-box', 'width រាប់បញ្ចូល padding និង border', 'កំណត់ទូទាំងគេហទំព័រលើ *, *::before, *::after។'],
-              ['display: inline-block', 'រៀបក្នុងជួរ តែទទួល width/height', 'ស្លាក badge ប៊ូតុងក្នុងជួរ និង chip រូបតំណាង។'],
-              ['overflow: hidden / clip', 'កាត់ផ្នែកកូនដែលហៀរចេញក្រៅ', 'ធ្វើជ្រុងរូបភាពមូល ឬកាត់ផ្ទៃតុបតែង។'],
-              ['overflow-x: auto', 'បង្ហាញរបាររំកិលផ្ដេកតែពេលចាំបាច់', 'តារាងទិន្នន័យធំៗ និងប្លុកកូដលើទូរស័ព្ទ។'],
-              ['outline: 2px solid ...', 'គូរក្រៅស៊ុមដោយមិនប្ដូរទំហំប្រអប់', 'ស៊ុម focus ដែលមិនធ្វើឱ្យប្លង់លោត។'],
+              [
+                'box-sizing: border-box',
+                'width រាប់បញ្ចូល padding និង border',
+                'កំណត់ទូទាំងគេហទំព័រលើ *, *::before, *::after។',
+              ],
+              [
+                'display: inline-block',
+                'រៀបក្នុងជួរ តែទទួល width/height',
+                'ស្លាក badge ប៊ូតុងក្នុងជួរ និង chip រូបតំណាង។',
+              ],
+              [
+                'overflow: hidden / clip',
+                'កាត់ផ្នែកកូនដែលហៀរចេញក្រៅ',
+                'ធ្វើជ្រុងរូបភាពមូល ឬកាត់ផ្ទៃតុបតែង។',
+              ],
+              [
+                'overflow-x: auto',
+                'បង្ហាញរបាររំកិលផ្ដេកតែពេលចាំបាច់',
+                'តារាងទិន្នន័យធំៗ និងប្លុកកូដលើទូរស័ព្ទ។',
+              ],
+              [
+                'outline: 2px solid ...',
+                'គូរក្រៅស៊ុមដោយមិនប្ដូរទំហំប្រអប់',
+                'ស៊ុម focus ដែលមិនធ្វើឱ្យប្លង់លោត។',
+              ],
             ],
           },
           warning:
@@ -1879,14 +2142,16 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
       },
       quiz: [
         {
-          question: 'ធាតុមួយមាន box-sizing: content-box, width: 200px, padding: 16px និង border: 2px solid black។ តើទទឹងបង្ហាញសរុបប៉ុន្មាន?',
+          question:
+            'ធាតុមួយមាន box-sizing: content-box, width: 200px, padding: 16px និង border: 2px solid black។ តើទទឹងបង្ហាញសរុបប៉ុន្មាន?',
           options: ['200px', '218px', '232px', '236px'],
           answer: 3,
           explanation:
             'ក្រោម content-box ទាំង padding និង border បូកបន្ថែមទាំងឆ្វេង និងស្ដាំ៖ 200 + (16 × 2) + (2 × 2) = 236px។',
         },
         {
-          question: 'ធាតុ <p> ពីរតម្រៀបលើគ្នាមាន margin-bottom: 20px (ខាងលើ) និង margin-top: 12px (ខាងក្រោម) ក្នុង <div> ធម្មតា។ តើចន្លោះបញ្ឈររវាងវាប៉ុន្មាន?',
+          question:
+            'ធាតុ <p> ពីរតម្រៀបលើគ្នាមាន margin-bottom: 20px (ខាងលើ) និង margin-top: 12px (ខាងក្រោម) ក្នុង <div> ធម្មតា។ តើចន្លោះបញ្ឈររវាងវាប៉ុន្មាន?',
           options: ['32px', '20px', '12px', '8px'],
           answer: 1,
           explanation:
@@ -1915,11 +2180,23 @@ p { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.65; color: hsl(240 5
           table: {
             headers: ['Property', 'Applies To', 'Effect'],
             rows: [
-              ['flex-direction: row | column', 'Container', 'Sets main axis direction (horizontal vs vertical).'],
-              ['flex-wrap: wrap', 'Container', 'Lets overflowing items wrap onto additional lines.'],
+              [
+                'flex-direction: row | column',
+                'Container',
+                'Sets main axis direction (horizontal vs vertical).',
+              ],
+              [
+                'flex-wrap: wrap',
+                'Container',
+                'Lets overflowing items wrap onto additional lines.',
+              ],
               ['gap: 12px', 'Container', 'Clean spacing between items without outer edge margins.'],
               ['flex: 1', 'Flex Item', 'Item grows to fill remaining space equally with siblings.'],
-              ['flex-shrink: 0', 'Flex Item', 'Prevents avatars, icons, and badges from squishing.'],
+              [
+                'flex-shrink: 0',
+                'Flex Item',
+                'Prevents avatars, icons, and badges from squishing.',
+              ],
             ],
           },
           warning:
@@ -2011,19 +2288,16 @@ p { margin: 0; font-size: 13px; color: #52525b; line-height: 1.5; }
       },
       quiz: [
         {
-          question: 'When flex-direction is set to column, which property controls vertical spacing/distribution along the column?',
-          options: [
-            'align-items',
-            'justify-content',
-            'align-self',
-            'flex-wrap',
-          ],
+          question:
+            'When flex-direction is set to column, which property controls vertical spacing/distribution along the column?',
+          options: ['align-items', 'justify-content', 'align-self', 'flex-wrap'],
           answer: 1,
           explanation:
             'justify-content ALWAYS acts along the main axis. When flex-direction: column makes the main axis vertical, justify-content distributes items vertically.',
         },
         {
-          question: 'Why should icons and avatars inside a horizontal flex container always have flex-shrink: 0?',
+          question:
+            'Why should icons and avatars inside a horizontal flex container always have flex-shrink: 0?',
           options: [
             'So they grow to fill empty space',
             'Because flex items default to flex-shrink: 1 and will squash narrow icons when sibling text is wide',
@@ -2087,19 +2361,16 @@ p { margin: 0; font-size: 13px; color: #52525b; line-height: 1.5; }
       },
       quiz: [
         {
-          question: 'នៅពេល flex-direction កំណត់ជា column តើលក្ខណៈសម្បត្តិណាគ្រប់គ្រងការតម្រឹមបញ្ឈរតាមជួរឈរ?',
-          options: [
-            'align-items',
-            'justify-content',
-            'align-self',
-            'flex-wrap',
-          ],
+          question:
+            'នៅពេល flex-direction កំណត់ជា column តើលក្ខណៈសម្បត្តិណាគ្រប់គ្រងការតម្រឹមបញ្ឈរតាមជួរឈរ?',
+          options: ['align-items', 'justify-content', 'align-self', 'flex-wrap'],
           answer: 1,
           explanation:
             'justify-content តែងតែធ្វើការលើអ័ក្សចម្បងជានិច្ច។ ពេល flex-direction: column ធ្វើឱ្យអ័ក្សចម្បងជាអ័ក្សបញ្ឈរ justify-content នឹងតម្រឹមបញ្ឈរ។',
         },
         {
-          question: 'ហេតុអ្វីបានជារូបតំណាង និង avatar ក្នុងប្រអប់ flex ផ្ដេកគួរតែមាន flex-shrink: 0?',
+          question:
+            'ហេតុអ្វីបានជារូបតំណាង និង avatar ក្នុងប្រអប់ flex ផ្ដេកគួរតែមាន flex-shrink: 0?',
           options: [
             'ដើម្បីឱ្យពួកវាពង្រីកពេញទំហំទំនេរ',
             'ព្រោះធាតុ flex មានលំនាំដើម flex-shrink: 1 ហើយនឹងកំប៉ិតពេលអត្ថបទក្បែរវែង',
@@ -2138,11 +2409,31 @@ p { margin: 0; font-size: 13px; color: #52525b; line-height: 1.5; }
           table: {
             headers: ['Property / Value', 'Applies To', 'What It Does'],
             rows: [
-              ['grid-template-columns', 'Container', 'Defines explicit column track widths (e.g. 220px minmax(0, 1fr)).'],
-              ['grid-template-areas', 'Container', 'Names visual layout regions like "nav main" for readable shells.'],
-              ['grid-column: span 2', 'Grid Item', 'Makes a featured card or banner span across 2 columns.'],
-              ['grid-column: 1 / -1', 'Grid Item', 'Spans an item across the entire explicit grid width.'],
-              ['place-items: center', 'Container', 'Shorthand for align-items + justify-items centering.'],
+              [
+                'grid-template-columns',
+                'Container',
+                'Defines explicit column track widths (e.g. 220px minmax(0, 1fr)).',
+              ],
+              [
+                'grid-template-areas',
+                'Container',
+                'Names visual layout regions like "nav main" for readable shells.',
+              ],
+              [
+                'grid-column: span 2',
+                'Grid Item',
+                'Makes a featured card or banner span across 2 columns.',
+              ],
+              [
+                'grid-column: 1 / -1',
+                'Grid Item',
+                'Spans an item across the entire explicit grid width.',
+              ],
+              [
+                'place-items: center',
+                'Container',
+                'Shorthand for align-items + justify-items centering.',
+              ],
             ],
           },
           warning:
@@ -2259,7 +2550,11 @@ p { margin: 0; font-size: 13px; color: #52525b; line-height: 1.5; }
               ['grid-template-areas', 'ប្រអប់មេ', 'ដាក់ឈ្មោះតំបន់ប្លង់ដូច "nav main" ងាយអាន។'],
               ['grid-column: span 2', 'ធាតុកូន', 'ឱ្យកាតពិសេសលាតឆ្លង 2 ជួរឈរ។'],
               ['grid-column: 1 / -1', 'ធាតុកូន', 'លាតធាតុពេញទទឹងគ្រប់ជួរឈរនៃ grid។'],
-              ['place-items: center', 'ប្រអប់មេ', 'តម្រឹមចំកណ្ដាលទាំងផ្ដេក និងបញ្ឈរក្នុងបន្ទាត់តែមួយ។'],
+              [
+                'place-items: center',
+                'ប្រអប់មេ',
+                'តម្រឹមចំកណ្ដាលទាំងផ្ដេក និងបញ្ឈរក្នុងបន្ទាត់តែមួយ។',
+              ],
             ],
           },
           warning:
@@ -2283,7 +2578,8 @@ p { margin: 0; font-size: 13px; color: #52525b; line-height: 1.5; }
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា minmax(0, 1fr) មានសុវត្ថិភាពជាង 1fr ធម្មតាសម្រាប់ជួរឈរ CSS Grid បត់បែន?',
+          question:
+            'ហេតុអ្វីបានជា minmax(0, 1fr) មានសុវត្ថិភាពជាង 1fr ធម្មតាសម្រាប់ជួរឈរ CSS Grid បត់បែន?',
           options: [
             'ព្រោះ Firefox មិនគាំទ្រ 1fr ទេ',
             'ព្រោះ 1fr មានលំនាំដើម minmax(auto, 1fr) ដែលអាចឱ្យមាតិកាវែងរុញជួរឈរហៀរប្រអប់មេ',
@@ -2329,11 +2625,31 @@ p { margin: 0; font-size: 13px; color: #52525b; line-height: 1.5; }
           table: {
             headers: ['Feature', 'Example', 'Why It Beats Old Hacks'],
             rows: [
-              ['clamp(min, val, max)', 'clamp(1.25rem, 3vw, 2.25rem)', 'Fluid headings with zero breakpoint jumps.'],
-              ['min(100% - 2rem, 720px)', 'width: min(100% - 2rem, 720px)', 'Centered responsive wrapper in one line.'],
-              ['min-height: 100dvh', 'Full-screen hero / app shell', 'Prevents mobile browser chrome from clipping bottom UI.'],
-              ['aspect-ratio: 16 / 9', 'Video / thumbnail frames', 'Locks media ratio cleanly without padding-bottom hacks.'],
-              ['@container (min-width: ...)', 'Component-level layout switch', 'Card adapts to its parent slot, not just the window width.'],
+              [
+                'clamp(min, val, max)',
+                'clamp(1.25rem, 3vw, 2.25rem)',
+                'Fluid headings with zero breakpoint jumps.',
+              ],
+              [
+                'min(100% - 2rem, 720px)',
+                'width: min(100% - 2rem, 720px)',
+                'Centered responsive wrapper in one line.',
+              ],
+              [
+                'min-height: 100dvh',
+                'Full-screen hero / app shell',
+                'Prevents mobile browser chrome from clipping bottom UI.',
+              ],
+              [
+                'aspect-ratio: 16 / 9',
+                'Video / thumbnail frames',
+                'Locks media ratio cleanly without padding-bottom hacks.',
+              ],
+              [
+                '@container (min-width: ...)',
+                'Component-level layout switch',
+                'Card adapts to its parent slot, not just the window width.',
+              ],
             ],
           },
           warning:
@@ -2419,7 +2735,8 @@ p { margin: 0; font-size: 13px; line-height: 1.55; color: #52525b; }
       },
       quiz: [
         {
-          question: 'Why does min-height: 100dvh work better than 100vh for full-screen sections on mobile browsers?',
+          question:
+            'Why does min-height: 100dvh work better than 100vh for full-screen sections on mobile browsers?',
           options: [
             '100dvh loads images faster on 4G networks',
             '100dvh dynamically adjusts as the mobile browser’s address bar shows or hides, preventing clipped bottom content',
@@ -2431,7 +2748,8 @@ p { margin: 0; font-size: 13px; line-height: 1.55; color: #52525b; }
             'On mobile Safari and Chrome, 100vh uses the largest viewport (ignoring the visible address bar), often pushing bottom CTAs below the screen; 100dvh tracks the live visible viewport.',
         },
         {
-          question: 'What is the key advantage of @container queries over @media queries for reusable components?',
+          question:
+            'What is the key advantage of @container queries over @media queries for reusable components?',
           options: [
             '@container queries do not require a viewport meta tag',
             '@container queries let a component adapt to the width of its parent container regardless of the overall screen size',
@@ -2462,11 +2780,31 @@ p { margin: 0; font-size: 13px; line-height: 1.55; color: #52525b; }
           table: {
             headers: ['មុខងារ', 'ឧទាហរណ៍', 'មូលហេតុដែលល្អជាងវិធីចាស់'],
             rows: [
-              ['clamp(min, val, max)', 'clamp(1.25rem, 3vw, 2.25rem)', 'ចំណងជើងប្រែទំហំរលូនដោយគ្មានការលោត breakpoint។'],
-              ['min(100% - 2rem, 720px)', 'width: min(100% - 2rem, 720px)', 'ប្រអប់កណ្ដាលឆ្លើយតបក្នុងមួយបន្ទាត់។'],
-              ['min-height: 100dvh', 'ផ្នែក Hero ពេញអេក្រង់', 'ការពាររបារកម្មវិធីរុករកទូរស័ព្ទកុំឱ្យកាត់បាតទំព័រ។'],
-              ['aspect-ratio: 16 / 9', 'ស៊ុមវីដេអូ ឬរូបភាព', 'រក្សាសមាមាត្រដោយមិនបាច់ប្រើល្បិច padding-bottom។'],
-              ['@container (min-width: ...)', 'ប្ដូរប្លង់កម្រិតសមាសធាតុ', 'កាតសម្របតាមទទឹងប្រអប់មេ មិនមែនតែទទឹងអេក្រង់ទេ។'],
+              [
+                'clamp(min, val, max)',
+                'clamp(1.25rem, 3vw, 2.25rem)',
+                'ចំណងជើងប្រែទំហំរលូនដោយគ្មានការលោត breakpoint។',
+              ],
+              [
+                'min(100% - 2rem, 720px)',
+                'width: min(100% - 2rem, 720px)',
+                'ប្រអប់កណ្ដាលឆ្លើយតបក្នុងមួយបន្ទាត់។',
+              ],
+              [
+                'min-height: 100dvh',
+                'ផ្នែក Hero ពេញអេក្រង់',
+                'ការពាររបារកម្មវិធីរុករកទូរស័ព្ទកុំឱ្យកាត់បាតទំព័រ។',
+              ],
+              [
+                'aspect-ratio: 16 / 9',
+                'ស៊ុមវីដេអូ ឬរូបភាព',
+                'រក្សាសមាមាត្រដោយមិនបាច់ប្រើល្បិច padding-bottom។',
+              ],
+              [
+                '@container (min-width: ...)',
+                'ប្ដូរប្លង់កម្រិតសមាសធាតុ',
+                'កាតសម្របតាមទទឹងប្រអប់មេ មិនមែនតែទទឹងអេក្រង់ទេ។',
+              ],
             ],
           },
           warning:
@@ -2495,7 +2833,8 @@ p { margin: 0; font-size: 13px; line-height: 1.55; color: #52525b; }
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា min-height: 100dvh ល្អជាង 100vh សម្រាប់ផ្នែកពេញអេក្រង់លើកម្មវិធីរុករកទូរស័ព្ទ?',
+          question:
+            'ហេតុអ្វីបានជា min-height: 100dvh ល្អជាង 100vh សម្រាប់ផ្នែកពេញអេក្រង់លើកម្មវិធីរុករកទូរស័ព្ទ?',
           options: [
             '100dvh ផ្ទុករូបភាពលឿនជាងលើបណ្ដាញ 4G',
             '100dvh ប្រែប្រួលតាមរបារអាសយដ្ឋានទូរស័ព្ទដែលបង្ហាញ ឬលាក់ ការពារកុំឱ្យកាត់មាតិកាខាងក្រោម',
@@ -2507,7 +2846,8 @@ p { margin: 0; font-size: 13px; line-height: 1.55; color: #52525b; }
             'លើទូរស័ព្ទ 100vh មិនដកកម្ពស់របារអាសយដ្ឋានចេញទេ ដែលធ្វើឱ្យប៊ូតុងខាងក្រោមធ្លាក់ផុតអេក្រង់; 100dvh គិតតាមកម្ពស់ជាក់ស្ដែង។',
         },
         {
-          question: 'តើ @container queries មានគុណសម្បត្តិសំខាន់អ្វីលើសពី @media queries សម្រាប់សមាសធាតុប្រើឡើងវិញ?',
+          question:
+            'តើ @container queries មានគុណសម្បត្តិសំខាន់អ្វីលើសពី @media queries សម្រាប់សមាសធាតុប្រើឡើងវិញ?',
           options: [
             '@container queries មិនត្រូវការ viewport meta tag ទេ',
             '@container queries អនុញ្ញាតឱ្យសមាសធាតុសម្របតាមទទឹងប្រអប់មេរបស់វា មិនអាស្រ័យលើទំហំអេក្រង់ទាំងមូល',
@@ -2546,11 +2886,31 @@ p { margin: 0; font-size: 13px; line-height: 1.55; color: #52525b; }
           table: {
             headers: ['Property / Rule', 'Performance / UX Role', 'Guideline'],
             rows: [
-              ['transform, opacity', 'GPU-composited (no layout)', 'Animate these for 60fps drawers, popovers, and presses.'],
-              ['width, height, top, left', 'Triggers Layout + Paint', 'Never animate these—use transform: translate/scale instead.'],
-              ['cubic-bezier(0.23, 1, 0.32, 1)', 'Snappy ease-out curve', 'Ideal for menus, toasts, and UI entering the screen.'],
-              ['transform: scale(0.97)', 'Tactile :active press', 'Gives buttons immediate physical feedback on click/tap.'],
-              ['@media (prefers-reduced-motion: reduce)', 'Accessibility rule', 'Disables or softens motion for motion-sensitive users.'],
+              [
+                'transform, opacity',
+                'GPU-composited (no layout)',
+                'Animate these for 60fps drawers, popovers, and presses.',
+              ],
+              [
+                'width, height, top, left',
+                'Triggers Layout + Paint',
+                'Never animate these—use transform: translate/scale instead.',
+              ],
+              [
+                'cubic-bezier(0.23, 1, 0.32, 1)',
+                'Snappy ease-out curve',
+                'Ideal for menus, toasts, and UI entering the screen.',
+              ],
+              [
+                'transform: scale(0.97)',
+                'Tactile :active press',
+                'Gives buttons immediate physical feedback on click/tap.',
+              ],
+              [
+                '@media (prefers-reduced-motion: reduce)',
+                'Accessibility rule',
+                'Disables or softens motion for motion-sensitive users.',
+              ],
             ],
           },
           warning:
@@ -2655,7 +3015,8 @@ btn.addEventListener('click', () => {
       },
       quiz: [
         {
-          question: 'Which pair of CSS properties can the browser animate on the GPU compositor thread without triggering layout recalculation?',
+          question:
+            'Which pair of CSS properties can the browser animate on the GPU compositor thread without triggering layout recalculation?',
           options: [
             'width and height',
             'top and left',
@@ -2667,7 +3028,8 @@ btn.addEventListener('click', () => {
             'Animating transform and opacity skips Layout and Paint stages, keeping animations smooth at 60fps+ even on low-end mobile devices.',
         },
         {
-          question: 'Why should dropdowns and popovers enter with ease-out from scale(0.95) rather than ease-in from scale(0)?',
+          question:
+            'Why should dropdowns and popovers enter with ease-out from scale(0.95) rather than ease-in from scale(0)?',
           options: [
             'scale(0) causes a JavaScript exception',
             'ease-out starts responsive and settles naturally, while scale(0.95) avoids an overly bouncy, cartoonish pop',
@@ -2703,11 +3065,31 @@ btn.addEventListener('click', () => {
           table: {
             headers: ['លក្ខណៈសម្បត្តិ / ច្បាប់', 'តួនាទីល្បឿន / UX', 'ការណែនាំ'],
             rows: [
-              ['transform, opacity', 'GPU-composited (គ្មាន layout)', 'ប្រើសម្រាប់ចលនា 60fps លើ drawer, popover និងប៊ូតុង។'],
-              ['width, height, top, left', 'បង្ក Layout + Paint រាល់ហ្វ្រេម', 'កុំធ្វើចលនាលើវា—ប្រើ transform: translate/scale វិញ។'],
-              ['cubic-bezier(0.23, 1, 0.32, 1)', 'ខ្សែកោង ease-out រហ័ស', 'ល្អបំផុតសម្រាប់ម៉ឺនុយ toast និងធាតុបង្ហាញចូល។'],
-              ['transform: scale(0.97)', 'ប្រតិកម្មចុច :active', 'ផ្ដល់អារម្មណ៍ឆ្លើយតបភ្លាមៗពេលចុចប៊ូតុង។'],
-              ['@media (prefers-reduced-motion: reduce)', 'ច្បាប់ភាពងាយស្រួលប្រើប្រាស់', 'បិទ ឬបន្ថយចលនាសម្រាប់អ្នកប្រើដែលងាយវិលមុខ។'],
+              [
+                'transform, opacity',
+                'GPU-composited (គ្មាន layout)',
+                'ប្រើសម្រាប់ចលនា 60fps លើ drawer, popover និងប៊ូតុង។',
+              ],
+              [
+                'width, height, top, left',
+                'បង្ក Layout + Paint រាល់ហ្វ្រេម',
+                'កុំធ្វើចលនាលើវា—ប្រើ transform: translate/scale វិញ។',
+              ],
+              [
+                'cubic-bezier(0.23, 1, 0.32, 1)',
+                'ខ្សែកោង ease-out រហ័ស',
+                'ល្អបំផុតសម្រាប់ម៉ឺនុយ toast និងធាតុបង្ហាញចូល។',
+              ],
+              [
+                'transform: scale(0.97)',
+                'ប្រតិកម្មចុច :active',
+                'ផ្ដល់អារម្មណ៍ឆ្លើយតបភ្លាមៗពេលចុចប៊ូតុង។',
+              ],
+              [
+                '@media (prefers-reduced-motion: reduce)',
+                'ច្បាប់ភាពងាយស្រួលប្រើប្រាស់',
+                'បិទ ឬបន្ថយចលនាសម្រាប់អ្នកប្រើដែលងាយវិលមុខ។',
+              ],
             ],
           },
           warning:
@@ -2731,7 +3113,8 @@ btn.addEventListener('click', () => {
       },
       quiz: [
         {
-          question: 'តើគូលក្ខណៈសម្បត្តិ CSS មួយណាដែលកម្មវិធីរុករកអាចធ្វើចលនាលើ GPU ដោយមិនគណនាប្លង់ឡើងវិញ?',
+          question:
+            'តើគូលក្ខណៈសម្បត្តិ CSS មួយណាដែលកម្មវិធីរុករកអាចធ្វើចលនាលើ GPU ដោយមិនគណនាប្លង់ឡើងវិញ?',
           options: [
             'width និង height',
             'top និង left',
@@ -2743,7 +3126,8 @@ btn.addEventListener('click', () => {
             'ការធ្វើចលនាលើ transform និង opacity រំលងដំណាក់កាល Layout និង Paint ធ្វើឱ្យរលូន 60fps សូម្បីលើទូរស័ព្ទកម្រិតមធ្យម។',
         },
         {
-          question: 'ហេតុអ្វីបានជាម៉ឺនុយ និង popover គួរចូលដោយ ease-out ពី scale(0.95) ជំនួសឱ្យ ease-in ពី scale(0)?',
+          question:
+            'ហេតុអ្វីបានជាម៉ឺនុយ និង popover គួរចូលដោយ ease-out ពី scale(0.95) ជំនួសឱ្យ ease-in ពី scale(0)?',
           options: [
             'ព្រោះ scale(0) បង្កកំហុសក្នុង JavaScript',
             'ព្រោះ ease-out ចាប់ផ្ដើមរហ័ស និងឈប់រលូន ហើយ scale(0.95) មើលទៅស្ងប់ស្អាតមិនលោតហួសហេតុ',
@@ -2785,7 +3169,11 @@ btn.addEventListener('click', () => {
               ['&& (AND)', 'True only if both sides are truthy', 'isLoggedIn && isAdmin.'],
               ['|| (OR)', 'Returns first truthy value', 'userRole || "guest".'],
               ['cond ? a : b', 'Ternary conditional expression', 'score >= 70 ? "Pass" : "Retry".'],
-              ['Falsy values', 'false, 0, "", null, undefined, NaN', 'if ("") is false; if ([]) is true!'],
+              [
+                'Falsy values',
+                'false, 0, "", null, undefined, NaN',
+                'if ("") is false; if ([]) is true!',
+              ],
             ],
           },
           warning:
@@ -2866,12 +3254,7 @@ console.log(sumPassing([60, 80, 95, 50, 70])); // 245`,
       quiz: [
         {
           question: 'Which expression evaluates to true in JavaScript?',
-          options: [
-            '"10" === 10',
-            'Boolean([])',
-            'Boolean("")',
-            'Boolean(NaN)',
-          ],
+          options: ['"10" === 10', 'Boolean([])', 'Boolean("")', 'Boolean(NaN)'],
           answer: 1,
           explanation:
             'Empty arrays [] and empty objects {} are truthy in JavaScript, whereas "", 0, null, undefined, and NaN are falsy, and "10" === 10 is false due to different types.',
@@ -2912,7 +3295,11 @@ console.log(sumPassing([60, 80, 95, 50, 70])); // 245`,
               ['&& (AND)', 'ពិតលុះត្រាទាំងសងខាង truthy', 'isLoggedIn && isAdmin។'],
               ['|| (OR)', 'ត្រឡប់តម្លៃ truthy ដំបូង', 'userRole || "guest"។'],
               ['cond ? a : b', 'ប្រមាណវិធី Ternary ខ្លី', 'score >= 70 ? "Pass" : "Retry"។'],
-              ['តម្លៃ Falsy', 'false, 0, "", null, undefined, NaN', 'if ("") ជា false; if ([]) ជា true!'],
+              [
+                'តម្លៃ Falsy',
+                'false, 0, "", null, undefined, NaN',
+                'if ("") ជា false; if ([]) ជា true!',
+              ],
             ],
           },
           warning:
@@ -2942,12 +3329,7 @@ console.log(sumPassing([60, 80, 95, 50, 70])); // 245`,
       quiz: [
         {
           question: 'តើកន្សោមមួយណាផ្ដល់តម្លៃ true ក្នុង JavaScript?',
-          options: [
-            '"10" === 10',
-            'Boolean([])',
-            'Boolean("")',
-            'Boolean(NaN)',
-          ],
+          options: ['"10" === 10', 'Boolean([])', 'Boolean("")', 'Boolean(NaN)'],
           answer: 1,
           explanation:
             'អារេទទេ [] និង object ទទេ {} សុទ្ធតែជា truthy ក្នុង JavaScript ចំណែក "", 0, null, undefined និង NaN ជា falsy ហើយ "10" === 10 ជា false។',
@@ -2987,11 +3369,31 @@ console.log(sumPassing([60, 80, 95, 50, 70])); // 245`,
           table: {
             headers: ['Type / Check', 'Example', 'Gotcha / Key Fact'],
             rows: [
-              ['string / number / boolean', '"hi", 42, true', 'Immutable primitives copied by value.'],
-              ['undefined vs null', 'let x; / const y = null', 'undefined = not set yet; null = intentionally empty.'],
-              ['typeof null', '"object" (historical bug)', 'Check value === null directly, never typeof.'],
-              ['Array.isArray(x)', 'Array.isArray([1, 2]) -> true', 'typeof [1, 2] returns "object", so use Array.isArray().'],
-              ['structuredClone(obj)', 'Deep clone nested data', 'Clones nested arrays/objects safely without shared refs.'],
+              [
+                'string / number / boolean',
+                '"hi", 42, true',
+                'Immutable primitives copied by value.',
+              ],
+              [
+                'undefined vs null',
+                'let x; / const y = null',
+                'undefined = not set yet; null = intentionally empty.',
+              ],
+              [
+                'typeof null',
+                '"object" (historical bug)',
+                'Check value === null directly, never typeof.',
+              ],
+              [
+                'Array.isArray(x)',
+                'Array.isArray([1, 2]) -> true',
+                'typeof [1, 2] returns "object", so use Array.isArray().',
+              ],
+              [
+                'structuredClone(obj)',
+                'Deep clone nested data',
+                'Clones nested arrays/objects safely without shared refs.',
+              ],
             ],
           },
           warning:
@@ -3096,11 +3498,31 @@ console.log({ theme, retries, nextSettings, emailAlerts });`,
           table: {
             headers: ['ប្រភេទ / ការពិនិត្យ', 'ឧទាហរណ៍', 'ចំណុចសំខាន់គួរចាំ'],
             rows: [
-              ['string / number / boolean', '"hi", 42, true', 'Primitives មិនផ្លាស់ប្ដូរ ចម្លងតាមតម្លៃ។'],
-              ['undefined vs null', 'let x; / const y = null', 'undefined = មិនទាន់ផ្ដល់តម្លៃ; null = ទទេដោយចេតនា។'],
-              ['typeof null', '"object" (កំហុសប្រវត្តិសាស្ត្រ)', 'ពិនិត្យ value === null ផ្ទាល់ កុំប្រើ typeof។'],
-              ['Array.isArray(x)', 'Array.isArray([1, 2]) -> true', 'typeof [1, 2] ត្រឡប់ "object" ដូច្នេះត្រូវប្រើ Array.isArray()។'],
-              ['structuredClone(obj)', 'ចម្លងជ្រៅគ្រប់ជាន់', 'ចម្លង object/array ត្រួតជាន់ដោយសុវត្ថិភាព។'],
+              [
+                'string / number / boolean',
+                '"hi", 42, true',
+                'Primitives មិនផ្លាស់ប្ដូរ ចម្លងតាមតម្លៃ។',
+              ],
+              [
+                'undefined vs null',
+                'let x; / const y = null',
+                'undefined = មិនទាន់ផ្ដល់តម្លៃ; null = ទទេដោយចេតនា។',
+              ],
+              [
+                'typeof null',
+                '"object" (កំហុសប្រវត្តិសាស្ត្រ)',
+                'ពិនិត្យ value === null ផ្ទាល់ កុំប្រើ typeof។',
+              ],
+              [
+                'Array.isArray(x)',
+                'Array.isArray([1, 2]) -> true',
+                'typeof [1, 2] ត្រឡប់ "object" ដូច្នេះត្រូវប្រើ Array.isArray()។',
+              ],
+              [
+                'structuredClone(obj)',
+                'ចម្លងជ្រៅគ្រប់ជាន់',
+                'ចម្លង object/array ត្រួតជាន់ដោយសុវត្ថិភាព។',
+              ],
             ],
           },
           warning:
@@ -3136,7 +3558,8 @@ console.log({ theme, retries, nextSettings, emailAlerts });`,
             'ប្រមាណវិធី ?? ប្រើតម្លៃខាងស្ដាំលុះត្រាតែខាងឆ្វេងជា null ឬ undefined ប៉ុណ្ណោះ—ដូច្នេះលេខ 0 ត្រូវបានរក្សាទុក។',
         },
         {
-          question: 'ហេតុអ្វីបានជា const a = { x: 1 }; const b = a; b.x = 9; ធ្វើឱ្យ a.x ប្ដូរជា 9 ដែរ?',
+          question:
+            'ហេតុអ្វីបានជា const a = { x: 1 }; const b = a; b.x = 9; ធ្វើឱ្យ a.x ប្ដូរជា 9 ដែរ?',
           options: [
             'ព្រោះអថេរ const ជាអថេរសកល',
             'ព្រោះ object ត្រូវបានផ្ទេរតាម reference ធ្វើឱ្យ a និង b ចង្អុលទៅ object តែមួយក្នុងអង្គចងចាំ',
@@ -3170,10 +3593,30 @@ console.log({ theme, retries, nextSettings, emailAlerts });`,
           table: {
             headers: ['Form', 'Hoisted?', 'Own `this`?', 'Best For'],
             rows: [
-              ['function calc(x) {}', 'Yes', 'Yes (dynamic)', 'Top-level named helpers and recursive functions.'],
-              ['const f = (x) => x * 2', 'No', 'No (lexical)', 'Short callbacks (.map, .filter, event listeners).'],
-              ['(...nums) => ...', 'No', 'No', 'Rest parameters collecting variable argument counts.'],
-              ['Closure factory', 'N/A', 'Captures outer scope', 'Encapsulating private state without global variables.'],
+              [
+                'function calc(x) {}',
+                'Yes',
+                'Yes (dynamic)',
+                'Top-level named helpers and recursive functions.',
+              ],
+              [
+                'const f = (x) => x * 2',
+                'No',
+                'No (lexical)',
+                'Short callbacks (.map, .filter, event listeners).',
+              ],
+              [
+                '(...nums) => ...',
+                'No',
+                'No',
+                'Rest parameters collecting variable argument counts.',
+              ],
+              [
+                'Closure factory',
+                'N/A',
+                'Captures outer scope',
+                'Encapsulating private state without global variables.',
+              ],
             ],
           },
           warning:
@@ -3261,7 +3704,8 @@ console.log(triple(7)); // 21`,
       },
       quiz: [
         {
-          question: 'Why does const makeItem = (id) => { id }; return undefined instead of an object?',
+          question:
+            'Why does const makeItem = (id) => { id }; return undefined instead of an object?',
           options: [
             'Arrow functions cannot return objects',
             'JavaScript interprets the curly braces { } as a function block body rather than an object literal unless wrapped in parentheses ({ id })',
@@ -3304,10 +3748,25 @@ console.log(triple(7)); // 21`,
           table: {
             headers: ['ទម្រង់', 'Hoisted?', 'មាន `this` ផ្ទាល់?', 'ស័ក្តិសមសម្រាប់'],
             rows: [
-              ['function calc(x) {}', 'បាទ/ចាស', 'មាន (dynamic)', 'អនុគមន៍ជំនួយកម្រិតលើ និងអនុគមន៍ហៅខ្លួនឯង។'],
-              ['const f = (x) => x * 2', 'ទេ', 'គ្មាន (lexical)', 'Callback ខ្លីៗ (.map, .filter, event listeners)។'],
+              [
+                'function calc(x) {}',
+                'បាទ/ចាស',
+                'មាន (dynamic)',
+                'អនុគមន៍ជំនួយកម្រិតលើ និងអនុគមន៍ហៅខ្លួនឯង។',
+              ],
+              [
+                'const f = (x) => x * 2',
+                'ទេ',
+                'គ្មាន (lexical)',
+                'Callback ខ្លីៗ (.map, .filter, event listeners)។',
+              ],
               ['(...nums) => ...', 'ទេ', 'គ្មាន', 'Rest parameter ប្រមូលចំនួនអាគុយម៉ង់មិនកំណត់។'],
-              ['Closure factory', 'N/A', 'ចាប់យក scope ខាងក្រៅ', 'រក្សាទិន្នន័យឯកជនដោយមិនប្រើអថេរសកល។'],
+              [
+                'Closure factory',
+                'N/A',
+                'ចាប់យក scope ខាងក្រៅ',
+                'រក្សាទិន្នន័យឯកជនដោយមិនប្រើអថេរសកល។',
+              ],
             ],
           },
           warning:
@@ -3336,7 +3795,8 @@ console.log(triple(7)); // 21`,
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា const makeItem = (id) => { id }; ត្រឡប់ undefined ជំនួសឱ្យ object?',
+          question:
+            'ហេតុអ្វីបានជា const makeItem = (id) => { id }; ត្រឡប់ undefined ជំនួសឱ្យ object?',
           options: [
             'Arrow function មិនអាចត្រឡប់ object បានទេ',
             'JavaScript ចាត់ទុក { } ជាតួប្លុកអនុគមន៍ មិនមែន object ទេ លុះត្រាដាក់វង់ក្រចក ({ id })',
@@ -3476,18 +3936,14 @@ console.log({ totalDoneMins, allDone }); // { totalDoneMins: 30, allDone: false 
       quiz: [
         {
           question: 'What does [10, 2, 1, 20].sort() return without a compare function?',
-          options: [
-            '[1, 2, 10, 20]',
-            '[1, 10, 2, 20]',
-            '[20, 10, 2, 1]',
-            'It throws a TypeError',
-          ],
+          options: ['[1, 2, 10, 20]', '[1, 10, 2, 20]', '[20, 10, 2, 1]', 'It throws a TypeError'],
           answer: 1,
           explanation:
             'By default, .sort() converts elements to strings and sorts alphabetically ("1", "10", "2", "20"). Always pass (a, b) => a - b for numeric sorting.',
         },
         {
-          question: 'Which array method returns true if AT LEAST ONE item passes a test and stops checking immediately upon finding it?',
+          question:
+            'Which array method returns true if AT LEAST ONE item passes a test and stops checking immediately upon finding it?',
           options: ['filter()', 'every()', 'some()', 'map()'],
           answer: 2,
           explanation:
@@ -3547,18 +4003,14 @@ console.log({ totalDoneMins, allDone }); // { totalDoneMins: 30, allDone: false 
       quiz: [
         {
           question: 'តើ [10, 2, 1, 20].sort() ត្រឡប់អ្វី ប្រសិនបើមិនដាក់ compare function?',
-          options: [
-            '[1, 2, 10, 20]',
-            '[1, 10, 2, 20]',
-            '[20, 10, 2, 1]',
-            'វាបង្ក TypeError',
-          ],
+          options: ['[1, 2, 10, 20]', '[1, 10, 2, 20]', '[20, 10, 2, 1]', 'វាបង្ក TypeError'],
           answer: 1,
           explanation:
             'តាមលំនាំដើម .sort() បម្លែងធាតុជាអក្សរ រួចតម្រៀបតាមអក្ខរក្រម ("1", "10", "2", "20")។ ត្រូវដាក់ (a, b) => a - b សម្រាប់តម្រៀបលេខ។',
         },
         {
-          question: 'តើវិធីសាស្ត្រអារេមួយណាត្រឡប់ true បើយ៉ាងតិចមានធាតុមួយត្រូវលក្ខខណ្ឌ ហើយឈប់ពិនិត្យភ្លាម?',
+          question:
+            'តើវិធីសាស្ត្រអារេមួយណាត្រឡប់ true បើយ៉ាងតិចមានធាតុមួយត្រូវលក្ខខណ្ឌ ហើយឈប់ពិនិត្យភ្លាម?',
           options: ['filter()', 'every()', 'some()', 'map()'],
           answer: 2,
           explanation:
@@ -3587,11 +4039,31 @@ console.log({ totalDoneMins, allDone }); // { totalDoneMins: 30, allDone: false 
           table: {
             headers: ['DOM API', 'Returns / Does', 'Best Practice'],
             rows: [
-              ['document.querySelector(sel)', 'First matching Element or null', 'Always guard for null before accessing properties.'],
-              ['el.closest(".card")', 'Nearest matching ancestor', 'Walk up from a clicked button to its parent card.'],
-              ['el.textContent = str', 'Sets plain text safely', 'Default choice for all dynamic text—immune to XSS.'],
-              ['el.dataset.userId', 'Reads/writes data-user-id', 'Store lightweight IDs/state in HTML data-* attributes.'],
-              ['el.replaceChildren(...nodes)', 'Replaces all children in 1 step', 'Cleaner and faster than innerHTML = "" + append loops.'],
+              [
+                'document.querySelector(sel)',
+                'First matching Element or null',
+                'Always guard for null before accessing properties.',
+              ],
+              [
+                'el.closest(".card")',
+                'Nearest matching ancestor',
+                'Walk up from a clicked button to its parent card.',
+              ],
+              [
+                'el.textContent = str',
+                'Sets plain text safely',
+                'Default choice for all dynamic text—immune to XSS.',
+              ],
+              [
+                'el.dataset.userId',
+                'Reads/writes data-user-id',
+                'Store lightweight IDs/state in HTML data-* attributes.',
+              ],
+              [
+                'el.replaceChildren(...nodes)',
+                'Replaces all children in 1 step',
+                'Cleaner and faster than innerHTML = "" + append loops.',
+              ],
             ],
           },
           warning:
@@ -3687,7 +4159,8 @@ render();`,
       },
       quiz: [
         {
-          question: 'Why should you use element.textContent instead of element.innerHTML when displaying user-typed text?',
+          question:
+            'Why should you use element.textContent instead of element.innerHTML when displaying user-typed text?',
           options: [
             'textContent automatically translates text into Khmer',
             'textContent treats input strictly as plain text, preventing malicious HTML/script injection (XSS)',
@@ -3699,7 +4172,8 @@ render();`,
             'innerHTML parses and executes embedded markup/event handlers, creating XSS vulnerabilities; textContent inserts raw characters safely without HTML parsing.',
         },
         {
-          question: 'What is the cleanest way to read a custom HTML attribute data-lesson-id="42" in JavaScript?',
+          question:
+            'What is the cleanest way to read a custom HTML attribute data-lesson-id="42" in JavaScript?',
           options: [
             'el.data.lessonId',
             'el.dataset.lessonId',
@@ -3730,11 +4204,31 @@ render();`,
           table: {
             headers: ['DOM API', 'តួនាទី', 'ការអនុវត្តល្អបំផុត'],
             rows: [
-              ['document.querySelector(sel)', 'ធាតុត្រូវដំបូង ឬ null', 'ពិនិត្យ null មុនប្រើលក្ខណៈសម្បត្តិជានិច្ច។'],
-              ['el.closest(".card")', 'ធាតុមេជិតបំផុតដែលត្រូវ', 'ឡើងពីប៊ូតុងដែលចុចទៅរកកាតមេរបស់វា។'],
-              ['el.textContent = str', 'កំណត់អត្ថបទធម្មតាដោយសុវត្ថិភាព', 'ជម្រើសលំនាំដើមសម្រាប់អត្ថបទថាមវន្ត—ការពារ XSS។'],
-              ['el.dataset.userId', 'អាន/សរសេរ data-user-id', 'រក្សា ID ឬស្ថានភាពស្រាលៗក្នុងគុណលក្ខណៈ data-*។'],
-              ['el.replaceChildren(...nodes)', 'ជំនួសកូនទាំងអស់ក្នុងជំហានតែមួយ', 'ស្អាត និងលឿនជាង innerHTML = "" + append ក្នុងរង្វិលជុំ។'],
+              [
+                'document.querySelector(sel)',
+                'ធាតុត្រូវដំបូង ឬ null',
+                'ពិនិត្យ null មុនប្រើលក្ខណៈសម្បត្តិជានិច្ច។',
+              ],
+              [
+                'el.closest(".card")',
+                'ធាតុមេជិតបំផុតដែលត្រូវ',
+                'ឡើងពីប៊ូតុងដែលចុចទៅរកកាតមេរបស់វា។',
+              ],
+              [
+                'el.textContent = str',
+                'កំណត់អត្ថបទធម្មតាដោយសុវត្ថិភាព',
+                'ជម្រើសលំនាំដើមសម្រាប់អត្ថបទថាមវន្ត—ការពារ XSS។',
+              ],
+              [
+                'el.dataset.userId',
+                'អាន/សរសេរ data-user-id',
+                'រក្សា ID ឬស្ថានភាពស្រាលៗក្នុងគុណលក្ខណៈ data-*។',
+              ],
+              [
+                'el.replaceChildren(...nodes)',
+                'ជំនួសកូនទាំងអស់ក្នុងជំហានតែមួយ',
+                'ស្អាត និងលឿនជាង innerHTML = "" + append ក្នុងរង្វិលជុំ។',
+              ],
             ],
           },
           warning:
@@ -3763,7 +4257,8 @@ render();`,
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជាអ្នកគួរប្រើ element.textContent ជំនួស element.innerHTML ពេលបង្ហាញអត្ថបទអ្នកប្រើវាយ?',
+          question:
+            'ហេតុអ្វីបានជាអ្នកគួរប្រើ element.textContent ជំនួស element.innerHTML ពេលបង្ហាញអត្ថបទអ្នកប្រើវាយ?',
           options: [
             'textContent បកប្រែអត្ថបទជាភាសាខ្មែរស្វ័យប្រវត្តិ',
             'textContent ចាត់ទុកអត្ថបទជាតួអក្សរធម្មតា ការពារការចាក់បញ្ចូល HTML/script វាយប្រហារ (XSS)',
@@ -3775,7 +4270,8 @@ render();`,
             'innerHTML បកប្រែ និងដំណើរការកូដ HTML/script ដែលបង្កចន្លោះប្រហោង XSS រីឯ textContent បង្ហាញអក្សរត្រង់ៗដោយសុវត្ថិភាព។',
         },
         {
-          question: 'តើវិធីស្អាតបំផុតដើម្បីអានគុណលក្ខណៈ HTML data-lesson-id="42" ក្នុង JavaScript គឺជាអ្វី?',
+          question:
+            'តើវិធីស្អាតបំផុតដើម្បីអានគុណលក្ខណៈ HTML data-lesson-id="42" ក្នុង JavaScript គឺជាអ្វី?',
           options: [
             'el.data.lessonId',
             'el.dataset.lessonId',
@@ -3809,11 +4305,31 @@ render();`,
           table: {
             headers: ['Event / Property', 'Fires When / Means', 'Common Usage'],
             rows: [
-              ['click / submit', 'Activation or form submission', 'Buttons, delegated lists, forms (with e.preventDefault()).'],
-              ['input / change', 'Every keystroke / committed value', 'Live search filtering vs select dropdown changes.'],
-              ['keydown', 'Key pressed (check e.key)', 'Shortcuts like Escape to close modals or "/" to focus search.'],
-              ['e.target.closest(sel)', 'Safely finds clicked control', 'Handles clicks on nested SVG/<span> inside a button.'],
-              ['{ once: true } / AbortController', 'Listener cleanup options', 'Prevents memory leaks when removing dynamic UI views.'],
+              [
+                'click / submit',
+                'Activation or form submission',
+                'Buttons, delegated lists, forms (with e.preventDefault()).',
+              ],
+              [
+                'input / change',
+                'Every keystroke / committed value',
+                'Live search filtering vs select dropdown changes.',
+              ],
+              [
+                'keydown',
+                'Key pressed (check e.key)',
+                'Shortcuts like Escape to close modals or "/" to focus search.',
+              ],
+              [
+                'e.target.closest(sel)',
+                'Safely finds clicked control',
+                'Handles clicks on nested SVG/<span> inside a button.',
+              ],
+              [
+                '{ once: true } / AbortController',
+                'Listener cleanup options',
+                'Prevents memory leaks when removing dynamic UI views.',
+              ],
             ],
           },
           warning:
@@ -3929,7 +4445,8 @@ tabBar.addEventListener('click', (e) => {
       },
       quiz: [
         {
-          question: 'Why is event delegation (one listener on a parent <ul>) better than attaching click listeners to every <li>?',
+          question:
+            'Why is event delegation (one listener on a parent <ul>) better than attaching click listeners to every <li>?',
           options: [
             '<li> elements do not support click events',
             'It uses less memory and automatically handles new <li> items inserted dynamically later',
@@ -3941,7 +4458,8 @@ tabBar.addEventListener('click', (e) => {
             'Because clicks bubble up to the parent container, one delegated listener handles hundreds of existing and future items without re-binding listeners on every render.',
         },
         {
-          question: 'Why should you listen to a <form>’s "submit" event instead of the submit <button>’s "click" event?',
+          question:
+            'Why should you listen to a <form>’s "submit" event instead of the submit <button>’s "click" event?',
           options: [
             'Buttons inside forms do not emit click events',
             'The "submit" event handles both clicking the button and pressing Enter inside an input, and runs native HTML5 validation first',
@@ -3972,11 +4490,31 @@ tabBar.addEventListener('click', (e) => {
           table: {
             headers: ['ព្រឹត្តិការណ៍ / លក្ខណៈសម្បត្តិ', 'កើតឡើងពេល / មានន័យ', 'ការប្រើប្រាស់ទូទៅ'],
             rows: [
-              ['click / submit', 'ចុច ឬដាក់ស្នើទម្រង់', 'ប៊ូតុង បញ្ជី delegation ទម្រង់ (ជាមួយ e.preventDefault())។'],
-              ['input / change', 'រាល់ការវាយ / ពេលប្ដូរតម្លៃរួច', 'ស្វែងរកភ្លាមៗ ទល់នឹងការជ្រើស <select>។'],
-              ['keydown', 'ពេលចុចគ្រាប់ចុច (ពិនិត្យ e.key)', 'ផ្លូវកាត់ដូច Escape បិទ modal ឬ "/" ស្វែងរក។'],
-              ['e.target.closest(sel)', 'រកប៊ូតុងដែលចុចដោយសុវត្ថិភាព', 'ដោះស្រាយពេលចុចចំ SVG/<span> ខាងក្នុងប៊ូតុង។'],
-              ['{ once: true } / AbortController', 'ជម្រើសសម្អាត listener', 'ការពារការលេចធ្លាយអង្គចងចាំពេលលុបសមាសធាតុ UI។'],
+              [
+                'click / submit',
+                'ចុច ឬដាក់ស្នើទម្រង់',
+                'ប៊ូតុង បញ្ជី delegation ទម្រង់ (ជាមួយ e.preventDefault())។',
+              ],
+              [
+                'input / change',
+                'រាល់ការវាយ / ពេលប្ដូរតម្លៃរួច',
+                'ស្វែងរកភ្លាមៗ ទល់នឹងការជ្រើស <select>។',
+              ],
+              [
+                'keydown',
+                'ពេលចុចគ្រាប់ចុច (ពិនិត្យ e.key)',
+                'ផ្លូវកាត់ដូច Escape បិទ modal ឬ "/" ស្វែងរក។',
+              ],
+              [
+                'e.target.closest(sel)',
+                'រកប៊ូតុងដែលចុចដោយសុវត្ថិភាព',
+                'ដោះស្រាយពេលចុចចំ SVG/<span> ខាងក្នុងប៊ូតុង។',
+              ],
+              [
+                '{ once: true } / AbortController',
+                'ជម្រើសសម្អាត listener',
+                'ការពារការលេចធ្លាយអង្គចងចាំពេលលុបសមាសធាតុ UI។',
+              ],
             ],
           },
           warning:
@@ -4005,7 +4543,8 @@ tabBar.addEventListener('click', (e) => {
       },
       quiz: [
         {
-          question: 'ហេតុអ្វីបានជា event delegation (listener តែមួយលើ <ul> មេ) ល្អជាងការភ្ជាប់ click listener លើគ្រប់ <li>?',
+          question:
+            'ហេតុអ្វីបានជា event delegation (listener តែមួយលើ <ul> មេ) ល្អជាងការភ្ជាប់ click listener លើគ្រប់ <li>?',
           options: [
             'ធាតុ <li> មិនគាំទ្រព្រឹត្តិការណ៍ click ទេ',
             'វាសន្សំអង្គចងចាំ និងគ្រប់គ្រង <li> ថ្មីៗដែលបន្ថែមពេលក្រោយបានដោយស្វ័យប្រវត្តិ',
@@ -4017,7 +4556,8 @@ tabBar.addEventListener('click', (e) => {
             'ដោយសារការចុចឡើង (bubble) ទៅប្រអប់មេ listener តែមួយអាចគ្រប់គ្រងធាតុចាស់ និងថ្មីរាប់រយដោយមិនបាច់ភ្ជាប់ឡើងវិញរាល់ពេល render។',
         },
         {
-          question: 'ហេតុអ្វីគួរស្ដាប់ព្រឹត្តិការណ៍ "submit" របស់ <form> ជំនួស "click" របស់ប៊ូតុង submit?',
+          question:
+            'ហេតុអ្វីគួរស្ដាប់ព្រឹត្តិការណ៍ "submit" របស់ <form> ជំនួស "click" របស់ប៊ូតុង submit?',
           options: [
             'ប៊ូតុងក្នុងទម្រង់មិនបង្កើតព្រឹត្តិការណ៍ click ទេ',
             'ព្រឹត្តិការណ៍ "submit" គ្រប់គ្រងទាំងការចុចប៊ូតុង និងការចុច Enter ក្នុងប្រអប់បញ្ចូល ព្រមទាំងដំណើរការការផ្ទៀងផ្ទាត់ HTML5 ជាមុន',
@@ -4051,11 +4591,31 @@ tabBar.addEventListener('click', (e) => {
           table: {
             headers: ['API / Combinator', 'Behavior', 'When To Use'],
             rows: [
-              ['response.ok', 'true for HTTP 200–299', 'Always check before parsing response.json().'],
-              ['AbortSignal.timeout(5000)', 'Auto-cancels stalled fetch after 5s', 'Prevents UI loaders from hanging forever on slow networks.'],
-              ['Promise.all([a, b])', 'Parallel; rejects if ANY fails', 'Loading required data needed together to render.'],
-              ['Promise.allSettled([a, b])', 'Parallel; never rejects, reports all outcomes', 'Independent dashboard widgets or batch notifications.'],
-              ['finally { ... }', 'Runs on both success and error', 'Always turn off loading spinners reliably.'],
+              [
+                'response.ok',
+                'true for HTTP 200–299',
+                'Always check before parsing response.json().',
+              ],
+              [
+                'AbortSignal.timeout(5000)',
+                'Auto-cancels stalled fetch after 5s',
+                'Prevents UI loaders from hanging forever on slow networks.',
+              ],
+              [
+                'Promise.all([a, b])',
+                'Parallel; rejects if ANY fails',
+                'Loading required data needed together to render.',
+              ],
+              [
+                'Promise.allSettled([a, b])',
+                'Parallel; never rejects, reports all outcomes',
+                'Independent dashboard widgets or batch notifications.',
+              ],
+              [
+                'finally { ... }',
+                'Runs on both success and error',
+                'Always turn off loading spinners reliably.',
+              ],
             ],
           },
           warning:
@@ -4161,7 +4721,8 @@ async function run() {
       },
       quiz: [
         {
-          question: 'What happens when fetch("/api/missing") receives an HTTP 404 Not Found response?',
+          question:
+            'What happens when fetch("/api/missing") receives an HTTP 404 Not Found response?',
           options: [
             'The fetch() promise automatically rejects into the catch block',
             'The fetch() promise resolves normally with response.ok === false and response.status === 404',
@@ -4173,7 +4734,8 @@ async function run() {
             'fetch() only rejects on network errors or aborts, not HTTP 4xx/5xx statuses. You must check if (!response.ok) and throw explicitly.',
         },
         {
-          question: 'Why does items.forEach(async (item) => { await save(item); }) cause unexpected bugs?',
+          question:
+            'Why does items.forEach(async (item) => { await save(item); }) cause unexpected bugs?',
           options: [
             'forEach does not accept arrow functions',
             'forEach does not await the promises returned by its callback, so code after forEach runs before the saves finish',
@@ -4204,11 +4766,31 @@ async function run() {
           table: {
             headers: ['API / Combinator', 'ឥរិយាបថ', 'ពេលណាគួរប្រើ'],
             rows: [
-              ['response.ok', 'true សម្រាប់ HTTP 200–299', 'ពិនិត្យជានិច្ចមុនបម្លែង response.json()។'],
-              ['AbortSignal.timeout(5000)', 'បោះបង់ fetch ស្វ័យប្រវត្តិក្រោយ 5 វិនាទី', 'ការពារ UI កុំឱ្យជាប់ Loading រហូតពេលបណ្ដាញយឺត។'],
-              ['Promise.all([a, b])', 'ស្របគ្នា; reject បើមានមួយបរាជ័យ', 'ផ្ទុកទិន្នន័យចាំបាច់ដែលត្រូវការព្រមគ្នា។'],
-              ['Promise.allSettled([a, b])', 'ស្របគ្នា; មិន reject ទេ បង្ហាញគ្រប់លទ្ធផល', 'ផ្ទាំង widget ឯករាជ្យ ឬការផ្ញើសារជាបាច់។'],
-              ['finally { ... }', 'ដំណើរការទាំងពេលជោគជ័យ និងកំហុស', 'បិទស្ថានភាព loading spinner ដោយប្រាកដ។'],
+              [
+                'response.ok',
+                'true សម្រាប់ HTTP 200–299',
+                'ពិនិត្យជានិច្ចមុនបម្លែង response.json()។',
+              ],
+              [
+                'AbortSignal.timeout(5000)',
+                'បោះបង់ fetch ស្វ័យប្រវត្តិក្រោយ 5 វិនាទី',
+                'ការពារ UI កុំឱ្យជាប់ Loading រហូតពេលបណ្ដាញយឺត។',
+              ],
+              [
+                'Promise.all([a, b])',
+                'ស្របគ្នា; reject បើមានមួយបរាជ័យ',
+                'ផ្ទុកទិន្នន័យចាំបាច់ដែលត្រូវការព្រមគ្នា។',
+              ],
+              [
+                'Promise.allSettled([a, b])',
+                'ស្របគ្នា; មិន reject ទេ បង្ហាញគ្រប់លទ្ធផល',
+                'ផ្ទាំង widget ឯករាជ្យ ឬការផ្ញើសារជាបាច់។',
+              ],
+              [
+                'finally { ... }',
+                'ដំណើរការទាំងពេលជោគជ័យ និងកំហុស',
+                'បិទស្ថានភាព loading spinner ដោយប្រាកដ។',
+              ],
             ],
           },
           warning:
@@ -4249,7 +4831,8 @@ async function run() {
             'fetch() reject តែពេលមានបញ្ហាបណ្ដាញ ឬ abort ប៉ុណ្ណោះ មិនមែនលេខ HTTP 4xx/5xx ទេ។ អ្នកត្រូវពិនិត្យ if (!response.ok) ហើយ throw កំហុសដោយខ្លួនឯង។',
         },
         {
-          question: 'ហេតុអ្វីបានជា items.forEach(async (item) => { await save(item); }) បង្កកំហុសមិនរំពឹងទុក?',
+          question:
+            'ហេតុអ្វីបានជា items.forEach(async (item) => { await save(item); }) បង្កកំហុសមិនរំពឹងទុក?',
           options: [
             'forEach មិនទទួលយក arrow function ទេ',
             'forEach មិនរង់ចាំ Promise ដែល callback ត្រឡប់ទេ ធ្វើឱ្យកូដបន្ទាប់ដំណើរការមុនពេល save ចប់',

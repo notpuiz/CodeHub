@@ -17,11 +17,10 @@ if (import.meta.hot) {
 
 export const useLocaleStore = defineStore('locale', () => {
   const getInitialLocale = () => {
-    if (typeof window === 'undefined') return 'en'
+    if (typeof window === 'undefined') return 'km'
     const stored = localStorage.getItem(STORAGE_KEY)
     if (SUPPORTED_LOCALES.includes(stored)) return stored
-    const navLang = (navigator.language || '').toLowerCase()
-    return navLang.startsWith('km') ? 'km' : 'en'
+    return 'km'
   }
 
   const locale = ref(getInitialLocale())

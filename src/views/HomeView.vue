@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { ArrowRight, BookOpen, Code2, Play, Search } from 'lucide-vue-next'
+import SpaceBackground from '@/components/SpaceBackground.vue'
 import { useCurriculumStore } from '@/stores/curriculum'
 import { useSearchStore } from '@/stores/search'
 import { useLocaleStore } from '@/stores/locale'
@@ -10,6 +11,7 @@ const searchStore = useSearchStore()
 const localeStore = useLocaleStore()
 
 const selectedGroup = ref('all')
+const mainRef = ref(null)
 
 const trackGroups = computed(() => [
   { id: 'all', label: localeStore.t('home.filterAll') },
@@ -57,8 +59,11 @@ function getPreviewLessons(track) {
 
 <template>
   <main
-    class="w-full px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] pt-10 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pt-20"
+    ref="mainRef"
+    class="relative isolate w-full overflow-x-clip px-4 pb-[calc(4rem+env(safe-area-inset-bottom,0px))] pt-10 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pt-20"
   >
+    <SpaceBackground :host-el="mainRef" />
+
     <!-- Hero -->
     <section class="mx-auto max-w-4xl text-center">
       <div
@@ -162,7 +167,7 @@ function getPreviewLessons(track) {
             v-for="track in visibleTracks"
             :key="track.id"
             :to="`/learn/${track.id}/${track.lessons[0].slug}`"
-            class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200 bg-white p-6 hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-zinc-700"
+            class="card-interactive btn-press group flex flex-col justify-between rounded-xl border border-zinc-200/90 bg-white/85 p-6 backdrop-blur-xs hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/65 dark:hover:border-zinc-700"
           >
             <div>
               <div class="flex items-center justify-between gap-3">

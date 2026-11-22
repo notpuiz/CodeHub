@@ -116,7 +116,9 @@ async function copySolution() {
           >
             <Check v-if="copied" class="h-3 w-3 shrink-0 text-emerald-400" />
             <Copy v-else class="h-3 w-3 shrink-0" />
-            <span>{{ copied ? localeStore.t('codeCard.copied') : localeStore.t('codeCard.copy') }}</span>
+            <span>{{
+              copied ? localeStore.t('codeCard.copied') : localeStore.t('codeCard.copy')
+            }}</span>
           </button>
         </div>
         <pre

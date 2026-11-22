@@ -98,9 +98,7 @@ function localizeTracks(locale) {
         const key = `${track.id}/${lesson.slug}`
         const lKm = tKm.lessons?.[lesson.slug] || {}
         const deepKm = allDeep[key]?.km || {}
-        const deepSectionsById = new Map(
-          (deepKm.extraSections || []).map((sec) => [sec.id, sec]),
-        )
+        const deepSectionsById = new Map((deepKm.extraSections || []).map((sec) => [sec.id, sec]))
 
         return {
           ...lesson,
